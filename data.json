@@ -24,7 +24,7 @@
   ],
   "measurements": [
     {
-      "data": "2026-09-06",
+      "data": "2026-10-19",
       "pessoaId": "andre",
       "idade": 28,
       "peito": 3,
@@ -39,7 +39,7 @@
       }
     },
     {
-      "data": "2026-10-17",
+      "data": "2026-10-19",
       "pessoaId": "lucas-marques",
       "idade": 27,
       "peso": 61.2,
@@ -57,7 +57,7 @@
       "observacao": ""
     },
     {
-      "data": "2026-10-17",
+      "data": "2026-10-19",
       "pessoaId": "thais-oliveira",
       "idade": 27,
       "peso": 72.2,
