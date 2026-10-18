@@ -10,6 +10,11 @@
       "id": "thais-oliveira",
       "nome": "Thais Oliveira",
       "sexo": ""
+    },
+    {
+      "id": "andre",
+      "nome": "André",
+      "sexo": "M"
     }
   ],
   "measurements": [
