@@ -24,6 +24,21 @@
   ],
   "measurements": [
     {
+      "data": "2026-09-06",
+      "pessoaId": "andre",
+      "idade": 28,
+      "peito": 3,
+      "abdomem": 14,
+      "coxa": 15,
+      "peso": 89,
+      "medidas": {
+        "peito": 104,
+        "abdomem": 86,
+        "coxa": 66,
+        "braco": 36.5
+      }
+    },
+    {
       "data": "2026-10-17",
       "pessoaId": "lucas-marques",
       "idade": 27,
