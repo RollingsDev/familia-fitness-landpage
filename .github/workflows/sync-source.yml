@@ -30,7 +30,11 @@ jobs:
 
       - name: Copiar conteúdo
         run: |
-          rsync -a --delete             --exclude '.git/'             --exclude '.github/workflows/sync-source.yml'             /tmp/source/ ./
+          rsync -a --delete \
+            --exclude '.git/' \
+            --exclude '.github/workflows/sync-source.yml' \
+            --exclude '.github/workflows/static.yml' \
+            /tmp/source/ ./
 
       - name: Publicar cópia
         run: |
