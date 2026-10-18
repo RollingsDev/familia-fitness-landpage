@@ -938,20 +938,97 @@ const MEASURE_REGISTER_FIELDS = [
     function renderSummary(rows) {
       const personSelect = document.getElementById('summaryPersonFilter');
       const periodSelect = document.getElementById('summaryPeriodFilter');
-      const people = getPeople(rows), periods = getPeriods(rows);
+      const registeredPeople = registeredPeopleOptions(rows);
+      const people = registeredPeople.map(person => person.name);
+      const periods = getPeriods(rows);
+
       if (!selectedSummaryPerson || !people.includes(selectedSummaryPerson)) selectedSummaryPerson = '';
       if (!selectedSummaryPeriod || !periods.includes(selectedSummaryPeriod)) selectedSummaryPeriod = '';
-      if (personSelect) { personSelect.innerHTML = '<option value="">Todas</option>' + people.map(name => '<option value="' + name + '">' + name + '</option>').join(''); personSelect.value = selectedSummaryPerson; }
-      if (periodSelect) { periodSelect.innerHTML = '<option value="">Todos</option>' + periods.map(period => '<option value="' + period + '">' + formatPeriod(period) + '</option>').join(''); periodSelect.value = selectedSummaryPeriod; }
-      const filtered = rows.filter(row => (!selectedSummaryPerson || row.name === selectedSummaryPerson) && (!selectedSummaryPeriod || row.period === selectedSummaryPeriod));
-      const latest = getLatestPeriod(filtered.length ? filtered : rows);
-      const latestRows = filtered.filter(row => row.period === latest);
+
+      if (personSelect) {
+        personSelect.innerHTML = '<option value="">Todas</option>' + people.map(name => '<option value="' + name + '">' + name + '</option>').join('');
+        personSelect.value = selectedSummaryPerson;
+      }
+
+      if (periodSelect) {
+        periodSelect.innerHTML = '<option value="">Todos</option>' + periods.map(period => '<option value="' + period + '">' + formatPeriod(period) + '</option>').join('');
+        periodSelect.value = selectedSummaryPeriod;
+      }
+
+      const filteredRows = rows.filter(row =>
+        (!selectedSummaryPerson || row.name === selectedSummaryPerson) &&
+        (!selectedSummaryPeriod || row.period === selectedSummaryPeriod)
+      );
+
+      const latest = getLatestPeriod(filteredRows.length ? filteredRows : rows);
+      const latestRows = latest ? filteredRows.filter(row => row.period === latest) : [];
       const calculated = latestRows.filter(row => Number.isFinite(row.bf)).length;
       const deltas = latestRows.filter(row => Number.isFinite(row.deltaBf));
       const averageDelta = deltas.length ? deltas.reduce((sum, row) => sum + row.deltaBf, 0) / deltas.length : null;
+
       const summaryKpis = document.getElementById('summaryKpis');
-      if (summaryKpis) summaryKpis.innerHTML = '<div class="mini-stat"><span>Período exibido</span><strong>' + formatPeriod(latest) + '</strong></div><div class="mini-stat"><span>BF% calculável</span><strong>' + calculated + '/' + latestRows.length + '</strong></div><div class="mini-stat"><span>Variação média</span><strong>' + deltaText(averageDelta) + '</strong></div>';
-      document.getElementById('summaryRows').innerHTML = [...filtered].sort((a, b) => b.period.localeCompare(a.period) || a.name.localeCompare(b.name, 'pt-BR')).map(row => '<tr><td><strong>' + row.name + '</strong></td><td>' + formatPeriod(row.period) + '</td><td>' + (row.age ?? '—') + '</td><td>' + formatKg(row.weight) + '</td><td>' + row.protocol + '<br>' + badge(row) + '</td><td>' + foldsText(row.folds) + '</td><td><strong>' + formatMm(row.sum) + '</strong></td><td><strong>' + formatPercent(row.bf) + '</strong></td><td>' + deltaText(row.deltaBf) + '</td><td>' + measuresText(row.measures) + '</td><td class="muted">' + (row.observation ? row.warning + ' ' + row.observation : row.warning) + '</td></tr>').join('');
+      if (summaryKpis) {
+        summaryKpis.innerHTML =
+          '<div class="mini-stat"><span>Período exibido</span><strong>' + (latest ? formatPeriod(latest) : '—') + '</strong></div>' +
+          '<div class="mini-stat"><span>BF% calculável</span><strong>' + calculated + '/' + latestRows.length + '</strong></div>' +
+          '<div class="mini-stat"><span>Variação média</span><strong>' + deltaText(averageDelta) + '</strong></div>';
+      }
+
+      const visibleRegistered = registeredPeople.filter(person =>
+        !selectedSummaryPerson || person.name === selectedSummaryPerson
+      );
+
+      const rowsByPerson = new Map();
+      [...filteredRows]
+        .sort((a, b) => b.period.localeCompare(a.period))
+        .forEach(row => {
+          if (!rowsByPerson.has(row.name)) rowsByPerson.set(row.name, []);
+          rowsByPerson.get(row.name).push(row);
+        });
+
+      const tableRows = [];
+
+      visibleRegistered.forEach(person => {
+        const personRows = rowsByPerson.get(person.name) || [];
+
+        if (personRows.length) {
+          personRows.forEach(row => {
+            tableRows.push(
+              '<tr>' +
+              '<td><strong>' + row.name + '</strong></td>' +
+              '<td>' + formatPeriod(row.period) + '</td>' +
+              '<td>' + (row.age ?? '—') + '</td>' +
+              '<td>' + formatKg(row.weight) + '</td>' +
+              '<td>' + row.protocol + '<br>' + badge(row) + '</td>' +
+              '<td>' + foldsText(row.folds) + '</td>' +
+              '<td><strong>' + formatMm(row.sum) + '</strong></td>' +
+              '<td><strong>' + formatPercent(row.bf) + '</strong></td>' +
+              '<td>' + deltaText(row.deltaBf) + '</td>' +
+              '<td>' + measuresText(row.measures) + '</td>' +
+              '<td class="muted">' + (row.observation ? row.warning + ' ' + row.observation : row.warning) + '</td>' +
+              '</tr>'
+            );
+          });
+        } else if (!selectedSummaryPeriod) {
+          tableRows.push(
+            '<tr>' +
+            '<td><strong>' + person.name + '</strong></td>' +
+            '<td>—</td>' +
+            '<td>—</td>' +
+            '<td>—</td>' +
+            '<td>Sem medição<br><span class="badge-status bad">Sem medição</span></td>' +
+            '<td><span class="muted">—</span></td>' +
+            '<td><strong>—</strong></td>' +
+            '<td><strong>—</strong></td>' +
+            '<td><span class="muted">—</span></td>' +
+            '<td><span class="muted">—</span></td>' +
+            '<td class="muted">Usuário cadastrado e pronto para iniciar.</td>' +
+            '</tr>'
+          );
+        }
+      });
+
+      document.getElementById('summaryRows').innerHTML = tableRows.join('');
       updateDataDiagnostics(rows);
     }
 
