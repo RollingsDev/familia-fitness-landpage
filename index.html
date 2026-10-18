@@ -1,0 +1,1805 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <meta name="theme-color" content="#020817" />
+  <link rel="manifest" href="manifest.json" />
+  <title>Consulta BF e Medidas da Família</title>
+
+  <script src="https://cdn.jsdelivr.net/npm/chart.js@4.4.9/dist/chart.umd.min.js"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+
+  <style>
+    :root {
+      --bg: #020817;
+      --bg2: #07142f;
+      --panel: rgba(8,20,46,.88);
+      --panel2: rgba(10,27,58,.86);
+      --text: #f4f7ff;
+      --muted: #a9b8d6;
+      --line: rgba(93,156,255,.26);
+      --line2: rgba(93,156,255,.42);
+      --cyan: #28c8ff;
+      --purple: #bf86ff;
+      --good: #22c55e;
+      --warn: #f59e0b;
+      --bad: #ef4444;
+      --shadow: 0 22px 70px rgba(0,0,0,.46);
+      --radius: 26px;
+    }
+
+    * { box-sizing: border-box; }
+    body {
+      margin: 0;
+      min-height: 100vh;
+      font-family: Inter, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
+      color: var(--text);
+      background:
+        radial-gradient(circle at 8% 4%, rgba(40,200,255,.12), transparent 26%),
+        radial-gradient(circle at 88% 8%, rgba(191,134,255,.10), transparent 30%),
+        linear-gradient(135deg, var(--bg) 0%, var(--bg2) 52%, #030d1e 100%);
+    }
+
+    .container {
+      width: min(1440px, calc(100% - 28px));
+      margin: 0 auto;
+      padding: 26px 0 42px;
+    }
+
+    .hero {
+      display: grid;
+      grid-template-columns: 1.35fr .65fr;
+      gap: 18px;
+      margin-bottom: 18px;
+    }
+
+    .hero-main, .hero-side, .panel, .card {
+      background: var(--panel);
+      border: 1px solid var(--line);
+      border-radius: var(--radius);
+      box-shadow: var(--shadow);
+      backdrop-filter: blur(14px);
+    }
+
+    .hero-main {
+      padding: 28px;
+      position: relative;
+      overflow: hidden;
+    }
+
+    .hero-main:after {
+      content: "";
+      position: absolute;
+      right: -95px;
+      top: -95px;
+      width: 250px;
+      height: 250px;
+      border-radius: 999px;
+      background: radial-gradient(circle, rgba(40,200,255,.22), transparent 65%);
+    }
+
+    .hero-side {
+      padding: 18px;
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+    }
+
+    .eyebrow {
+      display: inline-flex;
+      gap: 8px;
+      align-items: center;
+      color: #bfeeff;
+      border: 1px solid rgba(40,200,255,.28);
+      background: rgba(40,200,255,.08);
+      padding: 8px 12px;
+      border-radius: 999px;
+      font-size: 13px;
+      font-weight: 800;
+    }
+
+    h1 {
+      margin: 16px 0 8px;
+      font-size: clamp(32px, 4vw, 54px);
+      line-height: 1;
+      letter-spacing: -1.4px;
+    }
+
+    .subtitle {
+      margin: 0;
+      max-width: 940px;
+      color: var(--muted);
+      line-height: 1.7;
+      font-size: 15px;
+    }
+
+    .stat, .mini-stat {
+      background: rgba(8,20,46,.78);
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      padding: 15px;
+    }
+
+    .stat span, .mini-stat span {
+      display: block;
+      color: var(--muted);
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .06em;
+      margin-bottom: 6px;
+    }
+
+    .stat strong, .mini-stat strong {
+      display: block;
+      font-size: 21px;
+      line-height: 1.2;
+    }
+
+    .menu-toggle { display: none; border: 0; color: var(--text); background: transparent; font: inherit; font-weight: 800; padding: 8px 10px; cursor: pointer; }
+    .tab-menu { display: flex; flex-wrap: wrap; gap: 10px; }
+    .tabs {
+      position: sticky;
+      top: 10px;
+      z-index: 5;
+      padding: 6px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: rgba(2,8,23,.76);
+      backdrop-filter: blur(14px);
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin: 20px 0;
+    }
+
+    .tab-btn, .ghost-btn, .primary-btn {
+      min-height: 44px;
+      border: 1px solid var(--line);
+      color: var(--text);
+      background: rgba(8,20,46,.76);
+      border-radius: 999px;
+      padding: 11px 16px;
+      font: inherit;
+      cursor: pointer;
+      transition: .16s ease;
+    }
+
+    .primary-btn {
+      background: linear-gradient(135deg, rgba(40,200,255,.85), rgba(191,134,255,.72));
+      border-color: rgba(255,255,255,.12);
+      font-weight: 800;
+    }
+
+    .tab-btn:hover, .ghost-btn:hover, .primary-btn:hover {
+      transform: translateY(-1px);
+      border-color: rgba(40,200,255,.50);
+    }
+
+    .tab-btn.active {
+      background: linear-gradient(135deg, rgba(40,200,255,.20), rgba(191,134,255,.14));
+      border-color: rgba(40,200,255,.58);
+    }
+
+    .tab-btn:focus-visible, .ghost-btn:focus-visible, .primary-btn:focus-visible, input:focus-visible, select:focus-visible, textarea:focus-visible { outline: 3px solid rgba(40,200,255,.72); outline-offset: 3px; }
+
+    .section { display: none; }
+    .section.active { display: block; }
+
+    .grid-2 {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 18px;
+    }
+
+    .grid-3 {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 14px;
+    }
+
+    .panel { padding: 20px; }
+    .panel h2, .panel h3 { margin: 0 0 12px; letter-spacing: -.4px; }
+    .panel h2 { font-size: 23px; }
+    .panel h3 { font-size: 18px; }
+    .muted { color: var(--muted); }
+
+    .chart-wrap {
+      height: 340px;
+      position: relative;
+    }
+
+    .chart-wrap.small { height: 250px; }
+    .chart-wrap.tall { height: 410px; }
+
+    .table-wrap {
+      width: 100%;
+      overflow-x: auto;
+      border-radius: 18px;
+      border: 1px solid var(--line);
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      min-width: 980px;
+      background: rgba(8,20,46,.54);
+    }
+
+    th, td {
+      padding: 13px 14px;
+      text-align: left;
+      border-bottom: 1px solid var(--line);
+      vertical-align: top;
+    }
+
+    th {
+      color: #d7e3fb;
+      font-size: 12px;
+      text-transform: uppercase;
+      letter-spacing: .08em;
+      background: rgba(11,27,58,.78);
+    }
+
+    tr:hover td { background: rgba(40,200,255,.04); }
+
+    .badge-status {
+      display: inline-flex;
+      align-items: center;
+      border-radius: 999px;
+      padding: 5px 9px;
+      font-size: 12px;
+      font-weight: 800;
+      border: 1px solid transparent;
+      white-space: nowrap;
+    }
+
+    .badge-status.good { color: #bbf7d0; background: rgba(34,197,94,.14); border-color: rgba(34,197,94,.24); }
+    .badge-status.warn { color: #fde68a; background: rgba(245,158,11,.14); border-color: rgba(245,158,11,.24); }
+    .badge-status.bad { color: #fecaca; background: rgba(239,68,68,.14); border-color: rgba(239,68,68,.24); }
+
+    .delta { font-weight: 900; white-space: nowrap; }
+    .delta.down { color: #86efac; }
+    .delta.up { color: #fca5a5; }
+    .delta.flat { color: #cbd5e1; }
+
+    .person-list {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
+      gap: 12px;
+      margin-bottom: 18px;
+    }
+
+    .person-card {
+      border: 1px solid var(--line);
+      background: rgba(8,20,46,.58);
+      border-radius: 18px;
+      padding: 16px;
+      cursor: pointer;
+      transition: .18s ease;
+    }
+
+    .person-card:hover, .person-card.active {
+      border-color: rgba(40,200,255,.58);
+      transform: translateY(-2px);
+      background: rgba(40,200,255,.07);
+    }
+
+    .person-card strong {
+      display: block;
+      font-size: 18px;
+      margin-bottom: 6px;
+    }
+
+    .person-card small {
+      color: var(--muted);
+      line-height: 1.5;
+      display: block;
+    }
+
+    .detail-header {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      align-items: flex-start;
+      margin-bottom: 16px;
+    }
+
+    .form-grid {
+      display: grid;
+      grid-template-columns: repeat(4, minmax(0, 1fr));
+      gap: 12px;
+    }
+
+    label {
+      display: block;
+      color: #d3def3;
+      font-size: 13px;
+      margin-bottom: 7px;
+      font-weight: 700;
+    }
+
+    input, select, textarea {
+      width: 100%;
+      color: var(--text);
+      background: rgba(8,20,46,.72);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 11px 12px;
+      outline: none;
+      font: inherit;
+    }
+
+    textarea {
+      min-height: 220px;
+      resize: vertical;
+      font: 13px/1.5 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+    }
+
+    .actions {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 10px;
+      margin-top: 14px;
+    }
+
+    .note {
+      line-height: 1.6;
+      padding: 14px 16px;
+      border: 1px solid rgba(245,158,11,.23);
+      background: rgba(245,158,11,.09);
+      border-radius: 16px;
+      color: #fde68a;
+    }
+
+    .measure-grid {
+      display: grid;
+      grid-template-columns: repeat(3, minmax(0, 1fr));
+      gap: 18px;
+    }
+
+    .measure-card {
+      position: relative;
+      overflow: hidden;
+      min-height: 430px;
+      padding: 18px;
+      border-radius: 30px;
+      border: 1px solid var(--line);
+      background:
+        radial-gradient(circle at 0% 0%, rgba(23,84,170,.08), transparent 22%),
+        linear-gradient(180deg, rgba(6,18,43,.98), rgba(3,11,26,.98));
+      box-shadow: var(--shadow);
+    }
+
+    .measure-card:before {
+      content: "";
+      position: absolute;
+      inset: 0;
+      border-radius: inherit;
+      padding: 1px;
+      background: linear-gradient(135deg, rgba(64,148,255,.3), rgba(255,255,255,0), rgba(189,134,255,.18));
+      -webkit-mask: linear-gradient(#fff 0 0) content-box, linear-gradient(#fff 0 0);
+      -webkit-mask-composite: xor;
+              mask-composite: exclude;
+      pointer-events: none;
+    }
+
+    .measure-title {
+      text-align: center;
+      font-size: 31px;
+      line-height: 1.05;
+      margin: 0 0 10px;
+      font-weight: 800;
+      letter-spacing: -.6px;
+    }
+
+    .profile-badge-wrap { text-align: center; }
+
+    .profile-badge {
+      display: inline-flex;
+      align-items: center;
+      justify-content: center;
+      min-width: 230px;
+      min-height: 48px;
+      padding: 10px 18px;
+      border-radius: 999px;
+      border: 1px solid rgba(40,200,255,.5);
+      color: #8fe6ff;
+      background: rgba(40,200,255,.12);
+      font-weight: 800;
+      font-size: 17px;
+      box-shadow: inset 0 0 24px rgba(40,200,255,.08), 0 0 20px rgba(40,200,255,.06);
+    }
+
+    .profile-badge.purple {
+      border-color: rgba(191,134,255,.52);
+      color: #e5c7ff;
+      background: rgba(191,134,255,.14);
+      box-shadow: inset 0 0 24px rgba(191,134,255,.08), 0 0 20px rgba(191,134,255,.06);
+    }
+
+    .measure-ratio {
+      margin-top: 12px;
+      padding-left: 0;
+      text-align: center;
+      color: #c1cde6;
+      font-size: 18px;
+      font-weight: 500;
+    }
+
+    .measure-content {
+      margin-top: 12px;
+      display: grid;
+      grid-template-columns: minmax(120px, 34%) minmax(0, 1fr);
+      gap: 18px;
+      align-items: start;
+    }
+
+    .avatar {
+      min-height: 290px;
+      display: flex;
+      align-items: flex-end;
+      justify-content: center;
+      padding-top: 4px;
+      overflow: hidden;
+    }
+
+    .avatar img {
+      width: 156px;
+      height: auto;
+      display: block;
+      object-fit: contain;
+      filter: drop-shadow(0 12px 18px rgba(0,0,0,.25));
+      user-select: none;
+      pointer-events: none;
+    }
+
+    .avatar-fallback {
+      width: 130px;
+      height: 260px;
+      border-radius: 60px 60px 48px 48px;
+      background: linear-gradient(180deg, #d5e9ff, #7897c8 48%, #2f4d80);
+      opacity: .95;
+      box-shadow: 0 0 28px rgba(40,200,255,.28);
+    }
+
+    .metrics {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      gap: 12px;
+      min-width: 0;
+    }
+
+    .metric {
+      min-height: 112px;
+      border-radius: 18px;
+      border: 1px solid var(--line2);
+      background: linear-gradient(180deg, rgba(10,27,58,.86), rgba(8,20,46,.92));
+      padding: 12px 14px 11px;
+      display: flex;
+      flex-direction: column;
+      justify-content: space-between;
+      min-width: 0;
+    }
+
+    .metric-head {
+      display: flex;
+      gap: 10px;
+      align-items: flex-start;
+    }
+
+    .metric i {
+      width: 28px;
+      text-align: center;
+      font-size: 21px;
+      margin-top: 2px;
+      color: #67d7ff;
+      opacity: .95;
+      flex: 0 0 28px;
+    }
+
+    .metric.purple i { color: #d09cff; }
+
+    .metric-label {
+      color: #d6e2fb;
+      font-size: 16px;
+      line-height: 1.08;
+      font-weight: 500;
+      overflow-wrap: anywhere;
+      word-break: normal;
+    }
+
+    .metric-value {
+      font-size: 23px;
+      line-height: 1;
+      letter-spacing: -.3px;
+      font-weight: 900;
+      margin-top: 10px;
+    }
+
+    .metric-value span {
+      display: block;
+      margin-top: 5px;
+      font-size: 16px;
+      font-weight: 700;
+    }
+
+    .measure-note {
+      margin-top: 18px;
+      padding: 16px 18px;
+      border-radius: 18px;
+      border: 1px solid rgba(191,134,255,.16);
+      background: rgba(191,134,255,.06);
+      color: #d2dcf1;
+      font-size: 15px;
+      line-height: 1.7;
+    }
+
+
+    .workout-section {
+      margin: 18px 0;
+      padding: 18px;
+      border: 1px solid var(--line);
+      background: rgba(8,20,46,.42);
+      border-radius: 22px;
+    }
+
+    .workout-head {
+      display: flex;
+      justify-content: space-between;
+      gap: 14px;
+      align-items: flex-start;
+      margin-bottom: 14px;
+    }
+
+    .workout-head h3 {
+      margin: 0 0 6px;
+    }
+
+    .workout-tabs {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 14px;
+    }
+
+    .workout-tab {
+      border: 1px solid var(--line);
+      background: rgba(8,20,46,.74);
+      color: var(--text);
+      border-radius: 999px;
+      padding: 9px 13px;
+      font: inherit;
+      font-size: 13px;
+      font-weight: 800;
+      cursor: pointer;
+    }
+
+    .workout-tab.active {
+      border-color: rgba(40,200,255,.56);
+      background: linear-gradient(135deg, rgba(40,200,255,.20), rgba(191,134,255,.14));
+      color: #bfeeff;
+    }
+
+    .workout-pane {
+      display: none;
+    }
+
+    .workout-pane.active {
+      display: block;
+    }
+
+    .workout-day-title {
+      margin-bottom: 14px;
+      color: var(--muted);
+      line-height: 1.5;
+    }
+
+    .workout-day-title strong {
+      color: var(--text);
+      font-size: 18px;
+    }
+
+    .workout-exercises {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(280px, 1fr));
+      gap: 14px;
+    }
+
+    .exercise-card {
+      display: grid;
+      grid-template-columns: minmax(0, 1fr) 220px;
+      gap: 14px;
+      padding: 14px;
+      border: 1px solid var(--line);
+      border-radius: 18px;
+      background: linear-gradient(180deg, rgba(10,27,58,.78), rgba(8,20,46,.82));
+      min-width: 0;
+    }
+
+    .exercise-card h4 {
+      margin: 0 0 10px;
+      font-size: 17px;
+      line-height: 1.25;
+    }
+
+    .exercise-meta {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 8px;
+      margin-bottom: 12px;
+    }
+
+    .exercise-meta span {
+      border: 1px solid rgba(40,200,255,.24);
+      background: rgba(40,200,255,.08);
+      color: #c9efff;
+      border-radius: 999px;
+      padding: 6px 9px;
+      font-size: 12px;
+      font-weight: 800;
+    }
+
+    .exercise-link {
+      display: inline-flex;
+      align-items: center;
+      gap: 8px;
+      color: #9fe7ff;
+      text-decoration: none;
+      font-weight: 800;
+      font-size: 13px;
+    }
+
+    .exercise-video {
+      width: 100%;
+      min-height: 132px;
+      border-radius: 14px;
+      overflow: hidden;
+      border: 1px solid rgba(255,255,255,.08);
+      background: rgba(2,8,23,.55);
+    }
+
+    .exercise-video iframe {
+      display: block;
+      width: 100%;
+      height: 132px;
+      border: 0;
+    }
+
+    .local-video-preview a { display: block; position: relative; height: 100%; color: #fff; text-decoration: none; }
+    .local-video-preview img { display: block; width: 100%; height: 132px; object-fit: cover; opacity: .82; }
+    .local-video-preview span { display: block; padding: 8px 10px; color: #9fe7ff; font-size: 12px; font-weight: 800; text-align: center; background: rgba(2,8,23,.78); }
+    .local-video-preview a:hover img { opacity: 1; }
+
+    .exercise-preview-link {
+      display: block;
+      padding: 7px 10px 9px;
+      color: #9fe7ff;
+      font-size: 12px;
+      font-weight: 800;
+      text-align: center;
+      text-decoration: none;
+      background: rgba(2,8,23,.72);
+    }
+
+    .exercise-preview-link:hover { color: #ffffff; text-decoration: underline; }
+
+    .external-preview {
+      height: 132px;
+      display: grid;
+      place-items: center;
+      padding: 12px;
+      color: var(--muted);
+      text-align: center;
+      font-size: 13px;
+    }
+
+    @media (max-width: 1120px) {
+      .workout-exercises {
+        grid-template-columns: 1fr;
+      }
+    }
+
+    @media (max-width: 680px) {
+      .workout-head {
+        display: block;
+      }
+
+      .exercise-card {
+        grid-template-columns: 1fr;
+      }
+
+      .exercise-video iframe,
+      .external-preview {
+        height: 190px;
+      }
+    }
+
+    .register-toolbar { display: grid; grid-template-columns: 1.4fr 1.5fr .8fr .7fr; gap: 10px; margin-bottom: 16px; }
+    .register-exercise { padding: 14px; margin-top: 10px; border: 1px solid var(--line); border-radius: 16px; background: rgba(8,20,46,.42); }
+    .register-exercise-head { display: grid; grid-template-columns: 34px minmax(0, 1fr) auto; gap: 8px; align-items: center; }
+    .register-number { color: #9fe7ff; font-weight: 900; text-align: center; }
+    .register-sets { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: 10px; margin-top: 10px; }
+    .register-sets label { display: grid; grid-template-columns: 28px 1fr 1fr; gap: 5px; align-items: center; margin: 0; }
+    .register-sets input, .register-observation { padding: 8px; border-radius: 10px; }
+    .register-add-set { margin-top: 8px; padding: 7px 10px; min-height: 34px; font-size: 12px; }
+    .register-observation { margin-top: 10px; }
+    .register-session-observation, .register-output { min-height: 110px; margin-top: 8px; }
+    .register-output { font: 12px/1.45 ui-monospace, SFMono-Regular, Menlo, Consolas, monospace; }
+    @media (max-width: 820px) { .register-toolbar { grid-template-columns: 1fr 1fr; } .register-sets { grid-template-columns: 1fr; } .register-sets label { grid-template-columns: 28px 1fr 1fr; } }
+    .progress-timeline { display: grid; gap: 10px; }
+    .progress-timeline-item { display: grid; grid-template-columns: 110px minmax(0, 1fr); gap: 14px; align-items: start; padding: 12px 14px; border: 1px solid var(--line); border-radius: 14px; background: rgba(8,20,46,.54); }
+    .progress-timeline-item time { color: #9fe7ff; font-weight: 800; font-size: 13px; }
+    .progress-timeline-item p { margin: 4px 0 0; color: var(--muted); line-height: 1.5; }
+
+    .formula {
+      font-family: ui-monospace, SFMono-Regular, Menlo, Consolas, monospace;
+      color: #dbeafe;
+      background: rgba(2,6,23,.45);
+      border: 1px solid var(--line);
+      border-radius: 14px;
+      padding: 12px;
+      overflow-x: auto;
+      line-height: 1.6;
+    }
+
+    @media (max-width: 1280px) {
+      .hero, .grid-2 { grid-template-columns: 1fr; }
+      .measure-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+      .form-grid { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    }
+
+    @media (max-width: 820px) {
+      .container { width: min(100% - 18px, 1440px); padding-top: 18px; }
+      .hero-main, .hero-side, .panel { padding: 16px; }
+      .hero-side, .grid-3, .form-grid { grid-template-columns: 1fr; }
+      .measure-grid { grid-template-columns: 1fr; }
+      .measure-card, .measure-content, .metrics { min-width: 0; }
+    .reference-layout { grid-template-columns: 1fr; }
+      .profile-badge { min-width: 0; width: 100%; font-size: 15px; }
+      .measure-ratio { padding-left: 0; text-align: center; }
+      .measure-content { grid-template-columns: 1fr; }
+      .avatar { min-height: auto; }
+      .avatar img { width: 170px; }
+      .detail-header { display: block; }
+      .chart-wrap { height: 300px; }
+    }
+
+    .reference-layout { grid-template-columns: repeat(2, minmax(0, 1fr)); align-items: start; }
+    .reference-profiles { display: grid; gap: 10px; margin: 12px 0 16px; }
+    .reference-profile { display: grid; grid-template-columns: 58px minmax(0, 1fr); gap: 10px; align-items: center; padding: 9px; border: 1px solid rgba(148,163,184,.18); border-radius: 14px; background: rgba(8,20,46,.38); }
+    .reference-profile-image { height: 72px; display: flex; align-items: end; justify-content: center; overflow: hidden; border-radius: 10px; background: rgba(15,32,68,.72); }
+    .reference-profile-image img { width: 48px; height: 112px; object-fit: contain; object-position: top center; }
+    .reference-profile strong, .reference-profile span { display: block; }
+    .reference-profile span { color: #9edfff; font-size: 12px; margin-top: 2px; }
+    .reference-profile p { margin: 4px 0 0; color: #b8c7e4; font-size: 11px; line-height: 1.35; } .reference-layout .table-wrap { overflow-x: visible; } .reference-layout table { min-width: 0; } .reference-layout .chart-wrap { height: 280px; margin-top: 14px; }
+    .workout-tabs .workout-tab { color: #f4f7ff !important; text-shadow: 0 1px 2px rgba(0,0,0,.45); } .workout-tabs .workout-tab.active { color: #d9f6ff !important; }
+    @media (max-width: 820px) { .reference-layout { grid-template-columns: 1fr; } }
+    @media (max-width: 680px) {
+      body { padding-top: 62px; }
+      .container { padding-top: 12px; }
+      .tabs { position: fixed; top: 10px; left: 10px; right: 10px; margin: 0; display: block; padding: 5px; border-radius: 15px; }
+      .menu-toggle { display: flex; width: 100%; min-height: 42px; align-items: center; justify-content: center; gap: 8px; }
+      .tab-menu { display: none; max-height: calc(100vh - 115px); overflow-y: auto; padding-top: 5px; }
+      .tabs.menu-open .tab-menu { display: grid; gap: 6px; }
+      .tabs .tab-btn { display: none; width: 100%; justify-content: center; }
+      .tabs.menu-open .tab-btn, .tabs:not(.menu-open) .tab-btn.active { display: flex; }
+    }
+    .filter-row { display:flex; gap:10px; flex-wrap:wrap; justify-content:flex-end; }
+    .tool-actions { display:flex; flex-wrap:wrap; gap:10px; margin:12px 0; }
+    .file-btn { display:inline-flex; align-items:center; justify-content:center; }
+    .tool-card, .validation-box { background: rgba(8,20,46,.42); box-shadow:none; }
+    .validation-box.good { border-color: rgba(34,197,94,.42); }
+    .validation-box.warn { border-color: rgba(245,158,11,.48); }
+    body.light-theme { --bg:#eef4fb; --bg2:#dce9f7; --panel:rgba(255,255,255,.92); --panel2:#fff; --text:#12213a; --muted:#52627c; --line:rgba(45,93,150,.22); --line2:rgba(45,93,150,.38); background:linear-gradient(135deg,#f8fbff,#e5effa); }
+    body.light-theme .tabs, body.light-theme th { background:rgba(255,255,255,.88); }
+    body.light-theme .stat, body.light-theme .mini-stat, body.light-theme .person-card, body.light-theme table { background:rgba(255,255,255,.76); }
+    @media print { .hero, .tabs, .skip-link, .summary-filters, .filter-row, .tool-card, .validation-box, button { display:none !important; } body { background:#fff; color:#111; } .container { width:100%; padding:0; } .section { display:block !important; } .panel { page-break-inside:avoid; } }
+ .filter-row > div { min-width:145px; } .filter-row select { width:100%; }
+    @media (max-width: 480px) {
+      .metrics { grid-template-columns: 1fr; }
+      .profile-badge { min-width: 0; width: 100%; }
+      .measure-title { font-size: 26px; }
+    }
+
+    .skip-link { position: fixed; left: 12px; top: -60px; z-index: 20; padding: 12px 16px; border-radius: 12px; color: var(--bg); background: var(--cyan); font-weight: 800; text-decoration: none; }
+    .skip-link:focus { top: 12px; }
+    main:focus { outline: none; }
+    @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; } }
+    @media (max-width: 480px) { .progress-timeline-item { grid-template-columns: 1fr; gap: 5px; } .workout-tabs { overflow-x: auto; flex-wrap: nowrap; padding-bottom: 4px; } .workout-tab { flex: 0 0 auto; min-height: 44px; } }
+    @media print { .tabs, .skip-link, .exercise-video, .chart-wrap { height: 250px !important; } .chart-wrap canvas { display: block !important; } .section { display: block !important; } .panel, .measure-card, .workout-section, .exercise-card { box-shadow: none; background: #fff; color: #111; border-color: #bbb; } }
+  </style>
+</head>
+
+<body>
+  <a class="skip-link" href="#main-content">Pular para o conteúdo</a>
+  <main class="container" id="main-content" tabindex="-1">
+    <section class="hero">
+      <div class="hero-main">
+        <span class="eyebrow">📏 Adipômetro • BF • Medidas corporais</span>
+        <h1>Consulta corporal da família</h1>
+        <p class="subtitle">
+          Página estática para GitHub Pages. Inclui evolução por período, BF% pelo adipômetro, peso, dados individuais e visualização de medidas corporais com manequins carregados por arquivo.
+        </p>
+      </div>
+      <aside class="hero-side" id="kpiBox"></aside>
+    </section>
+
+    <nav class="tabs" aria-label="Seções da consulta">
+      <button type="button" class="menu-toggle" id="menuToggle" aria-expanded="false" aria-controls="mainTabs"><i class="fa-solid fa-bars"></i><span>Menu</span></button>
+      <div class="tab-menu" id="mainTabs">
+      <button class="tab-btn active" data-tab="dashboard">Dashboard</button>
+      <button class="tab-btn" data-tab="individual">Consulta individual</button>
+      <button class="tab-btn" data-tab="treinamento">Treinamento</button>
+      <button class="tab-btn" data-tab="medidas">Medidas corporais</button>
+      <button class="tab-btn" data-tab="periodos">Dados por período</button>
+      <button class="tab-btn" data-tab="metodo">Método</button>
+      <button class="tab-btn" data-tab="relatorios">Relatórios detalhados</button>
+      <button class="tab-btn" data-tab="comparacao">Comparar pessoas</button>
+      <button class="tab-btn" data-tab="referencias">Base de referência</button>
+      <button class="tab-btn" data-tab="dados">Ferramentas</button>
+      </div>
+    </nav>
+
+    <section id="dashboard" class="section active">
+      <div class="grid-2">
+        <article class="panel">
+          <h2>Evolução geral da família</h2>
+          <p class="muted">Compara média de BF% calculável e soma total das dobras por período.</p>
+          <div class="chart-wrap tall"><canvas id="globalEvolutionChart"></canvas></div>
+        </article>
+        <article class="panel">
+          <h2>Ranking do último período</h2>
+          <p class="muted">Mostra o último período com medição disponível.</p>
+          <div class="chart-wrap tall"><canvas id="latestRankingChart"></canvas></div>
+        </article>
+      </div>
+
+      <div class="grid-2" style="margin-top:18px">
+        <article class="panel">
+          <h2>Evolução de peso registrado</h2>
+          <p class="muted">Considera apenas pesos maiores que zero.</p>
+          <div class="chart-wrap"><canvas id="weightEvolutionChart"></canvas></div>
+        </article>
+        <article class="panel">
+          <h2>Variação de BF% no último período</h2>
+          <p class="muted">Diferença do último período contra a medição anterior.</p>
+          <div class="chart-wrap"><canvas id="deltaChart"></canvas></div>
+        </article>
+      </div>
+
+      <article class="panel" style="margin-top:18px">
+        <h2>Resumo das medições</h2>
+        <p class="muted">Visão completa por pessoa e período. Use Relatórios detalhados para acompanhar uma pessoa individualmente.</p><div class="filter-row summary-filters" aria-label="Filtros do resumo"><div><label for="summaryPersonFilter">Pessoa</label><select id="summaryPersonFilter"><option value="">Todas</option></select></div><div><label for="summaryPeriodFilter">Período</label><select id="summaryPeriodFilter"><option value="">Todos</option></select></div></div>
+        <div class="grid-3" id="summaryKpis" style="margin-bottom:14px"></div>
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Pessoa</th>
+                <th>Período</th>
+                <th>Idade</th>
+                <th>Peso</th>
+                <th>Protocolo</th>
+                <th>Dobras</th>
+                <th>Soma</th>
+                <th>BF%</th>
+                <th>Var. BF%</th>
+                <th>Medidas</th>
+                <th>Observação</th>
+              </tr>
+            </thead>
+            <tbody id="summaryRows"></tbody>
+          </table>
+        </div>
+      </article>
+    </section>
+
+
+    <section id="relatorios" class="section">
+      <article class="panel">
+        <div class="detail-header"><div><h2>Relatórios detalhados</h2><p class="muted">Acompanhe a evolução de uma pessoa entre todos os períodos registrados.</p></div><div class="filter-row"><div><label for="reportPersonFilter">Pessoa</label><select id="reportPersonFilter"></select></div><button type="button" class="primary-btn" id="printReport"><i class="fa-solid fa-print"></i> Imprimir / PDF</button></div></div>
+        <div class="grid-3" id="reportKpis"></div>
+      </article>
+      <div class="grid-2" style="margin-top:18px"><article class="panel"><h3>Evolução de BF%</h3><div class="chart-wrap"><canvas id="reportBfChart"></canvas></div></article><article class="panel"><h3>Evolução de peso</h3><div class="chart-wrap"><canvas id="reportWeightChart"></canvas></div></article></div>
+      <article class="panel" style="margin-top:18px"><h3>Medidas: último período x anterior</h3><div class="chart-wrap"><canvas id="reportMeasuresChart"></canvas></div></article>
+      <article class="panel" style="margin-top:18px"><h3>Histórico da pessoa</h3><div class="table-wrap"><table><thead><tr><th>Período</th><th>BF%</th><th>Variação</th><th>Peso</th><th>Soma das dobras</th><th>Medidas</th><th>Observação</th><th>Status</th></tr></thead><tbody id="reportHistoryRows"></tbody></table></div></article>
+    </section>
+    <section id="individual" class="section">
+      <article class="panel">
+        <h2>Consulta individual</h2>
+        <p class="muted">Clique em uma pessoa para ver dados por período, gráficos de evolução e medidas corporais.</p>
+        <div class="person-list" id="personCards"></div>
+        <div id="personDetail"></div>
+      </article>
+    </section>
+
+
+    <section id="treinamento" class="section">
+      <article class="panel">
+        <h2>Treinamento</h2>
+        <p class="muted">Selecione uma pessoa para consultar o plano. Douglas faz Upper, Lower e Fullbody; André segue a rotina completa de segunda a domingo do manual de 8 semanas.</p>
+        <div class="person-list" id="trainingPersonCards"></div>
+        <div id="trainingContent"></div>
+      </article>
+    </section>
+    <section id="comparacao" class="section">
+      <article class="panel">
+        <div class="detail-header"><div><h2>Comparar pessoas</h2><p class="muted">Escolha uma pessoa e um período para cada lado. É possível comparar a mesma pessoa em momentos diferentes.</p></div><div class="filter-row"><div><label for="comparePersonA">Pessoa 1</label><select id="comparePersonA"></select></div><div><label for="comparePeriodA">Período 1</label><select id="comparePeriodA"></select></div><div><label for="comparePersonB">Pessoa 2</label><select id="comparePersonB"></select></div><div><label for="comparePeriodB">Período 2</label><select id="comparePeriodB"></select></div></div></div>
+        <div class="grid-3" id="compareKpis"></div>
+      </article>
+      <div class="grid-2" style="margin-top:18px"><article class="panel"><h3>BF% por pessoa</h3><div class="chart-wrap"><canvas id="compareBfChart"></canvas></div></article><article class="panel"><h3>Peso registrado</h3><div class="chart-wrap"><canvas id="compareWeightChart"></canvas></div></article></div>
+      <div class="grid-2" style="margin-top:18px"><article class="panel"><h3>Soma das dobras</h3><div class="chart-wrap"><canvas id="compareFoldsChart"></canvas></div></article><article class="panel"><h3>Medidas corporais</h3><div class="chart-wrap"><canvas id="compareMeasuresChart"></canvas></div></article></div>
+    </section>
+    <section id="dados" class="section">
+      <article class="panel">
+        <h2>Ferramentas e segurança dos dados</h2>
+        <p class="muted">Faça backup antes de alterar os JSONs no GitHub. A importação fica salva apenas neste navegador até você publicar os arquivos novamente.</p>
+        <div class="grid-2">
+          <div class="panel tool-card"><h3>Backup e restauração</h3><div class="tool-actions"><button type="button" class="primary-btn" id="exportMeasurements"><i class="fa-solid fa-download"></i> Exportar medições</button><button type="button" class="primary-btn" id="exportTraining"><i class="fa-solid fa-download"></i> Exportar treinos</button></div><div class="tool-actions"><label class="file-btn ghost-btn" for="importMeasurements"><i class="fa-solid fa-upload"></i> Importar medições</label><input id="importMeasurements" type="file" accept=".json,application/json" hidden><label class="file-btn ghost-btn" for="importTraining"><i class="fa-solid fa-upload"></i> Importar treinos</label><input id="importTraining" type="file" accept=".json,application/json" hidden></div><button type="button" class="ghost-btn" id="clearLocalData"><i class="fa-solid fa-trash"></i> Limpar dados importados</button><p class="note" id="dataToolStatus" role="status">Nenhuma importação local ativa.</p></div>
+          <div class="panel tool-card"><h3>Preferências</h3><p class="muted">O tema é salvo neste dispositivo e não altera os arquivos do GitHub.</p><button type="button" class="ghost-btn" id="themeToggle"><i class="fa-solid fa-sun"></i> Alternar tema</button><p class="note">No celular, use “Adicionar à tela inicial” para instalar a página.</p></div>
+        </div>
+        <div class="panel validation-box" style="margin-top:18px"><h3>Diagnóstico dos dados</h3><div id="dataValidationStatus" class="muted">Aguardando carregamento.</div></div>
+      </article>
+    </section>
+    <section id="referencias" class="section">
+      <article class="panel"><h2>Base de referencia corporal</h2><p class="muted">Faixas gerais de percentual de gordura para comparacao visual. Nao substituem avaliacao profissional, especialmente em menores de idade, idosos ou atletas.</p><div class="grid-2 reference-layout"><div><h3>Homens</h3><div class="reference-profiles" id="referenceMenProfiles"></div><div class="table-wrap"><table><thead><tr><th>Classificação</th><th>BF%</th></tr></thead><tbody id="referenceMenRows"></tbody></table></div><div class="chart-wrap"><canvas id="referenceMenChart"></canvas></div></div><div><h3>Mulheres</h3><div class="reference-profiles" id="referenceWomenProfiles"></div><div class="table-wrap"><table><thead><tr><th>Classificação</th><th>BF%</th></tr></thead><tbody id="referenceWomenRows"></tbody></table></div><div class="chart-wrap"><canvas id="referenceWomenChart"></canvas></div></div></div></article>
+      <article class="panel" style="margin-top:18px"><h3>Como interpretar</h3><p class="muted">As faixas ajudam a contextualizar a tendencia do BF% calculado pelo protocolo de dobras. O resultado exibido no sistema e uma estimativa e deve ser comparado sempre com o proprio historico, condicoes de medicao e orientacao adequada.</p></article>
+    </section>
+    <section id="medidas" class="section">
+      <article class="panel">
+        <div class="detail-header">
+          <div>
+            <h2>Medidas corporais — último período</h2>
+            <div class="muted">Manequins técnicos sem rosto, usando as medidas tiradas sem contração muscular.</div>
+          </div>
+          <div style="min-width:180px">
+            <label for="measurePeriodFilter">Período</label>
+            <select id="measurePeriodFilter"></select>
+          </div>
+        </div>
+
+        <div class="measure-grid" id="measureCards"></div>
+
+      </article>
+
+      <article class="panel" style="margin-top:18px">
+        <h2>Comparativo das medidas corporais</h2>
+        <div class="chart-wrap tall"><canvas id="measureCompareChart"></canvas></div>
+      </article>
+    </section>
+
+    <section id="periodos" class="section">
+      <article class="panel">
+        <div class="detail-header">
+          <div>
+            <h2>Dados por período</h2>
+            <div class="muted">Escolha uma data para ver todas as pessoas daquele período.</div>
+          </div>
+          <div style="min-width:180px">
+            <label for="periodFilter">Período</label>
+            <select id="periodFilter"></select>
+          </div>
+        </div>
+
+        <div class="grid-3" id="periodKpis" style="margin-bottom:14px"></div>
+
+        <div class="grid-2" style="margin-bottom:18px">
+          <div class="chart-wrap"><canvas id="periodBfChart"></canvas></div>
+          <div class="chart-wrap"><canvas id="periodFoldChart"></canvas></div>
+        </div>
+
+        <div class="table-wrap">
+          <table>
+            <thead>
+              <tr>
+                <th>Pessoa</th>
+                <th>Idade</th>
+                <th>Peso</th>
+                <th>Dobras</th>
+                <th>Soma</th>
+                <th>BF%</th>
+                <th>Medidas</th>
+                <th>Status</th>
+              </tr>
+            </thead>
+            <tbody id="periodRows"></tbody>
+          </table>
+        </div>
+      </article>
+    </section>
+    <section id="metodo" class="section">
+      <article class="panel">
+        <h2>Método usado</h2>
+        <p class="muted">A página usa Jackson-Pollock 3 dobras quando os pontos medidos batem com o protocolo. Depois converte densidade corporal para BF% pela equação de Siri.</p>
+
+        <div class="grid-2">
+          <div>
+            <h3>Homens — 3 dobras</h3>
+            <div class="formula">S = peito + abdômen + coxa<br>BD = 1.10938 - 0.0008267*S + 0.0000016*S² - 0.0002574*idade<br>BF% = 495 / BD - 450</div>
+          </div>
+          <div>
+            <h3>Mulheres — 3 dobras</h3>
+            <div class="formula">S = tríceps + supra-ilíaca/flanco + coxa<br>BD = 1.0994921 - 0.0009929*S + 0.0000023*S² - 0.0001392*idade<br>BF% = 495 / BD - 450</div>
+          </div>
+        </div>
+
+        <p class="note" style="margin-top:16px">Fórmula de adipômetro é estimativa. Para menores de 18 anos ou idosos fora da faixa original, o resultado é exibido como referência visual, não avaliação clínica.</p>
+      </article>
+    </section>
+  </main>
+
+  <script type="application/json" id="measurements-data">
+{
+  "schemaVersion": 2,
+  "people": [
+    {
+      "id": "dona-ines",
+      "nome": "Dona Inês",
+      "sexo": "F"
+    },
+    {
+      "id": "tia-mah",
+      "nome": "Tia Mah",
+      "sexo": "F"
+    },
+    {
+      "id": "titio-douglas",
+      "nome": "Titio Douglas",
+      "sexo": "M"
+    },
+    {
+      "id": "tio-guto",
+      "nome": "Tio Guto",
+      "sexo": "M"
+    },
+    {
+      "id": "andre",
+      "nome": "André",
+      "sexo": "M"
+    },
+    {
+      "id": "felipe",
+      "nome": "Felipe",
+      "sexo": "M"
+    }
+  ],
+  "measurements": [
+    {
+      "data": "2026-04-12",
+      "pessoaId": "dona-ines",
+      "idade": 75,
+      "tricipes": 18,
+      "flanco": 22,
+      "coxa": 38,
+      "peso": 0
+    },
+    {
+      "data": "2026-04-12",
+      "pessoaId": "tia-mah",
+      "idade": 43,
+      "tricipes": 22,
+      "flanco": 20,
+      "coxa": 22,
+      "peso": 0
+    },
+    {
+      "data": "2026-04-12",
+      "pessoaId": "titio-douglas",
+      "idade": 43,
+      "peito": 13,
+      "abdomem": 20,
+      "coxa": 21,
+      "peso": 0
+    },
+    {
+      "data": "2026-04-12",
+      "pessoaId": "tio-guto",
+      "idade": 42,
+      "peito": 13,
+      "abdomem": 23,
+      "coxa": 13,
+      "peso": 0
+    },
+    {
+      "data": "2026-04-12",
+      "pessoaId": "andre",
+      "idade": 28,
+      "peito": 8,
+      "abdomem": 12,
+      "coxa": 19,
+      "peso": 0
+    },
+    {
+      "data": "2026-04-12",
+      "pessoaId": "felipe",
+      "idade": 14,
+      "peito": 2,
+      "abdomem": 3,
+      "coxa": 19,
+      "peso": 0
+    },
+    {
+      "data": "2026-05-17",
+      "pessoaId": "dona-ines",
+      "idade": 75,
+      "tricipes": 22,
+      "flanco": 22,
+      "coxa": 38,
+      "peso": 82.7
+    },
+    {
+      "data": "2026-05-17",
+      "pessoaId": "tia-mah",
+      "idade": 43,
+      "tricipes": 21,
+      "flanco": 18,
+      "coxa": 22,
+      "peso": 66.4
+    },
+    {
+      "data": "2026-05-17",
+      "pessoaId": "titio-douglas",
+      "idade": 43,
+      "peito": 12,
+      "abdomem": 15,
+      "coxa": 22,
+      "peso": 66.4
+    },
+    {
+      "data": "2026-05-17",
+      "pessoaId": "tio-guto",
+      "idade": 42,
+      "peito": 10,
+      "abdomem": 14,
+      "coxa": 21,
+      "peso": 75
+    },
+    {
+      "data": "2026-05-17",
+      "pessoaId": "andre",
+      "idade": 28,
+      "peito": 9,
+      "abdomem": 9,
+      "coxa": 10,
+      "peso": 86
+    },
+    {
+      "data": "2026-05-17",
+      "pessoaId": "felipe",
+      "idade": 13,
+      "peito": 9,
+      "abdomem": 10,
+      "coxa": 20,
+      "peso": 59
+    },
+    {
+      "data": "2026-06-21",
+      "pessoaId": "dona-ines",
+      "idade": 75,
+      "tricipes": 21,
+      "flanco": 19,
+      "coxa": 24,
+      "peso": 84.2,
+      "medidas": {
+        "cintura": 109.5,
+        "quadril": 123,
+        "coxa": 56,
+        "braco": 32
+      }
+    },
+    {
+      "data": "2026-06-21",
+      "pessoaId": "tia-mah",
+      "idade": 43,
+      "tricipes": 18,
+      "flanco": 20,
+      "coxa": 23,
+      "peso": 66.05,
+      "medidas": {
+        "cintura": 76,
+        "quadril": 101,
+        "coxa": 56,
+        "braco": 28.5
+      }
+    },
+    {
+      "data": "2026-06-21",
+      "pessoaId": "titio-douglas",
+      "idade": 43,
+      "peito": 10,
+      "abdomem": 12,
+      "coxa": 20,
+      "peso": 67.8,
+      "medidas": {
+        "peito": 95.5,
+        "abdomem": 82.5,
+        "coxa": 54.5,
+        "braco": 27.5
+      }
+    },
+    {
+      "data": "2026-06-21",
+      "pessoaId": "tio-guto",
+      "idade": 42,
+      "peito": 12,
+      "abdomem": 18,
+      "coxa": 18,
+      "peso": 74.7,
+      "medidas": {
+        "peito": 101,
+        "abdomem": 86,
+        "coxa": 54,
+        "braco": 30.5
+      }
+    },
+    {
+      "data": "2026-06-21",
+      "pessoaId": "andre",
+      "idade": 28,
+      "peito": 9,
+      "abdomem": 10,
+      "coxa": 12,
+      "peso": 86.65,
+      "medidas": {
+        "peito": 104,
+        "abdomem": 83,
+        "coxa": 62,
+        "braco": 34.5
+      }
+    },
+    {
+      "data": "2026-06-21",
+      "pessoaId": "felipe",
+      "idade": 13,
+      "peito": 4,
+      "abdomem": 10,
+      "coxa": 16,
+      "peso": 60.05,
+      "medidas": {
+        "peito": 69,
+        "abdomem": 76,
+        "coxa": 50,
+        "braco": 22.5
+      }
+    },
+    {
+      "data": "2026-08-09",
+      "pessoaId": "dona-ines",
+      "idade": 75,
+      "tricipes": 19,
+      "flanco": 19,
+      "coxa": 22,
+      "peso": 83.2,
+      "medidas": {
+        "cintura": 108,
+        "quadril": 122,
+        "coxa": 56,
+        "braco": 31
+      }
+    },
+    {
+      "data": "2026-08-09",
+      "pessoaId": "tia-mah",
+      "idade": 43,
+      "tricipes": 20,
+      "flanco": 12,
+      "coxa": 21,
+      "peso": 66.1,
+      "medidas": {
+        "cintura": 87,
+        "quadril": 101,
+        "coxa": 51,
+        "braco": 27
+      },
+      "observacao": "Período menstrual: possível inchaço e retenção de líquidos na medida da cintura."
+    },
+    {
+      "data": "2026-08-09",
+      "pessoaId": "titio-douglas",
+      "idade": 43,
+      "peito": 12,
+      "abdomem": 19,
+      "coxa": 16,
+      "peso": 68.7,
+      "medidas": {
+        "peito": 93,
+        "abdomem": 79,
+        "coxa": 55.5,
+        "braco": 26.5
+      }
+    },
+    {
+      "data": "2026-08-09",
+      "pessoaId": "tio-guto",
+      "idade": 42,
+      "peito": 11,
+      "abdomem": 17,
+      "coxa": 20,
+      "peso": 75.65,
+      "medidas": {
+        "peito": 100,
+        "abdomem": 85,
+        "coxa": 52.5,
+        "braco": 30.5
+      }
+    },
+    {
+      "data": "2026-08-09",
+      "pessoaId": "andre",
+      "idade": 28,
+      "peito": 8,
+      "abdomem": 11,
+      "coxa": 13,
+      "peso": 85.65,
+      "medidas": {
+        "peito": 104,
+        "abdomem": 82,
+        "coxa": 63,
+        "braco": 33
+      }
+    },
+    {
+      "data": "2026-08-09",
+      "pessoaId": "felipe",
+      "idade": 13,
+      "peito": 10,
+      "abdomem": 11,
+      "coxa": 18,
+      "peso": 60.7,
+      "medidas": {
+        "peito": 79,
+        "abdomem": 76,
+        "coxa": 53,
+        "braco": 22
+      }
+    }
+  ]
+}
+</script>
+  <script type="application/json" id="training-progress-data">
+{
+  "schemaVersion": 1,
+  "people": [
+    {
+      "id": "titio-douglas",
+      "nome": "Titio Douglas"
+    }
+  ],
+  "sessions": [
+    {
+      "id": "titio-douglas-2026-09-02-upper",
+      "pessoaId": "titio-douglas",
+      "data": "2026-09-02",
+      "titulo": "Upper",
+      "observacao": "Treino realizado em 02/09/2026 (quarta-feira). A sessão substituiu o treino de segunda-feira.",
+      "exercicios": [
+        {
+          "numero": 1,
+          "nome": "Fly",
+          "series": [
+            {
+              "peso": 33,
+              "repeticoes": 12
+            },
+            {
+              "peso": 40,
+              "repeticoes": 9
+            },
+            {
+              "peso": 40,
+              "repeticoes": 6,
+              "observacao": "meia na falha"
+            }
+          ]
+        },
+        {
+          "numero": 2,
+          "nome": "Supino reto",
+          "series": [
+            {
+              "peso": 50,
+              "repeticoes": 12
+            },
+            {
+              "peso": 50,
+              "repeticoes": 12
+            },
+            {
+              "peso": 50,
+              "repeticoes": 12
+            }
+          ]
+        },
+        {
+          "numero": 3,
+          "nome": "Remada alta supinada",
+          "series": [
+            {
+              "peso": 40,
+              "repeticoes": 12
+            },
+            {
+              "peso": 47,
+              "repeticoes": 12
+            },
+            {
+              "peso": 47,
+              "repeticoes": 12
+            }
+          ]
+        },
+        {
+          "numero": 4,
+          "nome": "Remada baixa triângulo",
+          "series": [
+            {
+              "peso": 26,
+              "repeticoes": 12
+            },
+            {
+              "peso": 26,
+              "repeticoes": 12
+            },
+            {
+              "peso": 26,
+              "repeticoes": 12,
+              "observacao": "pegada dupla"
+            }
+          ]
+        },
+        {
+          "numero": 5,
+          "nome": "Desenvolvimento máquina",
+          "series": [],
+          "observacao": "N/A"
+        },
+        {
+          "numero": 6,
+          "nome": "Elevação lateral",
+          "series": [
+            {
+              "peso": 15,
+              "repeticoes": 12
+            },
+            {
+              "peso": 15,
+              "repeticoes": 12
+            },
+            {
+              "peso": 15,
+              "repeticoes": 12
+            }
+          ]
+        },
+        {
+          "numero": 7,
+          "nome": "Tríceps paralela",
+          "series": [
+            {
+              "peso": 50,
+              "repeticoes": 12
+            },
+            {
+              "peso": 55,
+              "repeticoes": 12
+            },
+            {
+              "peso": 60,
+              "repeticoes": 12
+            }
+          ]
+        },
+        {
+          "numero": 8,
+          "nome": "Rosca Scott",
+          "series": [
+            {
+              "peso": 26.25,
+              "repeticoes": 12
+            },
+            {
+              "peso": 26.25,
+              "repeticoes": 12
+            },
+            {
+              "peso": 26.25,
+              "repeticoes": 10
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "titio-douglas-2026-09-03-lower",
+      "pessoaId": "titio-douglas",
+      "data": "2026-09-03",
+      "titulo": "Lower",
+      "observacao": "Treino realizado em 03/09/2026.",
+      "exercicios": [
+        {
+          "numero": 1,
+          "nome": "Leg press",
+          "series": [
+            {
+              "peso": 60,
+              "repeticoes": 12
+            },
+            {
+              "peso": 60,
+              "repeticoes": 12
+            },
+            {
+              "peso": 60,
+              "repeticoes": 12
+            }
+          ]
+        },
+        {
+          "numero": 2,
+          "nome": "Agachamento sumô",
+          "series": [
+            {
+              "peso": 40,
+              "repeticoes": 12
+            },
+            {
+              "peso": 40,
+              "repeticoes": 12
+            },
+            {
+              "peso": 40,
+              "repeticoes": 12
+            }
+          ]
+        },
+        {
+          "numero": 3,
+          "nome": "Cadeira flexora",
+          "series": [
+            {
+              "peso": 50,
+              "repeticoes": 12
+            },
+            {
+              "peso": 50,
+              "repeticoes": 12
+            },
+            {
+              "peso": 50,
+              "repeticoes": 12
+            }
+          ]
+        },
+        {
+          "numero": 4,
+          "nome": "Cadeira extensora",
+          "series": [
+            {
+              "peso": 50,
+              "repeticoes": 12
+            },
+            {
+              "peso": 50,
+              "repeticoes": 12
+            },
+            {
+              "peso": 50,
+              "repeticoes": 12
+            }
+          ]
+        },
+        {
+          "numero": 5,
+          "nome": "Cadeira abdutora",
+          "series": [
+            {
+              "peso": 32,
+              "repeticoes": 12
+            },
+            {
+              "peso": 38,
+              "repeticoes": 12
+            },
+            {
+              "peso": 38,
+              "repeticoes": 12
+            }
+          ]
+        },
+        {
+          "numero": 6,
+          "nome": "Cadeira adutora",
+          "series": [
+            {
+              "peso": 44,
+              "repeticoes": 12
+            },
+            {
+              "peso": 50,
+              "repeticoes": 12
+            },
+            {
+              "peso": 60,
+              "repeticoes": 13
+            }
+          ]
+        },
+        {
+          "numero": 7,
+          "nome": "Panturrilha",
+          "series": [],
+          "observacao": "N/A"
+        }
+      ]
+    },
+    {
+      "id": "titio-douglas-2026-09-05-full-body",
+      "pessoaId": "titio-douglas",
+      "data": "2026-09-05",
+      "titulo": "Full body",
+      "observacao": "Treino realizado em 05/09/2026.",
+      "exercicios": [
+        {
+          "numero": 1,
+          "nome": "Supino reto",
+          "series": [
+            {
+              "peso": 55,
+              "repeticoes": 12
+            },
+            {
+              "peso": 55,
+              "repeticoes": 12
+            },
+            {
+              "peso": 55,
+              "repeticoes": 12
+            }
+          ]
+        },
+        {
+          "numero": 2,
+          "nome": "Fly",
+          "series": [
+            {
+              "peso": 40,
+              "repeticoes": 11
+            },
+            {
+              "peso": 40,
+              "repeticoes": 10
+            },
+            {
+              "peso": 40,
+              "repeticoes": 8
+            }
+          ]
+        },
+        {
+          "numero": 3,
+          "nome": "Puxada alta neutra",
+          "series": [
+            {
+              "peso": 25,
+              "repeticoes": 12
+            },
+            {
+              "peso": 30,
+              "repeticoes": 12
+            },
+            {
+              "peso": 35,
+              "repeticoes": 12
+            }
+          ],
+          "observacao": "Barra neutra"
+        },
+        {
+          "numero": 4,
+          "nome": "Remada baixa triângulo",
+          "series": [
+            {
+              "peso": 47,
+              "repeticoes": 12
+            },
+            {
+              "peso": 68,
+              "repeticoes": 12
+            },
+            {
+              "peso": 68,
+              "repeticoes": 12
+            }
+          ]
+        },
+        {
+          "numero": 5,
+          "nome": "Elevação lateral",
+          "series": [
+            {
+              "peso": 20,
+              "repeticoes": 12
+            },
+            {
+              "peso": 20,
+              "repeticoes": 12
+            },
+            {
+              "peso": 20,
+              "repeticoes": 12
+            }
+          ]
+        },
+        {
+          "numero": 6,
+          "nome": "Tríceps paralela",
+          "series": [
+            {
+              "peso": 60,
+              "repeticoes": 12
+            },
+            {
+              "peso": 60,
+              "repeticoes": 12
+            },
+            {
+              "peso": 60,
+              "repeticoes": 13
+            }
+          ]
+        },
+        {
+          "numero": 7,
+          "nome": "Rosca Scott",
+          "series": [
+            {
+              "peso": 26.25,
+              "repeticoes": 12
+            },
+            {
+              "peso": 26.25,
+              "repeticoes": 12
+            },
+            {
+              "peso": 26.15,
+              "repeticoes": 12
+            }
+          ]
+        },
+        {
+          "numero": 8,
+          "nome": "Cadeira flexora",
+          "series": [
+            {
+              "peso": 55,
+              "repeticoes": 12
+            },
+            {
+              "peso": 55,
+              "repeticoes": 12
+            },
+            {
+              "peso": 55,
+              "repeticoes": 12
+            }
+          ]
+        },
+        {
+          "numero": 9,
+          "nome": "Cadeira extensora",
+          "series": [],
+          "observacao": "N/A"
+        }
+      ]
+    }
+  ]
+}
+</script>
+  <script src="script.js?v=20260905-10"></script>
+  <script>if ("serviceWorker" in navigator && location.protocol !== "file:") navigator.serviceWorker.register("service-worker.js").catch(() => {});</script>
+</body>
+</html>
