@@ -1543,8 +1543,20 @@ const MEASURE_REGISTER_FIELDS = [
     }
 
     function trainingPeopleOptions(rows) {
-      const ids = new Map(rows.filter(row => row.personId).map(row => [row.name, row.personId]));
-      return getPeople(rows).filter(name => TRAINING_PLANS[name]).map(name => ({ name, id: ids.get(name) || name.toLowerCase().replace(/[^a-z0-9]+/gi, '-') }));
+      const idsFromMeasurements = new Map(rows.filter(row => row.personId).map(row => [row.name, row.personId]));
+      const trainingPeople = Object.values(TRAINING_PEOPLE || {});
+      const idsFromTraining = new Map(trainingPeople.map(person => [person.nome, person.id]));
+      const names = [...new Set([
+        ...getPeople(rows),
+        ...trainingPeople.map(person => person.nome)
+      ])].sort((a, b) => a.localeCompare(b, 'pt-BR'));
+
+      return names
+        .filter(name => TRAINING_PLANS[name])
+        .map(name => ({
+          name,
+          id: idsFromTraining.get(name) || idsFromMeasurements.get(name) || trainingSlug(name)
+        }));
     }
 
     function trainingSlug(value) {
@@ -1674,14 +1686,14 @@ const MEASURE_REGISTER_FIELDS = [
     }
 
     function renderTrainingTab(rows) {
-      const people = getPeople(rows);
+      const options = trainingPeopleOptions(rows);
       const cards = document.getElementById('trainingPersonCards');
       const content = document.getElementById('trainingContent');
       if (!cards || !content) return;
-      const available = people.filter(name => TRAINING_PLANS[name]);
-      if (!selectedTrainingPersonName || !TRAINING_PLANS[selectedTrainingPersonName]) selectedTrainingPersonName = available[0] || null;
+      const available = options.map(item => item.name);
+      if (!selectedTrainingPersonName || !available.includes(selectedTrainingPersonName)) selectedTrainingPersonName = available[0] || null;
       cards.innerHTML = available.map(name => `<button type="button" class="person-card ${name === selectedTrainingPersonName ? 'active' : ''}" data-training-person="${name}"><strong>${name}</strong><small>${TRAINING_PLANS[name].titulo}</small></button>`).join('');
-      const registerPerson = trainingPeopleOptions(rows).find(item => item.name === selectedTrainingPersonName);
+      const registerPerson = options.find(item => item.name === selectedTrainingPersonName);
       content.innerHTML = selectedTrainingPersonName ? `<div class="workout-tabs training-view-tabs" role="tablist" aria-label="Seções do treinamento"><button type="button" class="workout-tab active" data-training-view="plan">Plano de treino</button><button type="button" class="workout-tab" data-training-view="evolution">Evolução</button><button type="button" class="workout-tab" data-training-view="register">Registro</button></div><div data-training-pane="plan">${renderWorkoutSection(selectedTrainingPersonName)}</div><div data-training-pane="evolution" hidden>${renderTrainingProgress(selectedTrainingPersonName)}</div><div data-training-pane="register" hidden>${renderTrainingRegister(rows, registerPerson?.id)}</div>` : '<p class="note">Nenhum treinamento cadastrado.</p>';
       cards.querySelectorAll('[data-training-person]').forEach(card => card.addEventListener('click', () => { selectedTrainingPersonName = card.dataset.trainingPerson; renderTrainingTab(rows); }));
       content.querySelectorAll('[data-training-view]').forEach(tab => tab.addEventListener('click', () => { content.querySelectorAll('[data-training-view]').forEach(item => item.classList.toggle('active', item === tab)); content.querySelectorAll('[data-training-pane]').forEach(pane => pane.hidden = pane.dataset.trainingPane !== tab.dataset.trainingView); if (tab.dataset.trainingView === 'plan') bindWorkoutTabs(); if (tab.dataset.trainingView === 'register') { const selected = trainingPeopleOptions(rows).find(item => item.name === selectedTrainingPersonName); bindTrainingRegister(rows, content, selected?.id); } }));
