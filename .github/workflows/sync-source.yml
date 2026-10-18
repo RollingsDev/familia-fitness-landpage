@@ -1,4 +1,4 @@
-name: Sincronizar repositório de origem
+name: Sincronizar aplicação de origem
 
 on:
   workflow_dispatch:
@@ -28,23 +28,25 @@ jobs:
         run: |
           git clone --depth 1 https://github.com/AndreGregoletto/AndreGregoletto-.git /tmp/source
 
-      - name: Copiar conteúdo
+      - name: Copiar aplicação preservando dados próprios
         run: |
           rsync -a --delete \
             --exclude '.git/' \
             --exclude '.github/workflows/sync-source.yml' \
             --exclude '.github/workflows/static.yml' \
+            --exclude 'data.json' \
+            --exclude 'training-progress.json' \
             /tmp/source/ ./
 
-      - name: Publicar cópia
+      - name: Publicar atualização
         run: |
           if [ -z "$(git status --porcelain)" ]; then
-            echo "Destino já está sincronizado."
+            echo "Aplicação já está sincronizada."
             exit 0
           fi
 
           git config user.name 'github-actions[bot]'
           git config user.email '41898282+github-actions[bot]@users.noreply.github.com'
           git add -A
-          git commit -m 'chore: sync source repository'
+          git commit -m 'chore: sync application from source'
           git push
