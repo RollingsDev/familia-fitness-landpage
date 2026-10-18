@@ -4,12 +4,17 @@
     {
       "id": "lucas-marques",
       "nome": "Lucas Marques",
-      "sexo": ""
+      "sexo": "M"
+    },
+    {
+      "id": "be",
+      "nome": "Bê",
+      "sexo": "F"
     },
     {
       "id": "thais-oliveira",
       "nome": "Thais Oliveira",
-      "sexo": ""
+      "sexo": "F"
     },
     {
       "id": "andre",
@@ -19,7 +24,7 @@
     {
       "id": "Isaias-teofilo",
       "nome": "Isaias Teofilo",
-      "sexo": ""
+      "sexo": "M"
     }
   ],
   "measurements": [
@@ -37,6 +42,24 @@
         "coxa": 66,
         "braco": 36.5
       }
+    },
+    {
+      "data": "2026-10-19",
+      "pessoaId": "be",
+      "idade": 24,
+      "peso": 59.5,
+      "peito": 0,
+      "abdomem": 0,
+      "coxa": 0,
+      "medidas": {
+        "peito": 0,
+        "abdomem": 0,
+        "cintura": 0,
+        "quadril": 0,
+        "coxa": 0,
+        "braco": 0
+      },
+      "observacao": ""
     },
     {
       "data": "2026-10-19",
