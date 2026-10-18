@@ -15,6 +15,11 @@
       "id": "andre",
       "nome": "André",
       "sexo": "M"
+    },
+    {
+      "id": "Isaias-teofilo",
+      "nome": "Isaias Teofilo",
+      "sexo": ""
     }
   ],
   "measurements": [
@@ -53,6 +58,24 @@
         "braco": 0
       },
       "observacao": ""
+    },
+    {
+      "data": "2026-10-19",
+      "pessoaId": "Isaias-teofilo",
+      "idade": 22,
+      "peso": 67.3,
+      "peito": 0,
+      "abdomem": 0,
+      "coxa": 0,
+      "medidas": {
+        "peito": 0,
+        "abdomem": 0,
+        "cintura": 0,
+        "quadril": 0,
+        "coxa": 0,
+        "braco": 0
+      },
+      "observacao": "Judeu"
     }
   ]
 }
