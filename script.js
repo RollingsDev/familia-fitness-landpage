@@ -956,15 +956,26 @@ const MEASURE_REGISTER_FIELDS = [
     }
 
     function renderPersonCards(rows) {
-      const latestRows = rowsForLatestByPerson(rows);
-      if (!selectedPersonName) selectedPersonName = latestRows[0]?.name || getPeople(rows)[0];
+      const people = registeredPeopleOptions(rows);
+      if (!selectedPersonName || !people.some(person => person.name === selectedPersonName)) {
+        selectedPersonName = people[0]?.name || null;
+      }
 
-      document.getElementById('personCards').innerHTML = latestRows.map(item => `
-        <div class="person-card ${item.name === selectedPersonName ? 'active' : ''}" data-person-name="${item.name}">
-          <strong>${item.name}</strong>
-          <small>${formatPercent(item.bf)} • soma ${formatMm(item.sum)}<br>${formatPeriod(item.period)} • var. ${Number.isFinite(item.deltaBf) ? deltaText(item.deltaBf) : '—'}</small>
-        </div>
-      `).join('');
+      document.getElementById('personCards').innerHTML = people.map(person => {
+        const latest = rows
+          .filter(row => row.name === person.name && row.measured)
+          .sort((a, b) => b.period.localeCompare(a.period))[0];
+
+        return `
+          <div class="person-card ${person.name === selectedPersonName ? 'active' : ''}" data-person-name="${person.name}">
+            <strong>${person.name}</strong>
+            <small>${latest
+              ? `${formatPercent(latest.bf)} • soma ${formatMm(latest.sum)}<br>${formatPeriod(latest.period)} • var. ${Number.isFinite(latest.deltaBf) ? deltaText(latest.deltaBf) : '—'}`
+              : 'Sem medição registrada<br>Pronto para começar'}
+            </small>
+          </div>
+        `;
+      }).join('');
 
       document.querySelectorAll('[data-person-name]').forEach(card => {
         card.addEventListener('click', () => {
@@ -1119,9 +1130,31 @@ const MEASURE_REGISTER_FIELDS = [
     function renderPersonDetail(rows, name) {
       const personRows = rows.filter(row => row.name === name).sort((a, b) => a.period.localeCompare(b.period));
       const latest = [...personRows].reverse().find(row => row.measured) || personRows[personRows.length - 1];
+      const registered = registeredPeopleOptions(rows).find(person => person.name === name);
 
       if (!latest) {
-        document.getElementById('personDetail').innerHTML = '<p class="note">Nenhuma pessoa encontrada.</p>';
+        if (!registered) {
+          document.getElementById('personDetail').innerHTML = '<p class="note">Nenhuma pessoa encontrada.</p>';
+          return;
+        }
+
+        document.getElementById('personDetail').innerHTML = `
+          <div class="detail-header">
+            <div>
+              <h2>${registered.name}</h2>
+              <div class="muted">Usuário cadastrado • ainda sem medição</div>
+            </div>
+            <div><span class="badge-status bad">Sem medição</span></div>
+          </div>
+
+          <div class="note" style="margin-bottom:18px">
+            Nenhuma medição corporal foi registrada para esta pessoa ainda.
+          </div>
+
+          ${renderWorkoutSection(registered.name)}
+        `;
+
+        bindWorkoutTabs();
         return;
       }
 
@@ -1542,21 +1575,28 @@ const MEASURE_REGISTER_FIELDS = [
       </section>`;
     }
 
-    function trainingPeopleOptions(rows) {
-      const idsFromMeasurements = new Map(rows.filter(row => row.personId).map(row => [row.name, row.personId]));
-      const trainingPeople = Object.values(TRAINING_PEOPLE || {});
-      const idsFromTraining = new Map(trainingPeople.map(person => [person.nome, person.id]));
-      const names = [...new Set([
-        ...getPeople(rows),
-        ...trainingPeople.map(person => person.nome)
-      ])].sort((a, b) => a.localeCompare(b, 'pt-BR'));
+    function registeredPeopleOptions(rows) {
+      const byName = new Map();
 
-      return names
-        .filter(name => TRAINING_PLANS[name])
-        .map(name => ({
-          name,
-          id: idsFromTraining.get(name) || idsFromMeasurements.get(name) || trainingSlug(name)
-        }));
+      (DEFAULT_MEASUREMENTS.people || []).forEach(person => {
+        const name = person.nome || person.id;
+        if (name) byName.set(name, { name, id: person.id || trainingSlug(name) });
+      });
+
+      Object.values(TRAINING_PEOPLE || {}).forEach(person => {
+        const name = person.nome || person.id;
+        if (name) byName.set(name, { name, id: person.id || byName.get(name)?.id || trainingSlug(name) });
+      });
+
+      rows.filter(row => row.name).forEach(row => {
+        if (!byName.has(row.name)) byName.set(row.name, { name: row.name, id: row.personId || trainingSlug(row.name) });
+      });
+
+      return [...byName.values()].sort((a, b) => a.name.localeCompare(b.name, 'pt-BR'));
+    }
+
+    function trainingPeopleOptions(rows) {
+      return registeredPeopleOptions(rows).filter(person => TRAINING_PLANS[person.name]);
     }
 
     function trainingSlug(value) {
