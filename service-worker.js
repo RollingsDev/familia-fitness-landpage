@@ -1,8 +1,8 @@
-const CACHE_NAME = 'consulta-corporal-v3';
+const CACHE_NAME = 'consulta-corporal-v4';
 const APP_SHELL = [
   './',
   './index.html',
-  './script.js?v=20261018-3',
+  './script.js?v=20261019-1',
   './data.json',
   './training-progress.json',
   './manifest.json'
