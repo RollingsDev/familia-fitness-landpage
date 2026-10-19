@@ -2,7 +2,7 @@
     let DEFAULT_MEASUREMENTS = {};
 
     const TRAINING_PLANS = {
-      "Tia Mah": {
+      "be": {
             "titulo": "Treino feminino",
             "observacao": "Treino importado do PDF Treino-woman. Cada aba representa um dia/treino.",
             "dias": [
