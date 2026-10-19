@@ -571,6 +571,161 @@
             {"nome": "Supino reto", "series": "3 x 12"}, {"nome": "Fly", "series": "3 x 12"}, {"nome": "Puxada alta individual", "series": "3 x 12"}, {"nome": "Remada baixa triângulo", "series": "3 x 12"}, {"nome": "Elevação lateral", "series": "3 x 12-15"}, {"nome": "Tríceps paralela", "series": "3 x 10"}, {"nome": "Rosca Scott", "series": "3 x 12"}, {"nome": "Leg press", "series": "4 x 10"}, {"nome": "Cadeira flexora", "series": "4 x 8"}, {"nome": "Cadeira extensora", "series": "4 x 10"}, {"nome": "Panturrilha", "series": "3 x 15-20"}
           ]}
         ]
+      },
+      "Isaias Teofilo": {
+            "titulo": "Treino do Isaías — Superior/Inferior (4 dias)",
+            "observacao": "Divisão Superior A, Inferior A, Superior B e Inferior B. Séries e repetições ainda não foram informadas.",
+            "dias": [
+                  {
+                        "codigo": "1",
+                        "nome": "Superior A",
+                        "exercicios": [
+                              {
+                                    "nome": "Supino inclinado com halteres",
+                                    "series": "A definir",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Puxada alta",
+                                    "series": "A definir",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Supino reto na máquina",
+                                    "series": "A definir",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Remada",
+                                    "series": "A definir",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Elevação lateral",
+                                    "series": "A definir",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Tríceps na polia",
+                                    "series": "A definir",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Rosca direta",
+                                    "series": "A definir",
+                                    "repeticoes": "A definir"
+                              }
+                        ]
+                  },
+                  {
+                        "codigo": "2",
+                        "nome": "Inferior A",
+                        "exercicios": [
+                              {
+                                    "nome": "Agachamento ou hack",
+                                    "series": "A definir",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Leg press",
+                                    "series": "A definir",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Mesa flexora",
+                                    "series": "A definir",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Cadeira extensora",
+                                    "series": "A definir",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Panturrilha",
+                                    "series": "A definir",
+                                    "repeticoes": "A definir"
+                              }
+                        ]
+                  },
+                  {
+                        "codigo": "3",
+                        "nome": "Superior B",
+                        "exercicios": [
+                              {
+                                    "nome": "Puxada alta",
+                                    "series": "A definir",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Remada baixa",
+                                    "series": "A definir",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Supino inclinado na máquina",
+                                    "series": "A definir",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Crucifixo",
+                                    "series": "A definir",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Elevação lateral",
+                                    "series": "A definir",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Crucifixo inverso",
+                                    "series": "A definir",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Rosca inclinada",
+                                    "series": "A definir",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Tríceps na polia",
+                                    "series": "A definir",
+                                    "repeticoes": "A definir"
+                              }
+                        ]
+                  },
+                  {
+                        "codigo": "4",
+                        "nome": "Inferior B",
+                        "exercicios": [
+                              {
+                                    "nome": "Terra romeno com halteres",
+                                    "series": "A definir",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Agachamento búlgaro",
+                                    "series": "A definir",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Mesa flexora",
+                                    "series": "A definir",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Cadeira extensora",
+                                    "series": "A definir",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Panturrilha",
+                                    "series": "A definir",
+                                    "repeticoes": "A definir"
+                              }
+                        ]
+                  }
+            ]
       }
 };
 
