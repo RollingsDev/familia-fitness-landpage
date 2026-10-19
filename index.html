@@ -817,6 +817,87 @@
     @media (prefers-reduced-motion: reduce) { *, *::before, *::after { scroll-behavior: auto !important; transition-duration: .01ms !important; animation-duration: .01ms !important; } }
     @media (max-width: 480px) { .progress-timeline-item { grid-template-columns: 1fr; gap: 5px; } .workout-tabs { overflow-x: auto; flex-wrap: nowrap; padding-bottom: 4px; } .workout-tab { flex: 0 0 auto; min-height: 44px; } }
     @media print { .tabs, .skip-link, .exercise-video, .chart-wrap { height: 250px !important; } .chart-wrap canvas { display: block !important; } .section { display: block !important; } .panel, .measure-card, .workout-section, .exercise-card { box-shadow: none; background: #fff; color: #111; border-color: #bbb; } }
+  
+    /* Correções do formulário de treinos em telas pequenas */
+    .training-register,
+    .register-exercises,
+    .register-exercise,
+    .register-toolbar,
+    .register-exercise-head,
+    .register-sets,
+    .register-sets label { min-width: 0; max-width: 100%; }
+
+    .register-toolbar > div,
+    .register-exercise-head > *,
+    .register-sets label > * { min-width: 0; }
+
+    .register-toolbar select,
+    .register-toolbar input,
+    .register-exercise input,
+    .register-exercise select,
+    .register-exercise button {
+      max-width: 100%;
+    }
+
+    @media (max-width: 600px) {
+      .training-register { padding: 12px; overflow-wrap: anywhere; }
+      .register-toolbar { grid-template-columns: minmax(0, 1fr); gap: 12px; }
+      .register-toolbar > div { width: 100%; min-width: 0; }
+      .register-toolbar select,
+      .register-toolbar input { display: block; width: 100%; min-width: 0; font-size: 16px; }
+      .register-unit-note { grid-column: 1; }
+
+      .register-exercise { padding: 12px; }
+      .register-exercise-head {
+        display: grid;
+        grid-template-columns: 32px minmax(0, 1fr);
+        gap: 10px;
+        align-items: center;
+      }
+      .register-exercise-head .register-number { grid-column: 1; grid-row: 1; }
+      .register-exercise-head .register-name {
+        grid-column: 2;
+        grid-row: 1;
+        width: 100%;
+        min-width: 0;
+        font-size: 16px;
+      }
+      .register-exercise-head .register-exercise-unit {
+        grid-column: 1 / -1;
+        grid-row: 2;
+        width: 100%;
+      }
+      .register-exercise-head .register-exercise-unit select { width: 100%; min-width: 0; font-size: 16px; }
+      .register-exercise-head .register-remove {
+        grid-column: 1 / -1;
+        grid-row: 3;
+        justify-self: end;
+        min-height: 38px;
+      }
+
+      .register-sets { display: grid; grid-template-columns: minmax(0, 1fr); gap: 12px; }
+      .register-sets label {
+        display: grid;
+        grid-template-columns: 28px minmax(0, 1fr) minmax(0, 1fr);
+        gap: 8px;
+        align-items: center;
+        width: 100%;
+        min-width: 0;
+      }
+      .register-sets label .register-weight,
+      .register-sets label .register-reps { width: 100%; min-width: 0; font-size: 16px; }
+      .register-sets label .register-emoji {
+        grid-column: 2 / 4;
+        width: 100%;
+        min-width: 0;
+        font-size: 16px;
+      }
+      .register-observation,
+      .register-session-observation,
+      .register-output { display: block; width: 100%; min-width: 0; }
+      .register-add-set { min-height: 40px; }
+    }
+
   </style>
 </head>
 
