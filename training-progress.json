@@ -22,5 +22,423 @@
       "nome": "Bê"
     }
   ],
-  "sessions": []
+  "sessions": [
+    {
+      "id": "thais-oliveira-2026-10-19-d",
+      "pessoaId": "thais-oliveira",
+      "data": "2026-10-19",
+      "titulo": "D",
+      "unidade": "kg",
+      "observacao": "",
+      "exercicios": [
+        {
+          "numero": 1,
+          "nome": "Remada aberta polia alta",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 30,
+              "repeticoes": 12,
+              "emoji": ""
+            },
+            {
+              "peso": 30,
+              "repeticoes": 12,
+              "emoji": ""
+            },
+            {
+              "peso": 30,
+              "repeticoes": 12,
+              "emoji": ""
+            }
+          ]
+        },
+        {
+          "numero": 2,
+          "nome": "Puxada triângulo polia",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 47,
+              "repeticoes": 12,
+              "emoji": ""
+            },
+            {
+              "peso": 47,
+              "repeticoes": 12,
+              "emoji": ""
+            },
+            {
+              "peso": 47,
+              "repeticoes": 12,
+              "emoji": ""
+            }
+          ]
+        },
+        {
+          "numero": 3,
+          "nome": "remada maquina supinada",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 33,
+              "repeticoes": 8,
+              "emoji": ""
+            },
+            {
+              "peso": 33,
+              "repeticoes": 8,
+              "emoji": ""
+            },
+            {
+              "peso": 33,
+              "repeticoes": 8,
+              "emoji": ""
+            }
+          ]
+        },
+        {
+          "numero": 4,
+          "nome": "Rosca scott na polia (cabo, halter ou barra W)",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 7.5,
+              "repeticoes": 10,
+              "emoji": ""
+            },
+            {
+              "peso": 7.5,
+              "repeticoes": 10,
+              "emoji": ""
+            },
+            {
+              "peso": 7.5,
+              "repeticoes": 8,
+              "emoji": ""
+            }
+          ]
+        },
+        {
+          "numero": 5,
+          "nome": "Abdominal (prancha)",
+          "unidade": "kg",
+          "series": []
+        },
+        {
+          "numero": 6,
+          "nome": "Panturrilha (escada ou em pé)",
+          "unidade": "kg",
+          "series": []
+        }
+      ]
+    },
+    {
+      "id": "andre-2026-10-19-d",
+      "pessoaId": "andre",
+      "data": "2026-10-19",
+      "titulo": "D",
+      "unidade": "kg",
+      "observacao": "",
+      "exercicios": [
+        {
+          "numero": 1,
+          "nome": "Remada aberta polia alta",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 60,
+              "repeticoes": 12,
+              "emoji": "😐"
+            },
+            {
+              "peso": 70,
+              "repeticoes": 12,
+              "emoji": "💀"
+            },
+            {
+              "peso": 80,
+              "repeticoes": 12,
+              "emoji": "🏳️‍🌈"
+            }
+          ]
+        },
+        {
+          "numero": 2,
+          "nome": "Puxada triângulo polia",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 138,
+              "repeticoes": 12,
+              "emoji": "😐"
+            },
+            {
+              "peso": 138,
+              "repeticoes": 12,
+              "emoji": "😐"
+            },
+            {
+              "peso": 138,
+              "repeticoes": 12,
+              "emoji": "😐"
+            }
+          ]
+        },
+        {
+          "numero": 3,
+          "nome": "Remada máquina supinada",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 82,
+              "repeticoes": 12,
+              "emoji": "😐"
+            },
+            {
+              "peso": 82,
+              "repeticoes": 12,
+              "emoji": "😐"
+            },
+            {
+              "peso": 82,
+              "repeticoes": 10,
+              "emoji": "💀"
+            }
+          ]
+        },
+        {
+          "numero": 4,
+          "nome": "Rosca direta (cabo, halter ou barra W)",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 20,
+              "repeticoes": 12,
+              "emoji": ""
+            },
+            {
+              "peso": 27.5,
+              "repeticoes": 10,
+              "emoji": ""
+            },
+            {
+              "peso": 27.5,
+              "repeticoes": 8,
+              "emoji": "💀"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lucas-marques-2026-10-19-d",
+      "pessoaId": "lucas-marques",
+      "data": "2026-10-19",
+      "titulo": "D",
+      "unidade": "kg",
+      "observacao": "",
+      "exercicios": [
+        {
+          "numero": 1,
+          "nome": "Remada aberta polia alta",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 40,
+              "repeticoes": 12,
+              "emoji": "😐"
+            },
+            {
+              "peso": 45,
+              "repeticoes": 12,
+              "emoji": "🏳️‍🌈"
+            },
+            {
+              "peso": 45,
+              "repeticoes": 8,
+              "emoji": "🏳️‍🌈"
+            }
+          ],
+          "observacao": "Falhei na 4 rep na ultima série"
+        },
+        {
+          "numero": 2,
+          "nome": "Puxada triângulo polia",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 89,
+              "repeticoes": 10,
+              "emoji": "💩"
+            },
+            {
+              "peso": 89,
+              "repeticoes": 10,
+              "emoji": "💩"
+            },
+            {
+              "peso": 89,
+              "repeticoes": 8,
+              "emoji": "💀"
+            }
+          ]
+        },
+        {
+          "numero": 3,
+          "nome": "Remada maquina supinada",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 54,
+              "repeticoes": 10,
+              "emoji": "💀"
+            },
+            {
+              "peso": 54,
+              "repeticoes": 12,
+              "emoji": "💀"
+            },
+            {
+              "peso": 54,
+              "repeticoes": 8,
+              "emoji": "💀"
+            }
+          ]
+        },
+        {
+          "numero": 4,
+          "nome": "Rosca direta polia (cabo, halter ou barra W)",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 15,
+              "repeticoes": 8,
+              "emoji": "💩"
+            },
+            {
+              "peso": 15,
+              "repeticoes": 8,
+              "emoji": "💩"
+            },
+            {
+              "peso": 15,
+              "repeticoes": 8,
+              "emoji": "💀"
+            }
+          ]
+        },
+        {
+          "numero": 5,
+          "nome": "Abdominal (prancha)",
+          "unidade": "kg",
+          "series": []
+        },
+        {
+          "numero": 6,
+          "nome": "Panturrilha (escada ou em pé)",
+          "unidade": "kg",
+          "series": []
+        }
+      ]
+    },
+    {
+      "id": "be-2026-10-19-d",
+      "pessoaId": "be",
+      "data": "2026-10-19",
+      "titulo": "D",
+      "unidade": "kg",
+      "observacao": "",
+      "exercicios": [
+        {
+          "numero": 1,
+          "nome": "Remada aberta polia alta",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 20,
+              "repeticoes": 11,
+              "emoji": "😴"
+            },
+            {
+              "peso": 20,
+              "repeticoes": 12,
+              "emoji": "😴"
+            },
+            {
+              "peso": 20,
+              "repeticoes": 12,
+              "emoji": "💀"
+            }
+          ]
+        },
+        {
+          "numero": 2,
+          "nome": "Puxada triângulo polia",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 33,
+              "repeticoes": 12,
+              "emoji": "😐"
+            },
+            {
+              "peso": 33,
+              "repeticoes": 12,
+              "emoji": "😐"
+            },
+            {
+              "peso": 33,
+              "repeticoes": 12,
+              "emoji": "💀"
+            }
+          ]
+        },
+        {
+          "numero": 3,
+          "nome": "Remada máquina supinada",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 26,
+              "repeticoes": 12,
+              "emoji": "😐"
+            },
+            {
+              "peso": 26,
+              "repeticoes": 12,
+              "emoji": "😄"
+            },
+            {
+              "peso": 26,
+              "repeticoes": 8,
+              "emoji": "💩"
+            }
+          ]
+        },
+        {
+          "numero": 4,
+          "nome": "Rosca direta (cabo, halter ou barra W)",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 5,
+              "repeticoes": 8,
+              "emoji": "💀"
+            },
+            {
+              "peso": 5,
+              "repeticoes": 8,
+              "emoji": "💀"
+            },
+            {
+              "peso": 5,
+              "repeticoes": 8,
+              "emoji": "💀"
+            }
+          ]
+        }
+      ]
+    }
+  ]
 }
