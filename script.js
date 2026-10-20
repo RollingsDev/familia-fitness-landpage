@@ -531,46 +531,293 @@
             ]
       },
       "Titio Douglas": {
-        "titulo": "Treino conjunto — Upper / Lower / Fullbody",
-        "observacao": "Manual de Treino — Ciclo de 8 Semanas. Rotina compartilhada com André.",
-        "dias": [
-          {"codigo": "Upper", "nome": "Upper — segunda-feira", "exercicios": [
-            {"nome": "Fly", "series": "3 x 12"}, {"nome": "Supino reto", "series": "3 x 12"}, {"nome": "Remada alta supinada", "series": "3 x 12"}, {"nome": "Remada baixa triângulo", "series": "3 x 12"}, {"nome": "Desenvolvimento máquina", "series": "3 x 12"}, {"nome": "Elevação lateral", "series": "3 x 12-15"}, {"nome": "Tríceps paralela", "series": "3 x 10-12"}, {"nome": "Rosca Scott", "series": "3 x 12"}
-          ]},
-          {"codigo": "Lower", "nome": "Lower — quinta-feira", "exercicios": [
-            {"nome": "Leg press", "series": "4 x 10"}, {"nome": "Agachamento sumô", "series": "3 x 12"}, {"nome": "Cadeira flexora", "series": "3 x 12"}, {"nome": "Cadeira extensora", "series": "3 x 12"}
-          ]},
-          {"codigo": "Fullbody", "nome": "Fullbody — sábado", "exercicios": [
-            {"nome": "Supino reto", "series": "3 x 12"}, {"nome": "Fly", "series": "3 x 12"}, {"nome": "Puxada alta individual", "series": "3 x 12"}, {"nome": "Remada baixa triângulo", "series": "3 x 12"}, {"nome": "Elevação lateral", "series": "3 x 12-15"}, {"nome": "Tríceps paralela", "series": "3 x 10"}, {"nome": "Rosca Scott", "series": "3 x 12"}, {"nome": "Cadeira flexora", "series": "4 x 8"}, {"nome": "Cadeira extensora", "series": "4 x 10"}
-          ]}
-        ]
+            "titulo": "Treino conjunto — Upper / Lower / Fullbody",
+            "observacao": "Manual de Treino — Ciclo de 8 Semanas. Rotina compartilhada com André.",
+            "dias": [
+                  {
+                        "codigo": "Upper",
+                        "nome": "Upper — segunda-feira",
+                        "exercicios": [
+                              {
+                                    "nome": "Fly",
+                                    "series": "3 x 12"
+                              },
+                              {
+                                    "nome": "Supino reto",
+                                    "series": "3 x 12"
+                              },
+                              {
+                                    "nome": "Remada alta supinada",
+                                    "series": "3 x 12"
+                              },
+                              {
+                                    "nome": "Remada baixa triângulo",
+                                    "series": "3 x 12"
+                              },
+                              {
+                                    "nome": "Desenvolvimento máquina",
+                                    "series": "3 x 12"
+                              },
+                              {
+                                    "nome": "Elevação lateral",
+                                    "series": "3 x 12-15"
+                              },
+                              {
+                                    "nome": "Tríceps paralela",
+                                    "series": "3 x 10-12"
+                              },
+                              {
+                                    "nome": "Rosca Scott",
+                                    "series": "3 x 12"
+                              }
+                        ]
+                  },
+                  {
+                        "codigo": "Lower",
+                        "nome": "Lower — quinta-feira",
+                        "exercicios": [
+                              {
+                                    "nome": "Leg press",
+                                    "series": "4 x 10"
+                              },
+                              {
+                                    "nome": "Agachamento sumô",
+                                    "series": "3 x 12"
+                              },
+                              {
+                                    "nome": "Cadeira flexora",
+                                    "series": "3 x 12"
+                              },
+                              {
+                                    "nome": "Cadeira extensora",
+                                    "series": "3 x 12"
+                              }
+                        ]
+                  },
+                  {
+                        "codigo": "Fullbody",
+                        "nome": "Fullbody — sábado",
+                        "exercicios": [
+                              {
+                                    "nome": "Supino reto",
+                                    "series": "3 x 12"
+                              },
+                              {
+                                    "nome": "Fly",
+                                    "series": "3 x 12"
+                              },
+                              {
+                                    "nome": "Puxada alta individual",
+                                    "series": "3 x 12"
+                              },
+                              {
+                                    "nome": "Remada baixa triângulo",
+                                    "series": "3 x 12"
+                              },
+                              {
+                                    "nome": "Elevação lateral",
+                                    "series": "3 x 12-15"
+                              },
+                              {
+                                    "nome": "Tríceps paralela",
+                                    "series": "3 x 10"
+                              },
+                              {
+                                    "nome": "Rosca Scott",
+                                    "series": "3 x 12"
+                              },
+                              {
+                                    "nome": "Cadeira flexora",
+                                    "series": "4 x 8"
+                              },
+                              {
+                                    "nome": "Cadeira extensora",
+                                    "series": "4 x 10"
+                              }
+                        ]
+                  }
+            ]
       },
       "André": {
-        "titulo": "Manual de Treino — Ciclo de 8 Semanas",
-        "observacao": "Rotina completa de segunda a domingo. Progressão planejada para força, hipertrofia e condicionamento.",
-        "dias": [
-          {"codigo": "Domingo", "nome": "Cardio longo / recuperação", "exercicios": [
-            {"nome": "Corrida Z2", "series": "45-70 min"}, {"nome": "Mobilidade", "series": "10-15 min"}
-          ]},
-          {"codigo": "Upper", "nome": "Upper — segunda-feira", "exercicios": [
-            {"nome": "Fly", "series": "3 x 12"}, {"nome": "Supino reto", "series": "3 x 12"}, {"nome": "Remada alta supinada", "series": "3 x 12"}, {"nome": "Remada baixa triângulo", "series": "3 x 12"}, {"nome": "Desenvolvimento máquina", "series": "3 x 12"}, {"nome": "Elevação lateral", "series": "3 x 12-15"}, {"nome": "Tríceps paralela", "series": "3 x 10-12"}, {"nome": "Rosca Scott", "series": "3 x 12"}
-          ]},
-          {"codigo": "Terça", "nome": "Terra + posterior + grip", "exercicios": [
-            {"nome": "Levantamento terra", "series": "Conforme tabela de progressão"}, {"nome": "Terra romeno", "series": "3 x 8-10"}, {"nome": "Cadeira flexora", "series": "3 x 10-12"}, {"nome": "Panturrilha", "series": "4 x 12-20"}, {"nome": "Sustentação de barra / grip", "series": "3 séries"}
-          ]},
-          {"codigo": "Quarta", "nome": "Ombros + cardio de qualidade", "exercicios": [
-            {"nome": "Desenvolvimento militar", "series": "Conforme tabela de progressão"}, {"nome": "Elevação lateral na polia", "series": "4 x 10-15"}, {"nome": "Crucifixo invertido", "series": "4 x 12-15"}, {"nome": "Face pull", "series": "3 x 12-15"}, {"nome": "Cardio", "series": "Conforme tabela"}
-          ]},
-          {"codigo": "Lower", "nome": "Lower — quinta-feira", "exercicios": [
-            {"nome": "Leg press", "series": "4 x 10"}, {"nome": "Agachamento sumô", "series": "3 x 12"}, {"nome": "Cadeira flexora", "series": "3 x 12"}, {"nome": "Cadeira extensora", "series": "3 x 12"}, {"nome": "Cadeira abdutora", "series": "3 x 12-15"}, {"nome": "Cadeira adutora", "series": "3 x 12-15"}, {"nome": "Panturrilha", "series": "3-4 x 15-20"}
-          ]},
-          {"codigo": "Sexta", "nome": "Agachamento + core + cardio leve", "exercicios": [
-            {"nome": "Agachamento livre", "series": "Conforme tabela de progressão"}, {"nome": "Búlgaro livre", "series": "3 x 8-12"}, {"nome": "Extensão lombar ou reverse hyper", "series": "3 x 10-15"}, {"nome": "Abdominal / core", "series": "3-4 séries"}, {"nome": "Cardio Z2", "series": "25-40 min"}
-          ]},
-          {"codigo": "Fullbody", "nome": "Fullbody — sábado", "exercicios": [
-            {"nome": "Supino reto", "series": "3 x 12"}, {"nome": "Fly", "series": "3 x 12"}, {"nome": "Puxada alta individual", "series": "3 x 12"}, {"nome": "Remada baixa triângulo", "series": "3 x 12"}, {"nome": "Elevação lateral", "series": "3 x 12-15"}, {"nome": "Tríceps paralela", "series": "3 x 10"}, {"nome": "Rosca Scott", "series": "3 x 12"}, {"nome": "Leg press", "series": "4 x 10"}, {"nome": "Cadeira flexora", "series": "4 x 8"}, {"nome": "Cadeira extensora", "series": "4 x 10"}, {"nome": "Panturrilha", "series": "3 x 15-20"}
-          ]}
-        ]
+            "titulo": "Treino PPL - UL (by Pacholok)",
+            "observacao": "Divisão Pull / Push / Legs / Upper / Lower. Séries válidas conforme planejamento; repetições ainda não informadas.",
+            "dias": [
+                  {
+                        "codigo": "Pull",
+                        "nome": "Pull — Costas e bíceps",
+                        "exercicios": [
+                              {
+                                    "nome": "Remada Curvada",
+                                    "series": "2 válidas",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Pulley Frente Aberto",
+                                    "series": "2 válidas",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Pulley Triangulo",
+                                    "series": "2 válidas",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Serrote",
+                                    "series": "2 válidas",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Rosca Scott",
+                                    "series": "3 válidas",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Rosca Bayesian",
+                                    "series": "3",
+                                    "repeticoes": "A definir"
+                              }
+                        ]
+                  },
+                  {
+                        "codigo": "Push",
+                        "nome": "Push — Peito, ombros e tríceps",
+                        "exercicios": [
+                              {
+                                    "nome": "Fly",
+                                    "series": "3 válidas",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Supino Inclinado Halter",
+                                    "series": "2 válidas",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Supino Reto Maquina",
+                                    "series": "2 válidas",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Elevação Frontal Corda",
+                                    "series": "A definir",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Elevação Lateral",
+                                    "series": "2 válidas",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Triceps Corda",
+                                    "series": "3 válidas",
+                                    "repeticoes": "A definir"
+                              }
+                        ]
+                  },
+                  {
+                        "codigo": "Legs",
+                        "nome": "Legs — Inferiores",
+                        "exercicios": [
+                              {
+                                    "nome": "Cadeira Flexora",
+                                    "series": "2 válidas",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Hack Machine",
+                                    "series": "2 válidas",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Cadeira Extensor",
+                                    "series": "2 válidas",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Elevação Pelvica",
+                                    "series": "2 válidas",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Cadeira Adutora",
+                                    "series": "2 válidas",
+                                    "repeticoes": "A definir"
+                              }
+                        ]
+                  },
+                  {
+                        "codigo": "Upper",
+                        "nome": "Upper — Superiores",
+                        "exercicios": [
+                              {
+                                    "nome": "Supino Inclinado Maquina",
+                                    "series": "2 válidas",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Fly",
+                                    "series": "2 válidas",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Remada baixa pulley",
+                                    "series": "2",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Pulldown máquina",
+                                    "series": "2 válidas",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Elevação lateral Maquina/Polia",
+                                    "series": "2 válidas",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Rosca Direta Cabo",
+                                    "series": "3 válidas",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Triceps Frances Máquina",
+                                    "series": "3 válidas",
+                                    "repeticoes": "A definir"
+                              }
+                        ]
+                  },
+                  {
+                        "codigo": "Lower",
+                        "nome": "Lower — Inferiores",
+                        "exercicios": [
+                              {
+                                    "nome": "Cadeira Flexora",
+                                    "series": "2 válidas",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Agachamento",
+                                    "series": "2 válidas",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Leg 45",
+                                    "series": "2 válidas",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Stiff",
+                                    "series": "2 válidas",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Abdutor",
+                                    "series": "2 válidas",
+                                    "repeticoes": "A definir"
+                              }
+                        ]
+                  }
+            ]
       },
       "Isaias Teofilo": {
             "titulo": "Treino do Isaías — Superior/Inferior (4 dias)",
@@ -721,6 +968,187 @@
                               {
                                     "nome": "Panturrilha",
                                     "series": "A definir",
+                                    "repeticoes": "A definir"
+                              }
+                        ]
+                  }
+            ]
+      },
+      "Lucas Marques": {
+            "titulo": "Treino PPL - UL (by Pacholok)",
+            "observacao": "Divisão Pull / Push / Legs / Upper / Lower. Séries válidas conforme planejamento; repetições ainda não informadas.",
+            "dias": [
+                  {
+                        "codigo": "Pull",
+                        "nome": "Pull — Costas e bíceps",
+                        "exercicios": [
+                              {
+                                    "nome": "Remada Curvada",
+                                    "series": "2 válidas",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Pulley Frente Aberto",
+                                    "series": "2 válidas",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Pulley Triangulo",
+                                    "series": "2 válidas",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Serrote",
+                                    "series": "2 válidas",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Rosca Scott",
+                                    "series": "3 válidas",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Rosca Bayesian",
+                                    "series": "3",
+                                    "repeticoes": "A definir"
+                              }
+                        ]
+                  },
+                  {
+                        "codigo": "Push",
+                        "nome": "Push — Peito, ombros e tríceps",
+                        "exercicios": [
+                              {
+                                    "nome": "Fly",
+                                    "series": "3 válidas",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Supino Inclinado Halter",
+                                    "series": "2 válidas",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Supino Reto Maquina",
+                                    "series": "2 válidas",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Elevação Frontal Corda",
+                                    "series": "A definir",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Elevação Lateral",
+                                    "series": "2 válidas",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Triceps Corda",
+                                    "series": "3 válidas",
+                                    "repeticoes": "A definir"
+                              }
+                        ]
+                  },
+                  {
+                        "codigo": "Legs",
+                        "nome": "Legs — Inferiores",
+                        "exercicios": [
+                              {
+                                    "nome": "Cadeira Flexora",
+                                    "series": "2 válidas",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Hack Machine",
+                                    "series": "2 válidas",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Cadeira Extensor",
+                                    "series": "2 válidas",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Elevação Pelvica",
+                                    "series": "2 válidas",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Cadeira Adutora",
+                                    "series": "2 válidas",
+                                    "repeticoes": "A definir"
+                              }
+                        ]
+                  },
+                  {
+                        "codigo": "Upper",
+                        "nome": "Upper — Superiores",
+                        "exercicios": [
+                              {
+                                    "nome": "Supino Inclinado Maquina",
+                                    "series": "2 válidas",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Fly",
+                                    "series": "2 válidas",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Remada baixa pulley",
+                                    "series": "2",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Pulldown máquina",
+                                    "series": "2 válidas",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Elevação lateral Maquina/Polia",
+                                    "series": "2 válidas",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Rosca Direta Cabo",
+                                    "series": "3 válidas",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Triceps Frances Máquina",
+                                    "series": "3 válidas",
+                                    "repeticoes": "A definir"
+                              }
+                        ]
+                  },
+                  {
+                        "codigo": "Lower",
+                        "nome": "Lower — Inferiores",
+                        "exercicios": [
+                              {
+                                    "nome": "Cadeira Flexora",
+                                    "series": "2 válidas",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Agachamento",
+                                    "series": "2 válidas",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Leg 45",
+                                    "series": "2 válidas",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Stiff",
+                                    "series": "2 válidas",
+                                    "repeticoes": "A definir"
+                              },
+                              {
+                                    "nome": "Abdutor",
+                                    "series": "2 válidas",
                                     "repeticoes": "A definir"
                               }
                         ]
@@ -2117,9 +2545,11 @@ const MEASURE_REGISTER_FIELDS = [
     function trainingRegisterExerciseRow(exercise = {}, index = 0, defaultUnit = 'kg') {
       const series = Array.isArray(exercise.registroSeries) ? exercise.registroSeries : (Array.isArray(exercise.seriesRegistro) ? exercise.seriesRegistro : (Array.isArray(exercise.series) ? exercise.series : []));
       const unit = exercise.unidade || defaultUnit || 'kg';
+      const seriesHint = typeof exercise.series === 'string' ? exercise.series.trim().match(/^(\\d+)\\s*(?:v[aá]lidas?)?$/i) : null;
+      const suggestedSeries = seriesHint ? Math.max(1, Math.min(10, Number(seriesHint[1]))) : 3;
       return `<div class="register-exercise" data-register-exercise>
         <div class="register-exercise-head"><span class="register-number">${index + 1}</span><input class="register-name" type="text" value="${exercise.nome || ''}" placeholder="Nome do exercicio"><label class="register-exercise-unit">Unidade<select class="register-unit"><option value="kg" ${unit === 'kg' ? 'selected' : ''}>kg</option><option value="lb" ${unit === 'lb' ? 'selected' : ''}>lb</option></select></label><button type="button" class="ghost-btn register-remove" data-remove-exercise>Remover</button></div>
-        <div class="register-sets">${Array.from({ length: Math.max(3, series.length) }, (_, setIndex) => `<label>S${setIndex + 1}<input class="register-weight" type="number" step="0.01" min="0" value="${series[setIndex]?.peso ?? ''}" placeholder="kg/lb"><input class="register-reps" type="number" step="1" min="0" value="${series[setIndex]?.repeticoes ?? ''}" placeholder="reps"><select class="register-emoji" aria-label="Como foi a série">${trainingRegisterEmojiOptions(series[setIndex]?.emoji || '')}</select></label>`).join('')}</div><button type="button" class="ghost-btn register-add-set" data-add-set><i class="fa-solid fa-plus"></i> Adicionar série</button>
+        <div class="register-sets">${Array.from({ length: Math.max(suggestedSeries, series.length) }, (_, setIndex) => `<label>S${setIndex + 1}<input class="register-weight" type="number" step="0.01" min="0" value="${series[setIndex]?.peso ?? ''}" placeholder="kg/lb"><input class="register-reps" type="number" step="1" min="0" value="${series[setIndex]?.repeticoes ?? ''}" placeholder="reps"><select class="register-emoji" aria-label="Como foi a série">${trainingRegisterEmojiOptions(series[setIndex]?.emoji || '')}</select></label>`).join('')}</div><button type="button" class="ghost-btn register-add-set" data-add-set><i class="fa-solid fa-plus"></i> Adicionar série</button>
         <input class="register-observation" type="text" value="${exercise.observacao || ''}" placeholder="Observação do exercício">
       </div>`;
     }
