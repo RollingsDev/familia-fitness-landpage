@@ -1976,9 +1976,7 @@ const MEASURE_REGISTER_FIELDS = [
     }
 
     function orderedTrainingDays(personName, plan) {
-      if (personName !== 'André') return plan.dias;
-      const order = { Upper: 1, 'Terça': 2, 'Quarta': 3, Lower: 4, Sexta: 5, Fullbody: 6, Domingo: 7 };
-      return [...plan.dias].sort((a, b) => (order[a.codigo] || 99) - (order[b.codigo] || 99));
+      return plan.dias;
     }
 
     function renderWorkoutSection(personName) {
@@ -2545,8 +2543,8 @@ const MEASURE_REGISTER_FIELDS = [
     function trainingRegisterExerciseRow(exercise = {}, index = 0, defaultUnit = 'kg') {
       const series = Array.isArray(exercise.registroSeries) ? exercise.registroSeries : (Array.isArray(exercise.seriesRegistro) ? exercise.seriesRegistro : (Array.isArray(exercise.series) ? exercise.series : []));
       const unit = exercise.unidade || defaultUnit || 'kg';
-      const seriesHint = typeof exercise.series === 'string' ? exercise.series.trim().match(/^(\\d+)\\s*(?:v[aá]lidas?)?$/i) : null;
-      const suggestedSeries = seriesHint ? Math.max(1, Math.min(10, Number(seriesHint[1]))) : 3;
+      const seriesHint = typeof exercise.series === 'string' ? exercise.series.trim().match(/^(\d+)\s*(?:v[aá]lidas?)?$/i) : null;
+      const suggestedSeries = seriesHint ? Math.max(1, Math.min(10, Number(seriesHint[1]))) : (series.length || 3);
       return `<div class="register-exercise" data-register-exercise>
         <div class="register-exercise-head"><span class="register-number">${index + 1}</span><input class="register-name" type="text" value="${exercise.nome || ''}" placeholder="Nome do exercicio"><label class="register-exercise-unit">Unidade<select class="register-unit"><option value="kg" ${unit === 'kg' ? 'selected' : ''}>kg</option><option value="lb" ${unit === 'lb' ? 'selected' : ''}>lb</option></select></label><button type="button" class="ghost-btn register-remove" data-remove-exercise>Remover</button></div>
         <div class="register-sets">${Array.from({ length: Math.max(suggestedSeries, series.length) }, (_, setIndex) => `<label>S${setIndex + 1}<input class="register-weight" type="number" step="0.01" min="0" value="${series[setIndex]?.peso ?? ''}" placeholder="kg/lb"><input class="register-reps" type="number" step="1" min="0" value="${series[setIndex]?.repeticoes ?? ''}" placeholder="reps"><select class="register-emoji" aria-label="Como foi a série">${trainingRegisterEmojiOptions(series[setIndex]?.emoji || '')}</select></label>`).join('')}</div><button type="button" class="ghost-btn register-add-set" data-add-set><i class="fa-solid fa-plus"></i> Adicionar série</button>
