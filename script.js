@@ -1362,7 +1362,8 @@ const MEASURE_REGISTER_FIELDS = [
       return (raw.sessions || []).reduce((grouped, session) => {
         if (!grouped[session.pessoaId]) grouped[session.pessoaId] = {};
         const { id, pessoaId, data, ...record } = session;
-        grouped[pessoaId][data] = record;
+        // Uma pessoa pode ter vários treinos no mesmo dia: preserva todos por ID.
+        grouped[pessoaId][data + '::' + (id || Object.keys(grouped[pessoaId]).length)] = { ...record, id, data };
         return grouped;
       }, {});
     }
@@ -2445,7 +2446,10 @@ const MEASURE_REGISTER_FIELDS = [
     function renderProgressVisual(personName, exerciseName) {
       const personId = Object.values(TRAINING_PEOPLE).find(person => person.nome === personName)?.id || personName;
       const records = TRAINING_PROGRESS[personId] || {};
-      const entries = [...new Map(Object.entries(records).flatMap(([date, record]) => record.exercicios.filter(item => !exerciseName || exerciseNameKey(item.nome) === exerciseName).map(item => ({ date, record, item }))).map(entry => [entry.date + '::' + exerciseNameKey(entry.item.nome), entry])).values()].sort((a, b) => a.date.localeCompare(b.date));
+      const entries = Object.entries(records).flatMap(([key, record]) => (record.exercicios || [])
+        .filter(item => !exerciseName || exerciseNameKey(item.nome) === exerciseName)
+        .map(item => ({ date: record.data || key.split('::')[0], record, item })))
+        .sort((a, b) => a.date.localeCompare(b.date) || String(a.record.id).localeCompare(String(b.record.id)));
       const selected = entries;
       const labels = selected.map(entry => formatPeriod(entry.date));
       const units = [...new Set(selected.map(entry => entry.item.unidade || entry.record?.unidade || 'kg'))].join('/') || 'kg';
@@ -2658,7 +2662,7 @@ const MEASURE_REGISTER_FIELDS = [
       if (!selectedTrainingPersonName || !available.includes(selectedTrainingPersonName)) selectedTrainingPersonName = available[0] || null;
       cards.innerHTML = available.map(name => `<button type="button" class="person-card ${name === selectedTrainingPersonName ? 'active' : ''}" data-training-person="${name}"><strong>${name}</strong><small>${TRAINING_PLANS[name].titulo}</small></button>`).join('');
       const registerPerson = options.find(item => item.name === selectedTrainingPersonName);
-      content.innerHTML = selectedTrainingPersonName ? `<div class="workout-tabs training-view-tabs" role="tablist" aria-label="Seções do treinamento"><button type="button" class="workout-tab active" data-training-view="plan">Plano de treino</button><button type="button" class="workout-tab" data-training-view="evolution">Evolução</button><button type="button" class="workout-tab" data-training-view="register">Registro</button></div><div data-training-pane="plan">${renderWorkoutSection(selectedTrainingPersonName)}</div><div data-training-pane="evolution" hidden>${renderTrainingProgress(selectedTrainingPersonName)}</div><div data-training-pane="register" hidden>${renderTrainingRegister(rows, registerPerson?.id)}</div>` : '<p class="note">Nenhum treinamento cadastrado.</p>';
+      content.innerHTML = selectedTrainingPersonName ? `${renderTrainingVolumeSummary(selectedTrainingPersonName)}<div class="workout-tabs training-view-tabs" role="tablist" aria-label="Seções do treinamento"><button type="button" class="workout-tab active" data-training-view="plan">Plano de treino</button><button type="button" class="workout-tab" data-training-view="evolution">Evolução</button><button type="button" class="workout-tab" data-training-view="register">Registro</button></div><div data-training-pane="plan">${renderWorkoutSection(selectedTrainingPersonName)}</div><div data-training-pane="evolution" hidden>${renderTrainingProgress(selectedTrainingPersonName)}</div><div data-training-pane="register" hidden>${renderTrainingRegister(rows, registerPerson?.id)}</div>` : '<p class="note">Nenhum treinamento cadastrado.</p>';
       cards.querySelectorAll('[data-training-person]').forEach(card => card.addEventListener('click', () => { selectedTrainingPersonName = card.dataset.trainingPerson; renderTrainingTab(rows); }));
       content.querySelectorAll('[data-training-view]').forEach(tab => tab.addEventListener('click', () => { content.querySelectorAll('[data-training-view]').forEach(item => item.classList.toggle('active', item === tab)); content.querySelectorAll('[data-training-pane]').forEach(pane => pane.hidden = pane.dataset.trainingPane !== tab.dataset.trainingView); if (tab.dataset.trainingView === 'plan') bindWorkoutTabs(); if (tab.dataset.trainingView === 'register') { const selected = trainingPeopleOptions(rows).find(item => item.name === selectedTrainingPersonName); bindTrainingRegister(rows, content, selected?.id); } }));
       bindWorkoutTabs();
@@ -2818,6 +2822,8 @@ const MEASURE_REGISTER_FIELDS = [
       renderPeriodTab(rows);
       renderMeasureTab(rows);
       renderTrainingTab(rows);
+      renderWorkoutCalendar();
+      renderWorkoutComparison(rows);
       renderMeasurementRegister(rows);
       renderDetailedReports(rows);
       renderComparisonTab(rows);
