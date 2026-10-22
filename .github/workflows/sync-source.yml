@@ -36,6 +36,10 @@ jobs:
             --exclude '.github/workflows/static.yml' \
             --exclude 'data.json' \
             --exclude 'training-progress.json' \
+            --exclude 'index.html' \
+            --exclude 'script.js' \
+            --exclude 'service-worker.js' \
+            --exclude 'training-dashboard.js' \
             /tmp/source/ ./
 
       - name: Publicar atualização
