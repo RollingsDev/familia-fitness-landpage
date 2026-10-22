@@ -898,6 +898,72 @@
       .register-add-set { min-height: 40px; }
     }
 
+  
+    /* Painel de calendário, comparações e volume acumulado de treinos */
+    .workout-calendar-controls, .workout-compare-filters { display:flex; justify-content:space-between; flex-wrap:wrap; gap:12px; align-items:end; margin:18px 0; }
+    .workout-calendar-controls label, .workout-compare-filters label { display:grid; gap:6px; min-width:0; flex:1 1 210px; }
+    .workout-calendar-controls select, .workout-compare-filters select { width:100%; min-width:0; max-width:100%; }
+    .workout-calendar-navigation { display:flex; align-items:center; justify-content:space-between; gap:10px; flex:1 1 200px; }
+    .workout-calendar-navigation strong { text-transform:capitalize; text-align:center; font-size:16px; }
+    .workout-calendar-navigation .ghost-btn { border-radius:12px; min-width:42px; padding:8px 11px; font-size:23px; }
+    .workout-calendar-grid { display:grid; grid-template-columns:repeat(7,minmax(0,1fr)); gap:7px; margin:16px 0 10px; }
+    .workout-cal-weekday { text-align:center; padding:6px 0; color:var(--muted); font-weight:800; font-size:13px; }
+    .workout-cal-day { display:flex; flex-direction:column; align-items:flex-start; justify-content:flex-start; text-align:left; gap:5px; min-width:0; min-height:94px; padding:10px; border:1px solid var(--line); border-radius:13px; font:inherit; color:var(--text); background:rgba(8,20,46,.55); cursor:pointer; transition:background .14s,border-color .14s; }
+    .workout-cal-day strong { font-size:17px; }
+    .workout-cal-day small { color:var(--muted); font-size:11px; }
+    .workout-cal-day em { font-size:12px; font-style:normal; font-weight:800; color:#9fe7ff; }
+    .workout-cal-day.has-session { border-color:rgba(40,200,255,.6); background:rgba(40,200,255,.12); }
+    .workout-cal-day.selected { outline:2px solid var(--cyan); outline-offset:1px; background:rgba(40,200,255,.22); }
+    .workout-cal-day:hover { border-color:var(--cyan); }
+    .workout-help { margin-top:12px; font-size:12px; line-height:1.5; }
+    .workout-day-report { margin-top:20px; }
+    .workout-day-report h3 { margin:0 0 12px; }
+    .workout-total { padding:12px; border-radius:12px; border:1px solid var(--line); background:rgba(40,200,255,.07); }
+    .workout-tonnage { font-size:17px; color:#a5f3fc; white-space:normal; text-align:right; }
+    .workout-log-list { display:grid; gap:12px; margin-top:12px; }
+    .workout-log-card { border:1px solid var(--line); border-radius:14px; padding:12px; background:rgba(7,20,46,.48); min-width:0; }
+    .workout-log-header { display:flex; justify-content:space-between; align-items:start; flex-wrap:wrap; gap:10px; }
+    .workout-log-header strong, .workout-log-header small { display:block; }
+    .workout-log-header small { margin-top:5px; color:var(--muted); }
+    .workout-log-card details { margin-top:12px; }
+    .workout-log-card summary { color:#9fe7ff; cursor:pointer; font-weight:700; padding:6px 0; }
+    .workout-detail-exercises { padding-left:23px; margin:10px 0 0; }
+    .workout-detail-exercises li { margin-bottom:12px; line-height:1.5; overflow-wrap:anywhere; }
+    .workout-detail-exercises li strong, .workout-detail-exercises li span { display:block; }
+    .workout-detail-exercises li span { color:var(--muted); font-size:13px; }
+    .workout-detail-exercises li span strong { display:inline; color:var(--text); }
+    .workout-metric-grid { display:grid; grid-template-columns:repeat(3,minmax(0,1fr)); gap:12px; margin:16px 0; }
+    .workout-metric { padding:14px; border:1px solid var(--line); border-radius:14px; background:rgba(40,200,255,.06); min-width:0; }
+    .workout-metric span { display:block; font-size:12px; color:var(--muted); }
+    .workout-metric strong { display:block; margin-top:7px; font-size:clamp(16px,2vw,23px); color:var(--text); overflow-wrap:anywhere; }
+    .workout-volume-summary { margin:18px 0; }
+    .workout-volume-summary h4 { margin:18px 0 6px; }
+    .workout-compare-card { padding:18px 0; border-top:1px solid var(--line); }
+    .workout-compare-card h3 { margin:4px 0 10px; }
+    .workout-compare-card p { line-height:1.5; }
+    .workout-compare-filters { justify-content:flex-start; }
+    .workout-compare-filters label { flex:1 1 250px; }
+    .workout-chart { min-height:280px; height:320px; margin:16px 0; }
+    .workout-table { min-width:540px; }
+    .workout-table td { font-variant-numeric:tabular-nums; }
+    #workoutCalendarRoot, #workoutComparisonRoot { min-width:0; }
+    @media(max-width:720px) {
+      .workout-calendar-grid { gap:4px; }
+      .workout-cal-day { min-height:74px; padding:7px 4px; border-radius:9px; gap:4px; }
+      .workout-cal-day strong { font-size:14px; }
+      .workout-cal-day small { font-size:9px; line-height:1.2; overflow-wrap:anywhere; }
+      .workout-cal-day em { font-size:10px; }
+      .workout-metric-grid { grid-template-columns:1fr; gap:8px; }
+      .workout-calendar-controls label, .workout-calendar-navigation { flex-basis:100%; }
+      .workout-log-header { flex-direction:column; }
+      .workout-tonnage { text-align:left; }
+      .workout-chart { height:300px; }
+    }
+    @media(max-width:385px) {
+      .workout-cal-day { min-height:68px; }
+      .workout-cal-day em { font-size:9px; }
+    }
+
   </style>
 </head>
 
@@ -921,6 +987,8 @@
       <button class="tab-btn active" data-tab="dashboard">Dashboard</button>
       <button class="tab-btn" data-tab="individual">Consulta individual</button>
       <button class="tab-btn" data-tab="treinamento">Treinamento</button>
+      <button class="tab-btn" data-tab="calendario-treinos">Calendário de treinos</button>
+      <button class="tab-btn" data-tab="comparar-cargas">Comparar cargas</button>
       <button class="tab-btn" data-tab="registro-medidas">Registrar medidas</button>
       <button class="tab-btn" data-tab="medidas">Medidas corporais</button>
       <button class="tab-btn" data-tab="periodos">Dados por período</button>
@@ -1009,11 +1077,27 @@
     <section id="treinamento" class="section">
       <article class="panel">
         <h2>Treinamento</h2>
-        <p class="muted">Selecione uma pessoa para consultar o plano. Douglas faz Upper, Lower e Fullbody; André segue a rotina completa de segunda a domingo do manual de 8 semanas.</p>
+        <p class="muted">Selecione uma pessoa para consultar o plano, o histórico de sessões e o volume total movimentado em cada treino.</p>
         <div class="person-list" id="trainingPersonCards"></div>
         <div id="trainingContent"></div>
       </article>
     </section>
+    <section id="calendario-treinos" class="section">
+      <article class="panel">
+        <h2><i class="fa-regular fa-calendar-days"></i> Calendário de treinos</h2>
+        <p class="muted">Consulte os dias em que cada pessoa treinou, com detalhes da sessão e volume total movimentado. O mesmo dia pode conter mais de um treino.</p>
+        <div id="workoutCalendarRoot"></div>
+      </article>
+    </section>
+
+    <section id="comparar-cargas" class="section">
+      <article class="panel">
+        <h2><i class="fa-solid fa-chart-column"></i> Comparar pesos e cargas</h2>
+        <p class="muted">Compare a maior carga de cada exercício, o volume total do histórico e o peso corporal registrado de todas as pessoas.</p>
+        <div id="workoutComparisonRoot"></div>
+      </article>
+    </section>
+
     <section id="registro-medidas" class="section">
       <article class="panel">
         <h2>Registrar medidas mensais</h2>
@@ -3331,7 +3415,8 @@
   ]
 }
 </script>
-  <script src="script.js?v=20261019-ppl-ul"></script>
-  <script>if ("serviceWorker" in navigator && location.protocol !== "file:") navigator.serviceWorker.register("service-worker.js?v=20261019-ppl-ul").catch(() => {});</script>
+  <script src="script.js?v=20261022-calendar-comparisons"></script>
+  <script src="training-dashboard.js?v=20261022-calendar-comparisons"></script>
+  <script>if ("serviceWorker" in navigator && location.protocol !== "file:") navigator.serviceWorker.register("service-worker.js?v=20261022-calendar-comparisons").catch(() => {});</script>
 </body>
 </html>
