@@ -2757,12 +2757,15 @@ const MEASURE_REGISTER_FIELDS = [
     function exerciseNameKey(name) {
       return baseExerciseNameKey(exerciseDisplayName(name));
     }
+    function exerciseTrackingKey(exercise) {
+      return exercise?.exercicioId ? baseExerciseNameKey(exercise.exercicioId) : exerciseNameKey(exercise?.nome);
+    }
 
     function renderProgressVisual(personName, exerciseName) {
       const personId = Object.values(TRAINING_PEOPLE).find(person => person.nome === personName)?.id || personName;
       const records = TRAINING_PROGRESS[personId] || {};
       const entries = Object.entries(records).flatMap(([key, record]) => (record.exercicios || [])
-        .filter(item => !exerciseName || exerciseNameKey(item.nome) === exerciseName)
+        .filter(item => !exerciseName || exerciseTrackingKey(item) === exerciseName)
         .map(item => ({ date: record.data || key.split('::')[0], record, item })))
         .sort((a, b) => a.date.localeCompare(b.date) || String(a.record.id).localeCompare(String(b.record.id)));
       const selected = entries;
@@ -2803,7 +2806,7 @@ const MEASURE_REGISTER_FIELDS = [
       const personId = Object.values(TRAINING_PEOPLE).find(person => person.nome === personName)?.id || personName;
       const records = TRAINING_PROGRESS[personId];
       if (!records) return '<section class="workout-section"><p class="muted">Nenhuma evolução registrada para esta pessoa.</p></section>';
-      const exerciseOptions = [...new Map(Object.values(records).flatMap(record => record.exercicios.map(item => [exerciseNameKey(item.nome), exerciseDisplayName(item.nome)]))).entries()];
+      const exerciseOptions = [...new Map(Object.values(records).flatMap(record => record.exercicios.map(item => [exerciseTrackingKey(item), exerciseDisplayName(item.nome)]))).entries()];
       return `<section class="workout-section">
         <div class="workout-head"><div><h3>Gráficos de progressão</h3><div class="muted">Acompanhe carga máxima e volume acumulado por exercício.</div></div></div>
         <label for="progressExerciseSelect">Exercício</label>
