@@ -224,7 +224,7 @@ function workoutExerciseRecords() {
   workoutSessions().forEach(function (session) {
     (session.exercicios || []).forEach(function (exercise) {
       if (session.tipo === 'cardio' || exercise.tipo === 'cardio') return;
-      const key = exerciseNameKey(exercise.nome);
+      const key = exerciseTrackingKey(exercise);
       if (!key) return;
       if (!group.has(key)) group.set(key, { label: exerciseDisplayName(exercise.nome), people: new Map(), peopleSet: new Set() });
       const item = group.get(key);
