@@ -80,10 +80,19 @@ function workoutExerciseText(exercise, session) {
 function workoutIsCardio(session) {
   return session.tipo === 'cardio' || (session.exercicios || []).some(function (exercise) { return exercise.tipo === 'cardio'; });
 }
+function workoutCardioData(session) {
+  const exercise=(session.exercicios || []).find(e=>e.tipo==='cardio') || {};
+  const modalidade=session.modalidade || exercise.nome || 'Esteira';
+  const duracaoMinutos=Number(session.duracaoMinutos ?? exercise.duracaoMinutos ?? 0);
+  const distanciaKm=Number(session.distanciaKm ?? exercise.distanciaKm ?? 0);
+  const degraus=Number(session.degraus ?? exercise.degraus ?? 0);
+  return {modalidade,duracaoMinutos,distanciaKm,degraus};
+}
 function workoutCardioLabel(session) {
-  const duration = Number(session.duracaoMinutos || session.exercicios?.find(function (e) { return e.tipo === 'cardio'; })?.duracaoMinutos || 0);
-  const distance = Number(session.distanciaKm || session.exercicios?.find(function (e) { return e.tipo === 'cardio'; })?.distanciaKm || 0);
-  return (duration ? formatNumber(duration, 0) + ' min' : '— min') + ' · ' + (distance ? formatNumber(distance, Number.isInteger(distance) ? 0 : 2) + ' km' : '— km');
+  const d=workoutCardioData(session),stairs=d.modalidade==='Escada';
+  return (d.duracaoMinutos ? formatNumber(d.duracaoMinutos,0)+' min' : '— min') + ' · ' +
+    (stairs ? (d.degraus ? formatNumber(d.degraus,0)+' degraus' : '— degraus') :
+      (d.distanciaKm ? formatNumber(d.distanciaKm,Number.isInteger(d.distanciaKm)?0:2)+' km' : '— km'));
 }
 
 function workoutSessionDetails(session, short) {
@@ -93,7 +102,7 @@ function workoutSessionDetails(session, short) {
       '<small>' + workoutDateBr(session.data) + ' · atividade aeróbica</small></div>' +
       '<strong class="workout-tonnage">' + workoutCardioLabel(session) + '</strong></div>' +
       '<details' + (short ? '' : ' open') + '><summary>Detalhes do cardio</summary>' +
-      '<p class="muted">Esteira · ' + workoutCardioLabel(session) + '</p>' +
+      '<p class="muted">' + workoutEscape(workoutCardioData(session).modalidade) + ' · ' + workoutCardioLabel(session) + '</p>' +
       (session.observacao ? '<p class="muted">' + workoutEscape(session.observacao) + '</p>' : '') + '</details></article>';
   }
   const stats = workoutStats(session);
@@ -248,10 +257,62 @@ function workoutCompareChartOptions(suffix) {
   };
 }
 
+
+let workoutCardioComparePerson='andre';
+let workoutCardioCompareMode='Esteira';
+
+function workoutCardioEntries() {
+  return workoutSessions().filter(workoutIsCardio).map(s=>({personId:s.pessoaId,data:s.data,id:s.id,...workoutCardioData(s)}))
+    .sort((a,b)=>a.data.localeCompare(b.data)||String(a.id).localeCompare(String(b.id)));
+}
+
+function workoutCardioComparisonMarkup() {
+  const entries=workoutCardioEntries();
+  const people=workoutPeople();
+  if(!people.some(p=>p.id===workoutCardioComparePerson))workoutCardioComparePerson=people[0]?.id||'';
+  const selected=entries.filter(x=>x.modalidade===workoutCardioCompareMode);
+  const show=selected.filter(x=>x.personId===workoutCardioComparePerson);
+  const stairs=workoutCardioCompareMode==='Escada';
+  const total=show.reduce((n,x)=>n+(stairs?x.degraus:x.distanciaKm),0);
+  const mins=show.reduce((n,x)=>n+x.duracaoMinutos,0);
+  return '<div class="workout-compare-card cardio-compare-card"><h3>Cardio · evolução por modalidade</h3>'+
+    '<p class="muted">Cardio não participa de comparativos de cargas e toneladas. Compare tempo e distância (Esteira/Bicicleta) ou tempo e degraus (Escada).</p>'+
+    '<div class="workout-compare-filters">'+
+    '<label>Pessoa<select id="workoutCardioComparePerson">'+people.map(p=>'<option value="'+workoutEscape(p.id)+'" '+(p.id===workoutCardioComparePerson?'selected':'')+'>'+workoutEscape(p.name)+'</option>').join('')+'</select></label>'+
+    '<label>Modalidade<select id="workoutCardioCompareMode">'+['Esteira','Bicicleta','Escada'].map(m=>'<option value="'+m+'" '+(m===workoutCardioCompareMode?'selected':'')+'>'+m+'</option>').join('')+'</select></label></div>'+
+    '<div class="workout-metric-grid"><div class="workout-metric"><span>Sessões</span><strong>'+show.length+'</strong></div>'+
+    '<div class="workout-metric"><span>Tempo acumulado</span><strong>'+mins+' min</strong></div>'+
+    '<div class="workout-metric"><span>'+(stairs?'Degraus acumulados':'Distância acumulada')+'</span><strong>'+formatNumber(total,stairs?0:2)+(stairs?' degraus':' km')+'</strong></div></div>'+
+    (show.length?'<div class="chart-wrap workout-chart"><canvas id="workoutCardioCompareChart"></canvas></div>':'<p class="muted">Nenhum registro desta modalidade para a pessoa selecionada.</p>')+
+    '<div class="table-wrap"><table class="workout-table"><thead><tr><th>Pessoa</th><th>Data</th><th>Tempo</th><th>'+(stairs?'Degraus':'Distância (km)')+'</th></tr></thead><tbody>'+
+    selected.map(x=>'<tr><td>'+workoutEscape(workoutName(x.personId))+'</td><td>'+workoutDateBr(x.data)+'</td><td>'+x.duracaoMinutos+' min</td><td>'+formatNumber(stairs?x.degraus:x.distanciaKm,stairs?0:2)+'</td></tr>').join('')+
+    '</tbody></table></div></div>';
+}
+
+function workoutCardioComparisonGraph(root) {
+  const canvas=root.querySelector('#workoutCardioCompareChart');
+  if(!canvas||typeof Chart!=='function')return;
+  const entries=workoutCardioEntries().filter(x=>x.personId===workoutCardioComparePerson&&x.modalidade===workoutCardioCompareMode);
+  const stairs=workoutCardioCompareMode==='Escada',unit=stairs?'degraus':'km';
+  charts.workoutCardioCompareChart=new Chart(canvas,{
+    type:'line',data:{labels:entries.map(x=>workoutDateBr(x.data)),datasets:[
+      {label:stairs?'Degraus':'Distância (km)',data:entries.map(x=>stairs?x.degraus:x.distanciaKm),
+        borderColor:'#22c55e',backgroundColor:'rgba(34,197,94,.14)',fill:true,tension:.25,yAxisID:'y'},
+      {label:'Tempo (min)',data:entries.map(x=>x.duracaoMinutos),
+        borderColor:'#28c8ff',backgroundColor:'rgba(40,200,255,.13)',tension:.25,yAxisID:'y1'}
+    ]},options:{responsive:true,maintainAspectRatio:false,interaction:{mode:'index',intersect:false},
+      plugins:{legend:{labels:{color:'#d7e3fb'}}},scales:{
+      x:{ticks:{color:'#d7e3fb'},grid:{color:'rgba(148,163,184,.12)'}},
+      y:{beginAtZero:true,title:{display:true,text:unit,color:'#b9cfe8'},ticks:{color:'#d7e3fb'}},
+      y1:{beginAtZero:true,position:'right',title:{display:true,text:'min',color:'#b9cfe8'},
+        ticks:{color:'#d7e3fb'},grid:{drawOnChartArea:false}}
+      }}});
+}
+
 function renderWorkoutComparison(rows) {
   const root = document.getElementById('workoutComparisonRoot');
   if (!root) return;
-  ['workoutExerciseCompareChart','workoutVolumeCompareChart','workoutBodyweightCompareChart'].forEach(destroyChart);
+  ['workoutExerciseCompareChart','workoutVolumeCompareChart','workoutBodyweightCompareChart','workoutCardioCompareChart'].forEach(destroyChart);
   const sessions = workoutSessions();
   const people = workoutPeople();
   const byExercise = workoutExerciseRecords();
@@ -302,7 +363,12 @@ function renderWorkoutComparison(rows) {
     '<div class="table-wrap"><table class="workout-table"><thead><tr><th>Pessoa</th><th>Peso</th><th>Data da medição</th></tr></thead><tbody>' +
     latestWeight.map(function (p) { return '<tr><td>' + workoutEscape(p.name) + '</td><td>' + (p.value === null ? '—' : formatNumber(p.value, 1) + ' kg') + '</td><td>' + workoutDateBr(p.date) + '</td></tr>'; }).join('') +
     '</tbody></table></div></div>' +
+    workoutCardioComparisonMarkup() +
     '<p class="muted workout-help">Como calculamos: volume = soma, em todas as séries válidas, de peso × repetições. 1 tonelada = 1.000 kg de volume. Cargas em libras são convertidas para kg. A comparação entre máquinas ou rotinas diferentes não mede diretamente força ou desempenho equivalente. Séries acima de 200 repetições são sinalizadas para conferência e excluídas dos cálculos de volume até correção.</p>';
+  const cardioPersonSelect=root.querySelector('#workoutCardioComparePerson');
+  const cardioModeSelect=root.querySelector('#workoutCardioCompareMode');
+  if(cardioPersonSelect)cardioPersonSelect.onchange=e=>{workoutCardioComparePerson=e.target.value;renderWorkoutComparison(rows);};
+  if(cardioModeSelect)cardioModeSelect.onchange=e=>{workoutCardioCompareMode=e.target.value;renderWorkoutComparison(rows);};
   const exerciseSelect = root.querySelector('#workoutCompareExercise');
   if (exerciseSelect) exerciseSelect.onchange = function (event) { workoutComparisonExercise = event.target.value; renderWorkoutComparison(rows); };
   const metricSelect = root.querySelector('#workoutCompareMetric');
@@ -325,4 +391,5 @@ function renderWorkoutComparison(rows) {
   plot('workoutVolumeCompareChart', cumulative.map(function (p) { return p.name; }), cumulative.map(function (p) { return Number((p.volumeKg / 1000).toFixed(3)); }), ' t', 'Toneladas de volume');
   const validWeight = latestWeight.filter(function (p) { return p.value !== null; });
   plot('workoutBodyweightCompareChart', validWeight.map(function (p) { return p.name; }), validWeight.map(function (p) { return p.value; }), ' kg', 'Peso corporal');
+  workoutCardioComparisonGraph(root);
 }
