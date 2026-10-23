@@ -1880,6 +1880,27 @@
           ]
         }
       ]
+    },
+    {
+      "id": "andre-2026-10-23-cardio",
+      "pessoaId": "andre",
+      "data": "2026-10-23",
+      "titulo": "Cardio",
+      "tipo": "cardio",
+      "duracaoMinutos": 60,
+      "distanciaKm": 9,
+      "observacao": "Esteira: 1 hora, 9 km percorridos.",
+      "exercicios": [
+        {
+          "numero": 1,
+          "nome": "Esteira",
+          "tipo": "cardio",
+          "duracaoMinutos": 60,
+          "distanciaKm": 9,
+          "observacao": "60 minutos de esteira, distância de 9 km.",
+          "series": []
+        }
+      ]
     }
   ]
 }
