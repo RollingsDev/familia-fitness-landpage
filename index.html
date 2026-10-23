@@ -977,7 +977,19 @@
       color: #12213a !important;
     }
 
-  </style>
+  
+    .workout-data-warning {
+      margin: 12px 0 0;
+      padding: 10px 12px;
+      border: 1px solid rgba(245, 158, 11, .55);
+      border-radius: 12px;
+      background: rgba(245, 158, 11, .09);
+      color: #fcd68c;
+      font-size: 13px;
+      line-height: 1.55;
+    }
+    body.light-theme .workout-data-warning { color: #894800; background: rgba(245, 158, 11, .12); }
+</style>
 </head>
 
 <body>
@@ -3428,8 +3440,8 @@
   ]
 }
 </script>
-  <script src="training-dashboard.js?v=20261022-calendar-comparisons"></script>
-  <script src="script.js?v=20261022-calendar-comparisons"></script>
-  <script>if ("serviceWorker" in navigator && location.protocol !== "file:") navigator.serviceWorker.register("service-worker.js?v=20261022-white-card-text").catch(() => {});</script>
+  <script src="training-dashboard.js?v=20261022-workouts"></script>
+  <script src="script.js?v=20261022-workouts"></script>
+  <script>if ("serviceWorker" in navigator && location.protocol !== "file:") navigator.serviceWorker.register("service-worker.js?v=20261022-workouts").catch(() => {});</script>
 </body>
 </html>
