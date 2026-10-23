@@ -77,7 +77,25 @@ function workoutExerciseText(exercise, session) {
   });
   return sets.join(' · ') || 'Sem séries preenchidas';
 }
+function workoutIsCardio(session) {
+  return session.tipo === 'cardio' || (session.exercicios || []).some(function (exercise) { return exercise.tipo === 'cardio'; });
+}
+function workoutCardioLabel(session) {
+  const duration = Number(session.duracaoMinutos || session.exercicios?.find(function (e) { return e.tipo === 'cardio'; })?.duracaoMinutos || 0);
+  const distance = Number(session.distanciaKm || session.exercicios?.find(function (e) { return e.tipo === 'cardio'; })?.distanciaKm || 0);
+  return (duration ? formatNumber(duration, 0) + ' min' : '— min') + ' · ' + (distance ? formatNumber(distance, 2) + ' km' : '— km');
+}
+
 function workoutSessionDetails(session, short) {
+  if (workoutIsCardio(session)) {
+    return '<article class="workout-log-card">' +
+      '<div class="workout-log-header"><div><strong>' + workoutEscape(workoutName(session.pessoaId)) + ' · ' + workoutEscape(session.titulo || 'Cardio') + '</strong>' +
+      '<small>' + workoutDateBr(session.data) + ' · atividade aeróbica</small></div>' +
+      '<strong class="workout-tonnage">' + workoutCardioLabel(session) + '</strong></div>' +
+      '<details' + (short ? '' : ' open') + '><summary>Detalhes do cardio</summary>' +
+      '<p class="muted">Esteira · ' + workoutCardioLabel(session) + '</p>' +
+      (session.observacao ? '<p class="muted">' + workoutEscape(session.observacao) + '</p>' : '') + '</details></article>';
+  }
   const stats = workoutStats(session);
   const pending = (session.exercicios || []).flatMap(function (e) { return (e.series || []).filter(function (set) { return Number(set.repeticoes) > 200; }).map(function (set) { return { name: e.nome, reps: set.repeticoes }; }); });
   const warning = pending.length ? '<p class="workout-data-warning"><strong>Conferir repetições:</strong> ' + pending.map(function (x) { return workoutEscape(x.name) + ' (' + x.reps + ' reps)'; }).join(' · ') + '. Séries acima de 200 repetições ficam fora da tonelagem até confirmação.</p>' : '';
@@ -108,7 +126,7 @@ function renderTrainingVolumeSummary(personName) {
     '<h3>Volume movimentado</h3><p class="muted">Soma de carga × repetições de todas as séries registradas, convertida para kg. Não é o peso levantado em uma única repetição.</p>' +
     '</div></div><div class="workout-metric-grid">' +
     '<div class="workout-metric"><span>Total no histórico</span><strong>' + workoutFullMass(total) + '</strong></div>' +
-    '<div class="workout-metric"><span>Última sessão</span><strong>' + (latest ? workoutFullMass(latestVol) : '—') + '</strong></div>' +
+    '<div class="workout-metric"><span>Última sessão</span><strong>' + (latest ? (workoutIsCardio(latest) ? workoutCardioLabel(latest) : workoutFullMass(latestVol)) : '—') + '</strong></div>' +
     '<div class="workout-metric"><span>Sessões registradas</span><strong>' + sessions.length + '</strong></div></div>' +
     (sessions.length ? '<h4>Histórico por sessão</h4><div class="workout-log-list">' +
     sessions.map(function (s) { return workoutSessionDetails(s, true); }).join('') + '</div>' : '<p class="muted">Ainda não há sessões para esta pessoa.</p>') + '</section>';
@@ -151,7 +169,9 @@ function renderWorkoutCalendar() {
       '" data-workout-date="' + date + '" aria-pressed="' + (date === workoutCalendarDate) + '" aria-label="' +
       workoutEscape(workoutDateBr(date) + ', ' + items.length + ' treino(s)') + '">' +
       '<strong>' + day + '</strong>' +
-      (items.length ? '<small>' + items.length + (items.length === 1 ? ' treino' : ' treinos') + '</small><em>' + workoutMass(vol) + '</em>' : '') +
+      (items.length ? '<small>' + items.length + (items.length === 1 ? ' treino' : ' treinos') + '</small><em>' +
+      (items.every(workoutIsCardio) ? items.map(workoutCardioLabel).join(' + ') :
+        workoutMass(vol) + (items.some(workoutIsCardio) ? ' + cardio' : '')) + '</em>' : '') +
       '</button>');
   }
   root.innerHTML =
@@ -175,7 +195,10 @@ function renderWorkoutCalendar() {
   const dayVolume = daySessions.reduce(function (sum, s) { return sum + workoutStats(s).volumeKg; }, 0);
   target.innerHTML = workoutCalendarDate ?
     '<div class="workout-day-report"><h3>' + workoutDateBr(workoutCalendarDate) + ' · ' + daySessions.length + (daySessions.length === 1 ? ' sessão' : ' sessões') + '</h3>' +
-    (daySessions.length ? '<p class="workout-total">Volume do dia: <strong>' + workoutFullMass(dayVolume) + '</strong></p><div class="workout-log-list">' +
+    (daySessions.length ? '<p class="workout-total">' +
+      (daySessions.some(function (s) { return !workoutIsCardio(s); }) ? 'Volume de musculação: <strong>' + workoutFullMass(dayVolume) + '</strong>' : '') +
+      (daySessions.some(workoutIsCardio) ? (daySessions.some(function (s) { return !workoutIsCardio(s); }) ? ' · ' : '') + 'Cardio: <strong>' + daySessions.filter(workoutIsCardio).map(workoutCardioLabel).join(' + ') + '</strong>' : '') +
+      '</p><div class="workout-log-list">' +
     daySessions.map(function (s) { return workoutSessionDetails(s, true); }).join('') + '</div>' : '<p class="muted">Nenhum treino registrado neste dia com o filtro atual.</p>') +
     '</div>' : '<p class="muted">Selecione um dia para ver os treinos.</p>';
 }
@@ -191,6 +214,7 @@ function workoutExerciseRecords() {
   const group = new Map();
   workoutSessions().forEach(function (session) {
     (session.exercicios || []).forEach(function (exercise) {
+      if (session.tipo === 'cardio' || exercise.tipo === 'cardio') return;
       const key = exerciseNameKey(exercise.nome);
       if (!key) return;
       if (!group.has(key)) group.set(key, { label: exerciseDisplayName(exercise.nome), people: new Map(), peopleSet: new Set() });
