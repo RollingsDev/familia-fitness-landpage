@@ -2915,6 +2915,113 @@ const MEASURE_REGISTER_FIELDS = [
       try { localStorage.setItem('training-register-drafts', JSON.stringify(TRAINING_REGISTER_DRAFTS)); localStorage.setItem('training-register-active-dates', JSON.stringify(TRAINING_REGISTER_ACTIVE_DATES)); } catch (error) { /* sem persistência local disponível */ }
     }
 
+    
+    function renderCardioRegister(rows,person,day) {
+      const people=trainingPeopleOptions(rows);
+      const days=TRAINING_PLANS[person.name].dias;
+      const date=TRAINING_REGISTER_ACTIVE_DATES[person.id+'::Cardio'] || new Date().toLocaleDateString('sv-SE');
+      const draft=TRAINING_REGISTER_DRAFTS[trainingRegisterDraftKey(person.id,date,'Cardio')] || {};
+      const safe=value=>String(value??'').replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;');
+      const options=people.map(p=>'<option value="'+safe(p.id)+'" '+(p.id===person.id?'selected':'')+'>'+safe(p.name)+'</option>').join('');
+      const workoutOptions=days.map(d=>'<option value="'+safe(d.codigo)+'" '+(d.codigo===day.codigo?'selected':'')+'>'+safe(d.nome)+'</option>').join('');
+      const modalities=['Esteira','Bicicleta','Escada'].map(x=>'<option value="'+x+'" '+(x===(draft.modalidade||'Esteira')?'selected':'')+'>'+x+'</option>').join('');
+      return '<section class="workout-section training-register cardio-register" data-cardio-register>' +
+        '<div class="workout-head"><div><h3>Registrar cardio</h3><p class="muted">Atividade aeróbica não soma tonelagem de musculação.</p></div><span class="badge-status good">CARDIO</span></div>'+
+        '<div class="register-toolbar">'+
+        '<div><label for="registerPerson">Pessoa</label><select id="registerPerson">'+options+'</select></div>'+
+        '<div><label for="registerWorkout">Treino</label><select id="registerWorkout">'+workoutOptions+'</select></div>'+
+        '<div><label for="registerDate">Data</label><input id="registerDate" type="date" value="'+safe(draft.data||date)+'"></div></div>'+
+        '<div class="cardio-fields">'+
+        '<label for="cardioActivity">Modalidade<select id="cardioActivity">'+modalities+'</select></label>'+
+        '<label for="cardioDuration">Tempo (minutos)<input id="cardioDuration" type="number" min="1" step="1" inputmode="numeric" placeholder="60" value="'+safe(draft.duracaoMinutos??'')+'"></label>'+
+        '<label for="cardioDistance" data-cardio-distance>Distância (km)<input id="cardioDistance" type="number" min="0.01" step="0.01" inputmode="decimal" placeholder="9" value="'+safe(draft.distanciaKm??'')+'"></label>'+
+        '<label for="cardioSteps" data-cardio-steps hidden>Degraus subidos<input id="cardioSteps" type="number" min="1" step="1" inputmode="numeric" placeholder="1000" value="'+safe(draft.degraus??'')+'"></label>'+
+        '</div><label for="registerSessionObservation">Observação</label><textarea id="registerSessionObservation" class="register-session-observation">'+safe(draft.observacao||'')+'</textarea>'+
+        '<p class="muted">Esteira/Bicicleta: tempo e distância. Escada: tempo e degraus.</p>'+
+        '<div class="actions"><button type="button" class="primary-btn" id="registerGenerate">Gerar objeto JSON</button>'+
+        '<button type="button" class="ghost-btn" id="registerClear">Limpar rascunho</button>'+
+        '<button type="button" class="ghost-btn" id="registerCopy" disabled>Copiar objeto</button></div>'+
+        '<p id="cardioValidation" class="workout-data-warning" role="alert" hidden></p>'+
+        '<textarea id="registerOutput" class="register-output" readonly placeholder="Objeto de cardio"></textarea></section>';
+    }
+
+    function saveCardioRegisterDraft(pane) {
+      const id=pane.querySelector('#registerPerson')?.value;
+      const date=pane.querySelector('#registerDate')?.value;
+      if(!id||!date)return;
+      TRAINING_REGISTER_DRAFTS[trainingRegisterDraftKey(id,date,'Cardio')]={
+        modelo:'cardio-v1',pessoaId:id,data:date,titulo:'Cardio',
+        modalidade:pane.querySelector('#cardioActivity').value,
+        duracaoMinutos:pane.querySelector('#cardioDuration').value,
+        distanciaKm:pane.querySelector('#cardioDistance').value,
+        degraus:pane.querySelector('#cardioSteps').value,
+        observacao:pane.querySelector('#registerSessionObservation').value
+      };
+      TRAINING_REGISTER_ACTIVE_DATES[id+'::Cardio']=date;
+      try {
+        localStorage.setItem('training-register-drafts',JSON.stringify(TRAINING_REGISTER_DRAFTS));
+        localStorage.setItem('training-register-active-dates',JSON.stringify(TRAINING_REGISTER_ACTIVE_DATES));
+      } catch(error) {}
+    }
+
+    function bindCardioRegister(rows,content) {
+      const slot=content.querySelector('[data-training-pane="register"]');
+      const pane=slot?.querySelector('[data-cardio-register]');
+      if(!pane)return;
+      const pField=pane.querySelector('#registerPerson');
+      const wField=pane.querySelector('#registerWorkout');
+      const redraw=(id,code)=>{
+        slot.innerHTML=renderTrainingRegister(rows,id,code);
+        bindTrainingRegister(rows,content,id,code);
+      };
+      pField.addEventListener('change',()=>{
+        const person=trainingPeopleOptions(rows).find(p=>p.id===pField.value);
+        redraw(person?.id,TRAINING_PLANS[person?.name]?.dias[0]?.codigo);
+      });
+      wField.addEventListener('change',()=>{saveCardioRegisterDraft(pane);redraw(pField.value,wField.value);});
+      const refresh=()=>{
+        const isStairs=pane.querySelector('#cardioActivity').value==='Escada';
+        pane.querySelector('[data-cardio-steps]').hidden=!isStairs;
+        pane.querySelector('[data-cardio-distance]').hidden=isStairs;
+      };
+      refresh();
+      pane.addEventListener('input',()=>saveCardioRegisterDraft(pane));
+      pane.addEventListener('change',()=>{refresh();saveCardioRegisterDraft(pane);});
+      pane.querySelector('#registerClear').onclick=()=>{
+        const id=pField.value,date=pane.querySelector('#registerDate').value;
+        clearTrainingRegisterDraft(id,date,'Cardio');redraw(id,'Cardio');
+      };
+      pane.querySelector('#registerGenerate').onclick=()=>{
+        const modality=pane.querySelector('#cardioActivity').value;
+        const minutes=Number(pane.querySelector('#cardioDuration').value);
+        const stairs=modality==='Escada';
+        const value=Number(pane.querySelector(stairs?'#cardioSteps':'#cardioDistance').value);
+        const date=pane.querySelector('#registerDate').value;
+        const error=pane.querySelector('#cardioValidation');
+        if(!date || !Number.isInteger(minutes)||minutes<=0||!Number.isFinite(value)||value<=0||(stairs&&!Number.isInteger(value))){
+          error.hidden=false;
+          error.textContent='Informe uma data, duração em minutos e '+(stairs?'degraus inteiros.':'distância em km.');
+          return;
+        }
+        error.hidden=true;
+        const quantity=stairs?{degraus:value}:{distanciaKm:value};
+        const id=pField.value;
+        const session={id:id+'-'+date+'-cardio-'+trainingSlug(modality),pessoaId:id,data:date,titulo:'Cardio',
+          tipo:'cardio',modalidade:modality,duracaoMinutos:minutes,...quantity,
+          observacao:pane.querySelector('#registerSessionObservation').value.trim(),
+          exercicios:[{numero:1,nome:modality,exercicioId:'cardio-'+trainingSlug(modality),
+            tipo:'cardio',duracaoMinutos:minutes,...quantity,series:[]}]};
+        pane.querySelector('#registerOutput').value=JSON.stringify(session,null,2);
+        pane.querySelector('#registerCopy').disabled=false;
+        saveCardioRegisterDraft(pane);
+      };
+      pane.querySelector('#registerCopy').onclick=async()=>{
+        const field=pane.querySelector('#registerOutput');
+        try {await navigator.clipboard.writeText(field.value);pane.querySelector('#registerCopy').textContent='Copiado';}
+        catch(error){field.select();document.execCommand('copy');}
+      };
+    }
+
     function renderTrainingRegister(rows, personId, workoutCode) {
       const options = trainingPeopleOptions(rows);
       const person = options.find(item => item.id === personId) || options[0];
@@ -2923,6 +3030,7 @@ const MEASURE_REGISTER_FIELDS = [
       const day = days.find(item => item.codigo === workoutCode) || days[0];
       const today = new Date().toISOString().slice(0, 10);
       if (!person || !plan || !day) return '<section class="workout-section"><p class="muted">Nenhum plano disponível para registro.</p></section>';
+      if (day.tipo === 'cardio') return renderCardioRegister(rows,person,day);
       const activeDate = TRAINING_REGISTER_ACTIVE_DATES[`${person.id}::${day.codigo}`] || today;
       const savedDraft = TRAINING_REGISTER_DRAFTS[trainingRegisterDraftKey(person.id, activeDate, day.codigo)];
       const modelo = day.exercicios.map(item => exerciseNameKey(item.nome)).join('|');
@@ -2947,6 +3055,7 @@ const MEASURE_REGISTER_FIELDS = [
     function bindTrainingRegister(rows, content, personId, workoutCode) {
       const pane = content.querySelector('[data-training-pane="register"]');
       if (!pane) return;
+      if (pane.querySelector('[data-cardio-register]')) { bindCardioRegister(rows,content); return; }
       const personSelect = pane.querySelector('#registerPerson');
       const workoutSelect = pane.querySelector('#registerWorkout');
       const currentPersonId = personId || personSelect.value;
