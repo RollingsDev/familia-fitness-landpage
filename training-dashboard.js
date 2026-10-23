@@ -83,7 +83,7 @@ function workoutIsCardio(session) {
 function workoutCardioLabel(session) {
   const duration = Number(session.duracaoMinutos || session.exercicios?.find(function (e) { return e.tipo === 'cardio'; })?.duracaoMinutos || 0);
   const distance = Number(session.distanciaKm || session.exercicios?.find(function (e) { return e.tipo === 'cardio'; })?.distanciaKm || 0);
-  return (duration ? formatNumber(duration, 0) + ' min' : '— min') + ' · ' + (distance ? formatNumber(distance, 2) + ' km' : '— km');
+  return (duration ? formatNumber(duration, 0) + ' min' : '— min') + ' · ' + (distance ? formatNumber(distance, Number.isInteger(distance) ? 0 : 2) + ' km' : '— km');
 }
 
 function workoutSessionDetails(session, short) {
