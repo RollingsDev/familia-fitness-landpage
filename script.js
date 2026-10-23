@@ -2205,7 +2205,7 @@ const MEASURE_REGISTER_FIELDS = [
           <div class="workout-tabs">
             ${days.map((day, index) => `
               <button type="button" class="workout-tab ${index === 0 ? 'active' : ''}" data-workout-tab="${index}">
-                Treino ${day.codigo}
+                ${day.tipo === 'cardio' ? 'Cardio' : 'Treino ' + day.codigo}
               </button>
             `).join('')}
           </div>
@@ -2214,7 +2214,7 @@ const MEASURE_REGISTER_FIELDS = [
             ${days.map((day, index) => `
               <div class="workout-pane ${index === 0 ? 'active' : ''}" data-workout-pane="${index}">
                 <div class="workout-day-title">
-                  <strong>Treino ${day.codigo} | ${day.nome}</strong><br>
+                  <strong>${day.tipo === 'cardio' ? 'Cardio' : 'Treino ' + day.codigo} | ${day.nome}</strong><br>
                   ${day.exercicios.length} exercícios cadastrados
                 </div>
 
@@ -2224,8 +2224,7 @@ const MEASURE_REGISTER_FIELDS = [
                       <div>
                         <h4>${exercise.nome}</h4>
                         <div class="exercise-meta">
-                          <span>Séries: ${exercise.series}</span>
-                          <span>Reps/tempo: ${exercise.repeticoes}</span>
+                          ${day.tipo === 'cardio' ? '<span>Modalidade: Cardio</span><span>' + exercise.repeticoes + '</span>' : '<span>Séries: ' + exercise.series + '</span><span>Reps/tempo: ' + exercise.repeticoes + '</span>'}
                         </div>
                         ${exercise.video ? `<a class="exercise-link" href="${exercise.video}" target="_blank" rel="noopener"><i class="fa-brands fa-youtube"></i> Abrir referência</a>` : '<span class="muted"><i class="fa-solid fa-list-check"></i> Conforme o manual de 8 semanas</span>'}
                       </div>
@@ -2866,7 +2865,7 @@ const MEASURE_REGISTER_FIELDS = [
       const seriesHint = typeof exercise.series === 'string' ? exercise.series.trim().match(/^(\d+)\s*(?:v[aá]lidas?)?$/i) : null;
       const suggestedSeries = seriesHint ? Math.max(1, Math.min(10, Number(seriesHint[1]))) : (series.length || 3);
       return `<div class="register-exercise" data-register-exercise>
-        <div class="register-exercise-head"><span class="register-number">${index + 1}</span><input class="register-name" type="text" value="${exercise.nome || ''}" placeholder="Nome do exercicio"><label class="register-exercise-unit">Unidade<select class="register-unit"><option value="kg" ${unit === 'kg' ? 'selected' : ''}>kg</option><option value="lb" ${unit === 'lb' ? 'selected' : ''}>lb</option></select></label><button type="button" class="ghost-btn register-remove" data-remove-exercise>Remover</button></div>
+        <div class="register-exercise-head"><span class="register-number">${index + 1}</span><input class="register-name" type="text" list="exerciseCanonicalOptions" value="${exerciseDisplayName(exercise.nome || '')}" placeholder="Escolha um exercício"><label class="register-exercise-unit">Unidade<select class="register-unit"><option value="kg" ${unit === 'kg' ? 'selected' : ''}>kg</option><option value="lb" ${unit === 'lb' ? 'selected' : ''}>lb</option></select></label><button type="button" class="ghost-btn register-remove" data-remove-exercise>Remover</button></div>
         <div class="register-sets">${Array.from({ length: Math.max(suggestedSeries, series.length) }, (_, setIndex) => `<label>S${setIndex + 1}<input class="register-weight" type="number" step="0.01" min="0" value="${series[setIndex]?.peso ?? ''}" placeholder="kg/lb"><input class="register-reps" type="number" step="1" min="0" value="${series[setIndex]?.repeticoes ?? ''}" placeholder="reps"><select class="register-emoji" aria-label="Como foi a série">${trainingRegisterEmojiOptions(series[setIndex]?.emoji || '')}</select></label>`).join('')}</div><button type="button" class="ghost-btn register-add-set" data-add-set><i class="fa-solid fa-plus"></i> Adicionar série</button>
         <input class="register-observation" type="text" value="${exercise.observacao || ''}" placeholder="Observação do exercício">
       </div>`;
@@ -2894,7 +2893,8 @@ const MEASURE_REGISTER_FIELDS = [
         observacao: pane.querySelector('#registerSessionObservation')?.value || '',
         exercicios: [...pane.querySelectorAll('[data-register-exercise]')].map((item, index) => ({
           numero: index + 1,
-          nome: item.querySelector('.register-name')?.value || '',
+          nome: exerciseDisplayName(item.querySelector('.register-name')?.value || ''),
+          exercicioId: exerciseNameKey(item.querySelector('.register-name')?.value || '').replace(/ /g,'-'),
           unidade: item.querySelector('.register-unit')?.value || 'kg',
           series: [...item.querySelectorAll('.register-sets label')].map(label => ({
             peso: label.querySelector('.register-weight')?.value === '' ? null : Number(label.querySelector('.register-weight')?.value),
@@ -3036,6 +3036,7 @@ const MEASURE_REGISTER_FIELDS = [
       const modelo = day.exercicios.map(item => exerciseNameKey(item.nome)).join('|');
       const draft = savedDraft?.modelo === modelo ? savedDraft : null;
       const registerExercises = draft?.exercicios?.length ? draft.exercicios : day.exercicios;
+      const canonicalNames=[...new Set(Object.values(EXERCISE_CANONICAL_NAME_BY_KEY))].sort((a,b)=>a.localeCompare(b,'pt-BR'));
       return `<section class="workout-section training-register">
         <div class="workout-head"><div><h3>Registrar sessão</h3><div class="muted">Preencha a sessão realizada e gere o objeto pronto para colar no training-progress.json.</div></div></div>
         <div class="register-toolbar">
@@ -3044,7 +3045,7 @@ const MEASURE_REGISTER_FIELDS = [
           <div><label for="registerDate">Data</label><input id="registerDate" type="date" value="${draft?.data || activeDate}"></div>
           <div class="register-unit-note"><span>Unidade</span><strong>Escolha em cada exercicio</strong></div>
         </div>
-        <div class="register-exercises" id="registerExercises">${registerExercises.map((exercise, index) => trainingRegisterExerciseRow(exercise, index, draft?.unidade || 'kg')).join('')}</div>
+        <datalist id="exerciseCanonicalOptions">${canonicalNames.map(name => `<option value="${name}">`).join('')}</datalist><div class="register-exercises" id="registerExercises">${registerExercises.map((exercise, index) => trainingRegisterExerciseRow(exercise, index, draft?.unidade || 'kg')).join('')}</div>
         <div class="actions"><button type="button" class="ghost-btn" id="registerAddExercise"><i class="fa-solid fa-plus"></i> Adicionar exercício</button></div>
         <label for="registerSessionObservation">Observação da sessão</label><textarea id="registerSessionObservation" class="register-session-observation" placeholder="Ex.: treino adaptado, troca de exercício, equipamento utilizado...">${draft?.observacao || ''}</textarea>
         <div class="actions"><button type="button" class="primary-btn" id="registerGenerate"><i class="fa-solid fa-code"></i> Gerar objeto JSON</button><button type="button" class="ghost-btn" id="registerClear">Limpar rascunho</button><button type="button" class="ghost-btn" id="registerCopy" disabled><i class="fa-regular fa-copy"></i> Copiar objeto</button></div>
@@ -3066,13 +3067,14 @@ const MEASURE_REGISTER_FIELDS = [
       pane.addEventListener('change', event => { if (!event.target.matches('#registerPerson, #registerWorkout')) saveTrainingRegisterDraft(pane, personId, workoutCode || workoutSelect.value); });
       const rerenderWithPlan = (nextPersonId, nextWorkoutCode) => { pane.innerHTML = renderTrainingRegister(rows, nextPersonId, nextWorkoutCode); bindTrainingRegister(rows, content, nextPersonId, nextWorkoutCode); };
       const exerciseList = pane.querySelector('#registerExercises');
+      exerciseList.addEventListener('focusout',event=>{if(!event.target.matches('.register-name'))return;const name=exerciseDisplayName(event.target.value);if(name&&name!==event.target.value){event.target.value=name;saveTrainingRegisterDraft(pane);}});
       pane.querySelector('#registerAddExercise').addEventListener('click', () => { exerciseList.insertAdjacentHTML('beforeend', trainingRegisterExerciseRow({}, exerciseList.querySelectorAll('[data-register-exercise]').length)); });
       exerciseList.addEventListener('click', event => { const addSet = event.target.closest('[data-add-set]'); if (addSet) { const exercise = addSet.closest('[data-register-exercise]'); const setIndex = exercise.querySelectorAll('.register-sets label').length; exercise.querySelector('.register-sets').insertAdjacentHTML('beforeend', `<label>S${setIndex + 1}<input class="register-weight" type="number" step="0.01" min="0" placeholder="kg/lb"><input class="register-reps" type="number" step="1" min="0" placeholder="reps"><select class="register-emoji" aria-label="Como foi a série">${trainingRegisterEmojiOptions()}</select></label>`); saveTrainingRegisterDraft(pane, personId, workoutCode || workoutSelect.value); return; } if (event.target.closest('[data-remove-exercise]')) { event.target.closest('[data-register-exercise]').remove(); [...exerciseList.querySelectorAll('[data-register-exercise]')].forEach((item, index) => item.querySelector('.register-number').textContent = index + 1); saveTrainingRegisterDraft(pane, personId, workoutCode || workoutSelect.value); } });
       pane.querySelector('#registerClear').addEventListener('click', () => { const date = pane.querySelector('#registerDate').value; const code = pane.querySelector('#registerWorkout').value; clearTrainingRegisterDraft(personId, date, code); pane.innerHTML = renderTrainingRegister(rows, personId, code); bindTrainingRegister(rows, content, personId, code); });
       pane.querySelector('#registerGenerate').addEventListener('click', () => {
         const person = trainingPeopleOptions(rows).find(item => item.id === pane.querySelector('#registerPerson').value);
         const day = TRAINING_PLANS[person.name].dias.find(item => item.codigo === pane.querySelector('#registerWorkout').value);
-        const session = { id: `${person.id}-${pane.querySelector('#registerDate').value}-${trainingSlug(day.codigo)}`, pessoaId: person.id, data: pane.querySelector('#registerDate').value, titulo: day.codigo, unidade: 'kg', observacao: pane.querySelector('#registerSessionObservation').value.trim(), exercicios: [...pane.querySelectorAll('[data-register-exercise]')].map((item, index) => { const series = [...item.querySelectorAll('.register-sets label')].map(label => ({ peso: Number(label.querySelector('.register-weight').value), repeticoes: Number(label.querySelector('.register-reps').value), emoji: label.querySelector('.register-emoji')?.value || '' })).filter(set => Number.isFinite(set.peso) && set.peso > 0); const result = { numero: index + 1, nome: item.querySelector('.register-name').value.trim() || 'Exercício não informado', unidade: item.querySelector('.register-unit')?.value || 'kg', series }; const observation = item.querySelector('.register-observation').value.trim(); if (observation) result.observacao = observation; return result; }) };
+        const session = { id: `${person.id}-${pane.querySelector('#registerDate').value}-${trainingSlug(day.codigo)}`, pessoaId: person.id, data: pane.querySelector('#registerDate').value, titulo: day.codigo, unidade: 'kg', observacao: pane.querySelector('#registerSessionObservation').value.trim(), exercicios: [...pane.querySelectorAll('[data-register-exercise]')].map((item, index) => { const series = [...item.querySelectorAll('.register-sets label')].map(label => ({ peso: Number(label.querySelector('.register-weight').value), repeticoes: Number(label.querySelector('.register-reps').value), emoji: label.querySelector('.register-emoji')?.value || '' })).filter(set => Number.isFinite(set.peso) && set.peso > 0); const result = { numero: index + 1, nome: exerciseDisplayName(item.querySelector('.register-name').value.trim() || 'Exercício não informado'), exercicioId: exerciseNameKey(item.querySelector('.register-name').value.trim() || 'Exercício não informado').replace(/ /g,'-'), unidade: item.querySelector('.register-unit')?.value || 'kg', series }; const observation = item.querySelector('.register-observation').value.trim(); if (observation) result.observacao = observation; return result; }) };
         const output = pane.querySelector('#registerOutput'); output.value = JSON.stringify(session, null, 2); pane.querySelector('#registerCopy').disabled = false; saveTrainingRegisterDraft(pane, personId, pane.querySelector('#registerWorkout').value);
       });
       pane.querySelector('#registerCopy').addEventListener('click', async () => { const output = pane.querySelector('#registerOutput'); try { await navigator.clipboard.writeText(output.value); pane.querySelector('#registerCopy').textContent = 'Copiado'; setTimeout(() => pane.querySelector('#registerCopy').innerHTML = '<i class="fa-regular fa-copy"></i> Copiar objeto', 1400); } catch { output.select(); document.execCommand('copy'); } });
