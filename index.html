@@ -989,6 +989,26 @@
       line-height: 1.55;
     }
     body.light-theme .workout-data-warning { color: #894800; background: rgba(245, 158, 11, .12); }
+
+    /* Formulário aeróbico com unidades específicas e layout responsivo */
+    .cardio-register { min-width: 0; }
+    .cardio-fields {
+      display: grid;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 14px;
+      margin: 14px 0 20px;
+    }
+    .cardio-fields label { display: grid; min-width: 0; gap: 7px; }
+    .cardio-fields input, .cardio-fields select { width: 100%; min-width: 0; font-size: 16px; }
+    .cardio-fields [hidden] { display: none !important; }
+    .cardio-compare-card { border-top: 2px solid rgba(34,197,94,.45); }
+    .cardio-compare-card h3 { color: #8df3bc; }
+    .cardio-register .badge-status { letter-spacing: .08em; }
+    @media(max-width:600px) {
+      .cardio-fields { grid-template-columns: minmax(0, 1fr); gap: 11px; }
+      .cardio-register .register-toolbar { grid-template-columns: minmax(0,1fr); }
+      .cardio-register .register-toolbar > div { width: 100%; }
+    }
 </style>
 </head>
 
