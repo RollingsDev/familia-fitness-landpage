@@ -99,7 +99,7 @@
         },
         {
           "numero": 4,
-          "nome": "Rosca scott na polia (cabo, halter ou barra W)",
+          "nome": "Rosca scott na polia",
           "unidade": "kg",
           "series": [
             {
@@ -209,7 +209,7 @@
         },
         {
           "numero": 4,
-          "nome": "Rosca direta (cabo, halter ou barra W)",
+          "nome": "Rosca direta",
           "unidade": "kg",
           "series": [
             {
@@ -308,7 +308,7 @@
         },
         {
           "numero": 4,
-          "nome": "Rosca direta polia (cabo, halter ou barra W)",
+          "nome": "Rosca direta polia",
           "unidade": "kg",
           "series": [
             {
@@ -418,7 +418,7 @@
         },
         {
           "numero": 4,
-          "nome": "Rosca direta (cabo, halter ou barra W)",
+          "nome": "Rosca direta",
           "unidade": "kg",
           "series": [
             {
@@ -538,7 +538,7 @@
         },
         {
           "numero": 5,
-          "nome": "Elevação pélvica (máquina ou barra livre)",
+          "nome": "Elevação pélvica",
           "unidade": "kg",
           "series": [
             {
@@ -648,7 +648,7 @@
         },
         {
           "numero": 5,
-          "nome": "Elevação pélvica (máquina ou barra livre)",
+          "nome": "Elevação pélvica",
           "unidade": "kg",
           "series": [
             {
@@ -1249,7 +1249,7 @@
         },
         {
           "numero": 4,
-          "nome": "Crucifixo",
+          "nome": "Fly",
           "unidade": "kg",
           "series": [
             {
@@ -1671,7 +1671,7 @@
         },
         {
           "numero": 5,
-          "nome": "Elevação lateral Maquina/Polia",
+          "nome": "Elevação lateral",
           "unidade": "kg",
           "series": [
             {
@@ -1820,7 +1820,7 @@
         },
         {
           "numero": 5,
-          "nome": "Elevação lateral Maquina/Polia",
+          "nome": "Elevação lateral",
           "unidade": "kg",
           "series": [
             {
