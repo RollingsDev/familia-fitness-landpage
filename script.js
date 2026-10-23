@@ -14,37 +14,43 @@
                                     "nome": "Mesa Flexora",
                                     "series": "4",
                                     "repeticoes": "12",
-                                    "video": "https://www.youtube.com/shorts/IXg1PQ_5gmw"
+                                    "video": "https://www.youtube.com/shorts/IXg1PQ_5gmw",
+                                    "exercicioId": "mesa-flexora"
                               },
                               {
                                     "nome": "Stiff",
                                     "series": "3",
                                     "repeticoes": "12",
-                                    "video": "https://www.youtube.com/shorts/raMtPJQ5f9A"
+                                    "video": "https://www.youtube.com/shorts/raMtPJQ5f9A",
+                                    "exercicioId": "stiff"
                               },
                               {
                                     "nome": "Cadeira Flexora",
                                     "series": "3",
                                     "repeticoes": "15",
-                                    "video": "https://www.youtube.com/shorts/T46yKiz8laY"
+                                    "video": "https://www.youtube.com/shorts/T46yKiz8laY",
+                                    "exercicioId": "cadeira-flexora"
                               },
                               {
                                     "nome": "Agachamento Búlgaro",
                                     "series": "3",
                                     "repeticoes": "10",
-                                    "video": "https://www.youtube.com/shorts/0KQOdTvfc5A"
+                                    "video": "https://www.youtube.com/shorts/0KQOdTvfc5A",
+                                    "exercicioId": "agachamento-bulgaro"
                               },
                               {
                                     "nome": "Cadeira Adutora",
                                     "series": "3",
                                     "repeticoes": "15",
-                                    "video": "https://www.youtube.com/shorts/1aATfJITaIw"
+                                    "video": "https://www.youtube.com/shorts/1aATfJITaIw",
+                                    "exercicioId": "cadeira-adutora"
                               },
                               {
                                     "nome": "Elevação Pélvica",
                                     "series": "4",
                                     "repeticoes": "12",
-                                    "video": "https://www.youtube.com/shorts/Nuoo1XgRtGY"
+                                    "video": "https://www.youtube.com/shorts/Nuoo1XgRtGY",
+                                    "exercicioId": "elevacao-pelvica"
                               }
                         ]
                   },
@@ -56,43 +62,50 @@
                                     "nome": "Supino Reto",
                                     "series": "4",
                                     "repeticoes": "10",
-                                    "video": "https://www.youtube.com/shorts/hlV6f0kHmeo"
+                                    "video": "https://www.youtube.com/shorts/hlV6f0kHmeo",
+                                    "exercicioId": "supino-reto"
                               },
                               {
                                     "nome": "Supino Inclinado na Máquina",
                                     "series": "3",
                                     "repeticoes": "10",
-                                    "video": "https://www.youtube.com/shorts/wW0sG8mXqO0"
+                                    "video": "https://www.youtube.com/shorts/wW0sG8mXqO0",
+                                    "exercicioId": "supino-inclinado-na-maquina"
                               },
                               {
                                     "nome": "Elevação Lateral",
                                     "series": "4",
                                     "repeticoes": "12",
-                                    "video": "https://www.youtube.com/shorts/ot9nwSC1JnA"
+                                    "video": "https://www.youtube.com/shorts/ot9nwSC1JnA",
+                                    "exercicioId": "elevacao-lateral"
                               },
                               {
                                     "nome": "Elevação Frontal",
                                     "series": "3",
                                     "repeticoes": "12",
-                                    "video": "https://www.youtube.com/shorts/GqZRmCow0rw"
+                                    "video": "https://www.youtube.com/shorts/GqZRmCow0rw",
+                                    "exercicioId": "elevacao-frontal"
                               },
                               {
                                     "nome": "Tríceps na Corda",
                                     "series": "4",
                                     "repeticoes": "12",
-                                    "video": "https://www.youtube.com/shorts/-QGC1cL6ETE"
+                                    "video": "https://www.youtube.com/shorts/-QGC1cL6ETE",
+                                    "exercicioId": "triceps-na-corda"
                               },
                               {
                                     "nome": "Prancha Abdominal",
                                     "series": "3",
                                     "repeticoes": "30 seg",
-                                    "video": "https://www.youtube.com/shorts/uxPlAbWFUDs"
+                                    "video": "https://www.youtube.com/shorts/uxPlAbWFUDs",
+                                    "exercicioId": "prancha-abdominal"
                               },
                               {
                                     "nome": "Panturrilha (Escada ou em Pé)",
                                     "series": "4",
                                     "repeticoes": "15",
-                                    "video": "https://www.youtube.com/shorts/3afDSh_V0sg"
+                                    "video": "https://www.youtube.com/shorts/3afDSh_V0sg",
+                                    "exercicioId": "panturrilha-escada-ou-em-pe"
                               }
                         ]
                   },
@@ -104,37 +117,43 @@
                                     "nome": "Agachamento",
                                     "series": "4",
                                     "repeticoes": "10",
-                                    "video": "https://www.youtube.com/shorts/1oipoiTpbJA"
+                                    "video": "https://www.youtube.com/shorts/1oipoiTpbJA",
+                                    "exercicioId": "agachamento"
                               },
                               {
                                     "nome": "Hack Machine",
                                     "series": "4",
                                     "repeticoes": "12",
-                                    "video": "https://www.youtube.com/watch?v=SBBURLX8eKs"
+                                    "video": "https://www.youtube.com/watch?v=SBBURLX8eKs",
+                                    "exercicioId": "hack-machine"
                               },
                               {
                                     "nome": "Leg Press 45°",
                                     "series": "4",
                                     "repeticoes": "12",
-                                    "video": "https://www.youtube.com/shorts/D9WR6PoMYxs"
+                                    "video": "https://www.youtube.com/shorts/D9WR6PoMYxs",
+                                    "exercicioId": "leg-press-45"
                               },
                               {
                                     "nome": "Afundo e Passada",
                                     "series": "3",
                                     "repeticoes": "10",
-                                    "video": "https://www.youtube.com/shorts/JoZYP87WAp0"
+                                    "video": "https://www.youtube.com/shorts/JoZYP87WAp0",
+                                    "exercicioId": "afundo-e-passada"
                               },
                               {
                                     "nome": "Cadeira Extensora",
                                     "series": "4",
                                     "repeticoes": "12",
-                                    "video": "https://www.youtube.com/shorts/PzIfB9MiiX8"
+                                    "video": "https://www.youtube.com/shorts/PzIfB9MiiX8",
+                                    "exercicioId": "cadeira-extensora"
                               },
                               {
                                     "nome": "Cadeira Abdutora",
                                     "series": "3",
                                     "repeticoes": "15",
-                                    "video": "https://www.youtube.com/shorts/nabhYLtz8Gg"
+                                    "video": "https://www.youtube.com/shorts/nabhYLtz8Gg",
+                                    "exercicioId": "cadeira-abdutora"
                               }
                         ]
                   },
@@ -146,37 +165,43 @@
                                     "nome": "Remada Aberta na Polia Alta",
                                     "series": "4",
                                     "repeticoes": "10",
-                                    "video": "https://www.youtube.com/shorts/_2MfZAj98tk"
+                                    "video": "https://www.youtube.com/shorts/_2MfZAj98tk",
+                                    "exercicioId": "remada-aberta-na-polia-alta"
                               },
                               {
                                     "nome": "Puxada Alta com Triângulo",
                                     "series": "3",
                                     "repeticoes": "12",
-                                    "video": "https://www.youtube.com/shorts/ySLFHxmJ_Sc"
+                                    "video": "https://www.youtube.com/shorts/ySLFHxmJ_Sc",
+                                    "exercicioId": "puxada-alta-com-triangulo"
                               },
                               {
                                     "nome": "Pulldown",
                                     "series": "3",
                                     "repeticoes": "12",
-                                    "video": "https://www.youtube.com/shorts/GDhW19yQrJI"
+                                    "video": "https://www.youtube.com/shorts/GDhW19yQrJI",
+                                    "exercicioId": "pulldown"
                               },
                               {
-                                    "nome": "Rosca Direta (Cabo/Halter/Barra W)",
+                                    "nome": "Rosca Direta",
                                     "series": "4",
                                     "repeticoes": "12",
-                                    "video": "https://www.youtube.com/shorts/x6JCKfdzPJE"
+                                    "video": "https://www.youtube.com/shorts/x6JCKfdzPJE",
+                                    "exercicioId": "rosca-direta"
                               },
                               {
                                     "nome": "Prancha Abdominal",
                                     "series": "3",
                                     "repeticoes": "60 seg",
-                                    "video": "https://www.youtube.com/shorts/uxPlAbWFUDs"
+                                    "video": "https://www.youtube.com/shorts/uxPlAbWFUDs",
+                                    "exercicioId": "prancha-abdominal"
                               },
                               {
                                     "nome": "Panturrilha (Escada ou em Pé)",
                                     "series": "4",
                                     "repeticoes": "20",
-                                    "video": "https://www.youtube.com/shorts/3afDSh_V0sg"
+                                    "video": "https://www.youtube.com/shorts/3afDSh_V0sg",
+                                    "exercicioId": "panturrilha-escada-ou-em-pe"
                               }
                         ]
                   },
@@ -188,37 +213,43 @@
                                     "nome": "Elevação Pélvica",
                                     "series": "4",
                                     "repeticoes": "12",
-                                    "video": "https://www.youtube.com/shorts/Nuoo1XgRtGY"
+                                    "video": "https://www.youtube.com/shorts/Nuoo1XgRtGY",
+                                    "exercicioId": "elevacao-pelvica"
                               },
                               {
                                     "nome": "Glúteo no Cabo",
                                     "series": "3",
                                     "repeticoes": "12",
-                                    "video": "https://www.youtube.com/shorts/XqQlpJhB8xU"
+                                    "video": "https://www.youtube.com/shorts/XqQlpJhB8xU",
+                                    "exercicioId": "gluteo-no-cabo"
                               },
                               {
                                     "nome": "Cadeira Abdutora",
                                     "series": "3",
                                     "repeticoes": "20",
-                                    "video": "https://www.youtube.com/shorts/nabhYLtz8Gg"
+                                    "video": "https://www.youtube.com/shorts/nabhYLtz8Gg",
+                                    "exercicioId": "cadeira-abdutora"
                               },
                               {
                                     "nome": "Cadeira Flexora",
                                     "series": "3",
                                     "repeticoes": "12",
-                                    "video": "https://www.youtube.com/shorts/T46yKiz8laY"
+                                    "video": "https://www.youtube.com/shorts/T46yKiz8laY",
+                                    "exercicioId": "cadeira-flexora"
                               },
                               {
                                     "nome": "Mesa Flexora",
                                     "series": "3",
                                     "repeticoes": "12",
-                                    "video": "https://www.youtube.com/shorts/IXg1PQ_5gmw"
+                                    "video": "https://www.youtube.com/shorts/IXg1PQ_5gmw",
+                                    "exercicioId": "mesa-flexora"
                               },
                               {
                                     "nome": "Cardio (Bicicleta, Escada ou Esteira)",
                                     "series": "20",
                                     "repeticoes": "30 min",
-                                    "video": "https://i.pinimg.com/originals/e6/9a/ca/e69acae1176c249d95dcea23f85381c9.jpg"
+                                    "video": "https://i.pinimg.com/originals/e6/9a/ca/e69acae1176c249d95dcea23f85381c9.jpg",
+                                    "exercicioId": "cardio-bicicleta-escada-ou-esteira"
                               }
                         ]
                   },
@@ -230,37 +261,43 @@
                                     "nome": "Elevação Pélvica",
                                     "series": "4",
                                     "repeticoes": "12",
-                                    "video": "https://www.youtube.com/shorts/Nuoo1XgRtGY"
+                                    "video": "https://www.youtube.com/shorts/Nuoo1XgRtGY",
+                                    "exercicioId": "elevacao-pelvica"
                               },
                               {
                                     "nome": "Cadeira Adutora",
                                     "series": "3",
                                     "repeticoes": "15",
-                                    "video": "https://www.youtube.com/shorts/1aATfJITaIw"
+                                    "video": "https://www.youtube.com/shorts/1aATfJITaIw",
+                                    "exercicioId": "cadeira-adutora"
                               },
                               {
                                     "nome": "Cadeira Abdutora",
                                     "series": "3",
                                     "repeticoes": "20",
-                                    "video": "https://www.youtube.com/shorts/nabhYLtz8Gg"
+                                    "video": "https://www.youtube.com/shorts/nabhYLtz8Gg",
+                                    "exercicioId": "cadeira-abdutora"
                               },
                               {
                                     "nome": "Glúteo no Cabo",
                                     "series": "3",
                                     "repeticoes": "12",
-                                    "video": "https://www.youtube.com/shorts/XqQlpJhB8xU"
+                                    "video": "https://www.youtube.com/shorts/XqQlpJhB8xU",
+                                    "exercicioId": "gluteo-no-cabo"
                               },
                               {
                                     "nome": "Prancha Abdominal",
                                     "series": "3",
                                     "repeticoes": "60 seg",
-                                    "video": "https://www.youtube.com/shorts/uxPlAbWFUDs"
+                                    "video": "https://www.youtube.com/shorts/uxPlAbWFUDs",
+                                    "exercicioId": "prancha-abdominal"
                               },
                               {
                                     "nome": "Cardio (Bicicleta, Escada ou Esteira)",
                                     "series": "20",
                                     "repeticoes": "30 min",
-                                    "video": "https://i.pinimg.com/originals/e6/9a/ca/e69acae1176c249d95dcea23f85381c9.jpg"
+                                    "video": "https://i.pinimg.com/originals/e6/9a/ca/e69acae1176c249d95dcea23f85381c9.jpg",
+                                    "exercicioId": "cardio-bicicleta-escada-ou-esteira"
                               }
                         ]
                   }
@@ -278,37 +315,43 @@
                                     "nome": "Mesa Flexora",
                                     "series": "4",
                                     "repeticoes": "12",
-                                    "video": "https://www.youtube.com/shorts/IXg1PQ_5gmw"
+                                    "video": "https://www.youtube.com/shorts/IXg1PQ_5gmw",
+                                    "exercicioId": "mesa-flexora"
                               },
                               {
                                     "nome": "Stiff",
                                     "series": "3",
                                     "repeticoes": "12",
-                                    "video": "https://www.youtube.com/shorts/raMtPJQ5f9A"
+                                    "video": "https://www.youtube.com/shorts/raMtPJQ5f9A",
+                                    "exercicioId": "stiff"
                               },
                               {
                                     "nome": "Cadeira Flexora",
                                     "series": "3",
                                     "repeticoes": "15",
-                                    "video": "https://www.youtube.com/shorts/T46yKiz8laY"
+                                    "video": "https://www.youtube.com/shorts/T46yKiz8laY",
+                                    "exercicioId": "cadeira-flexora"
                               },
                               {
                                     "nome": "Agachamento Búlgaro",
                                     "series": "3",
                                     "repeticoes": "10",
-                                    "video": "https://www.youtube.com/shorts/0KQOdTvfc5A"
+                                    "video": "https://www.youtube.com/shorts/0KQOdTvfc5A",
+                                    "exercicioId": "agachamento-bulgaro"
                               },
                               {
                                     "nome": "Cadeira Adutora",
                                     "series": "3",
                                     "repeticoes": "15",
-                                    "video": "https://www.youtube.com/shorts/1aATfJITaIw"
+                                    "video": "https://www.youtube.com/shorts/1aATfJITaIw",
+                                    "exercicioId": "cadeira-adutora"
                               },
                               {
                                     "nome": "Elevação Pélvica",
                                     "series": "4",
                                     "repeticoes": "12",
-                                    "video": "https://www.youtube.com/shorts/Nuoo1XgRtGY"
+                                    "video": "https://www.youtube.com/shorts/Nuoo1XgRtGY",
+                                    "exercicioId": "elevacao-pelvica"
                               }
                         ]
                   },
@@ -320,43 +363,50 @@
                                     "nome": "Supino Reto",
                                     "series": "4",
                                     "repeticoes": "10",
-                                    "video": "https://www.youtube.com/shorts/hlV6f0kHmeo"
+                                    "video": "https://www.youtube.com/shorts/hlV6f0kHmeo",
+                                    "exercicioId": "supino-reto"
                               },
                               {
                                     "nome": "Supino Inclinado na Máquina",
                                     "series": "3",
                                     "repeticoes": "10",
-                                    "video": "https://www.youtube.com/shorts/wW0sG8mXqO0"
+                                    "video": "https://www.youtube.com/shorts/wW0sG8mXqO0",
+                                    "exercicioId": "supino-inclinado-na-maquina"
                               },
                               {
                                     "nome": "Elevação Lateral",
                                     "series": "4",
                                     "repeticoes": "12",
-                                    "video": "https://www.youtube.com/shorts/ot9nwSC1JnA"
+                                    "video": "https://www.youtube.com/shorts/ot9nwSC1JnA",
+                                    "exercicioId": "elevacao-lateral"
                               },
                               {
                                     "nome": "Elevação Frontal",
                                     "series": "3",
                                     "repeticoes": "12",
-                                    "video": "https://www.youtube.com/shorts/GqZRmCow0rw"
+                                    "video": "https://www.youtube.com/shorts/GqZRmCow0rw",
+                                    "exercicioId": "elevacao-frontal"
                               },
                               {
                                     "nome": "Tríceps na Corda",
                                     "series": "4",
                                     "repeticoes": "12",
-                                    "video": "https://www.youtube.com/shorts/-QGC1cL6ETE"
+                                    "video": "https://www.youtube.com/shorts/-QGC1cL6ETE",
+                                    "exercicioId": "triceps-na-corda"
                               },
                               {
                                     "nome": "Prancha Abdominal",
                                     "series": "3",
                                     "repeticoes": "30 seg",
-                                    "video": "https://www.youtube.com/shorts/uxPlAbWFUDs"
+                                    "video": "https://www.youtube.com/shorts/uxPlAbWFUDs",
+                                    "exercicioId": "prancha-abdominal"
                               },
                               {
                                     "nome": "Panturrilha (Escada ou em Pé)",
                                     "series": "4",
                                     "repeticoes": "15",
-                                    "video": "https://www.youtube.com/shorts/3afDSh_V0sg"
+                                    "video": "https://www.youtube.com/shorts/3afDSh_V0sg",
+                                    "exercicioId": "panturrilha-escada-ou-em-pe"
                               }
                         ]
                   },
@@ -368,37 +418,43 @@
                                     "nome": "Agachamento",
                                     "series": "4",
                                     "repeticoes": "10",
-                                    "video": "https://www.youtube.com/shorts/1oipoiTpbJA"
+                                    "video": "https://www.youtube.com/shorts/1oipoiTpbJA",
+                                    "exercicioId": "agachamento"
                               },
                               {
                                     "nome": "Hack Machine",
                                     "series": "4",
                                     "repeticoes": "12",
-                                    "video": "https://www.youtube.com/watch?v=SBBURLX8eKs"
+                                    "video": "https://www.youtube.com/watch?v=SBBURLX8eKs",
+                                    "exercicioId": "hack-machine"
                               },
                               {
                                     "nome": "Leg Press 45°",
                                     "series": "4",
                                     "repeticoes": "12",
-                                    "video": "https://www.youtube.com/shorts/D9WR6PoMYxs"
+                                    "video": "https://www.youtube.com/shorts/D9WR6PoMYxs",
+                                    "exercicioId": "leg-press-45"
                               },
                               {
                                     "nome": "Afundo e Passada",
                                     "series": "3",
                                     "repeticoes": "10",
-                                    "video": "https://www.youtube.com/shorts/JoZYP87WAp0"
+                                    "video": "https://www.youtube.com/shorts/JoZYP87WAp0",
+                                    "exercicioId": "afundo-e-passada"
                               },
                               {
                                     "nome": "Cadeira Extensora",
                                     "series": "4",
                                     "repeticoes": "12",
-                                    "video": "https://www.youtube.com/shorts/PzIfB9MiiX8"
+                                    "video": "https://www.youtube.com/shorts/PzIfB9MiiX8",
+                                    "exercicioId": "cadeira-extensora"
                               },
                               {
                                     "nome": "Cadeira Abdutora",
                                     "series": "3",
                                     "repeticoes": "15",
-                                    "video": "https://www.youtube.com/shorts/nabhYLtz8Gg"
+                                    "video": "https://www.youtube.com/shorts/nabhYLtz8Gg",
+                                    "exercicioId": "cadeira-abdutora"
                               }
                         ]
                   },
@@ -410,37 +466,43 @@
                                     "nome": "Remada Aberta na Polia Alta",
                                     "series": "4",
                                     "repeticoes": "10",
-                                    "video": "https://www.youtube.com/shorts/_2MfZAj98tk"
+                                    "video": "https://www.youtube.com/shorts/_2MfZAj98tk",
+                                    "exercicioId": "remada-aberta-na-polia-alta"
                               },
                               {
                                     "nome": "Puxada Alta com Triângulo",
                                     "series": "3",
                                     "repeticoes": "12",
-                                    "video": "https://www.youtube.com/shorts/ySLFHxmJ_Sc"
+                                    "video": "https://www.youtube.com/shorts/ySLFHxmJ_Sc",
+                                    "exercicioId": "puxada-alta-com-triangulo"
                               },
                               {
                                     "nome": "Pulldown",
                                     "series": "3",
                                     "repeticoes": "12",
-                                    "video": "https://www.youtube.com/shorts/GDhW19yQrJI"
+                                    "video": "https://www.youtube.com/shorts/GDhW19yQrJI",
+                                    "exercicioId": "pulldown"
                               },
                               {
-                                    "nome": "Rosca Direta (Cabo/Halter/Barra W)",
+                                    "nome": "Rosca Direta",
                                     "series": "4",
                                     "repeticoes": "12",
-                                    "video": "https://www.youtube.com/shorts/x6JCKfdzPJE"
+                                    "video": "https://www.youtube.com/shorts/x6JCKfdzPJE",
+                                    "exercicioId": "rosca-direta"
                               },
                               {
                                     "nome": "Prancha Abdominal",
                                     "series": "3",
                                     "repeticoes": "60 seg",
-                                    "video": "https://www.youtube.com/shorts/uxPlAbWFUDs"
+                                    "video": "https://www.youtube.com/shorts/uxPlAbWFUDs",
+                                    "exercicioId": "prancha-abdominal"
                               },
                               {
                                     "nome": "Panturrilha (Escada ou em Pé)",
                                     "series": "4",
                                     "repeticoes": "20",
-                                    "video": "https://www.youtube.com/shorts/3afDSh_V0sg"
+                                    "video": "https://www.youtube.com/shorts/3afDSh_V0sg",
+                                    "exercicioId": "panturrilha-escada-ou-em-pe"
                               }
                         ]
                   },
@@ -452,37 +514,43 @@
                                     "nome": "Elevação Pélvica",
                                     "series": "4",
                                     "repeticoes": "12",
-                                    "video": "https://www.youtube.com/shorts/Nuoo1XgRtGY"
+                                    "video": "https://www.youtube.com/shorts/Nuoo1XgRtGY",
+                                    "exercicioId": "elevacao-pelvica"
                               },
                               {
                                     "nome": "Glúteo no Cabo",
                                     "series": "3",
                                     "repeticoes": "12",
-                                    "video": "https://www.youtube.com/shorts/XqQlpJhB8xU"
+                                    "video": "https://www.youtube.com/shorts/XqQlpJhB8xU",
+                                    "exercicioId": "gluteo-no-cabo"
                               },
                               {
                                     "nome": "Cadeira Abdutora",
                                     "series": "3",
                                     "repeticoes": "20",
-                                    "video": "https://www.youtube.com/shorts/nabhYLtz8Gg"
+                                    "video": "https://www.youtube.com/shorts/nabhYLtz8Gg",
+                                    "exercicioId": "cadeira-abdutora"
                               },
                               {
                                     "nome": "Cadeira Flexora",
                                     "series": "3",
                                     "repeticoes": "12",
-                                    "video": "https://www.youtube.com/shorts/T46yKiz8laY"
+                                    "video": "https://www.youtube.com/shorts/T46yKiz8laY",
+                                    "exercicioId": "cadeira-flexora"
                               },
                               {
                                     "nome": "Mesa Flexora",
                                     "series": "3",
                                     "repeticoes": "12",
-                                    "video": "https://www.youtube.com/shorts/IXg1PQ_5gmw"
+                                    "video": "https://www.youtube.com/shorts/IXg1PQ_5gmw",
+                                    "exercicioId": "mesa-flexora"
                               },
                               {
                                     "nome": "Cardio (Bicicleta, Escada ou Esteira)",
                                     "series": "20",
                                     "repeticoes": "30 min",
-                                    "video": "https://i.pinimg.com/originals/e6/9a/ca/e69acae1176c249d95dcea23f85381c9.jpg"
+                                    "video": "https://i.pinimg.com/originals/e6/9a/ca/e69acae1176c249d95dcea23f85381c9.jpg",
+                                    "exercicioId": "cardio-bicicleta-escada-ou-esteira"
                               }
                         ]
                   },
@@ -494,37 +562,43 @@
                                     "nome": "Elevação Pélvica",
                                     "series": "4",
                                     "repeticoes": "12",
-                                    "video": "https://www.youtube.com/shorts/Nuoo1XgRtGY"
+                                    "video": "https://www.youtube.com/shorts/Nuoo1XgRtGY",
+                                    "exercicioId": "elevacao-pelvica"
                               },
                               {
                                     "nome": "Cadeira Adutora",
                                     "series": "3",
                                     "repeticoes": "15",
-                                    "video": "https://www.youtube.com/shorts/1aATfJITaIw"
+                                    "video": "https://www.youtube.com/shorts/1aATfJITaIw",
+                                    "exercicioId": "cadeira-adutora"
                               },
                               {
                                     "nome": "Cadeira Abdutora",
                                     "series": "3",
                                     "repeticoes": "20",
-                                    "video": "https://www.youtube.com/shorts/nabhYLtz8Gg"
+                                    "video": "https://www.youtube.com/shorts/nabhYLtz8Gg",
+                                    "exercicioId": "cadeira-abdutora"
                               },
                               {
                                     "nome": "Glúteo no Cabo",
                                     "series": "3",
                                     "repeticoes": "12",
-                                    "video": "https://www.youtube.com/shorts/XqQlpJhB8xU"
+                                    "video": "https://www.youtube.com/shorts/XqQlpJhB8xU",
+                                    "exercicioId": "gluteo-no-cabo"
                               },
                               {
                                     "nome": "Prancha Abdominal",
                                     "series": "3",
                                     "repeticoes": "60 seg",
-                                    "video": "https://www.youtube.com/shorts/uxPlAbWFUDs"
+                                    "video": "https://www.youtube.com/shorts/uxPlAbWFUDs",
+                                    "exercicioId": "prancha-abdominal"
                               },
                               {
                                     "nome": "Cardio (Bicicleta, Escada ou Esteira)",
                                     "series": "20",
                                     "repeticoes": "30 min",
-                                    "video": "https://i.pinimg.com/originals/e6/9a/ca/e69acae1176c249d95dcea23f85381c9.jpg"
+                                    "video": "https://i.pinimg.com/originals/e6/9a/ca/e69acae1176c249d95dcea23f85381c9.jpg",
+                                    "exercicioId": "cardio-bicicleta-escada-ou-esteira"
                               }
                         ]
                   }
@@ -540,35 +614,43 @@
                         "exercicios": [
                               {
                                     "nome": "Fly",
-                                    "series": "3 x 12"
+                                    "series": "3 x 12",
+                                    "exercicioId": "fly"
                               },
                               {
                                     "nome": "Supino Reto",
-                                    "series": "3 x 12"
+                                    "series": "3 x 12",
+                                    "exercicioId": "supino-reto"
                               },
                               {
                                     "nome": "Remada Alta (Pegada Supinada)",
-                                    "series": "3 x 12"
+                                    "series": "3 x 12",
+                                    "exercicioId": "remada-alta-pegada-supinada"
                               },
                               {
                                     "nome": "Remada Baixa com Triângulo",
-                                    "series": "3 x 12"
+                                    "series": "3 x 12",
+                                    "exercicioId": "remada-baixa-com-triangulo"
                               },
                               {
                                     "nome": "Desenvolvimento na Máquina",
-                                    "series": "3 x 12"
+                                    "series": "3 x 12",
+                                    "exercicioId": "desenvolvimento-na-maquina"
                               },
                               {
                                     "nome": "Elevação Lateral",
-                                    "series": "3 x 12-15"
+                                    "series": "3 x 12-15",
+                                    "exercicioId": "elevacao-lateral"
                               },
                               {
                                     "nome": "Tríceps Paralela",
-                                    "series": "3 x 10-12"
+                                    "series": "3 x 10-12",
+                                    "exercicioId": "triceps-paralela"
                               },
                               {
                                     "nome": "Rosca Scott",
-                                    "series": "3 x 12"
+                                    "series": "3 x 12",
+                                    "exercicioId": "rosca-scott"
                               }
                         ]
                   },
@@ -578,19 +660,23 @@
                         "exercicios": [
                               {
                                     "nome": "Leg Press",
-                                    "series": "4 x 10"
+                                    "series": "4 x 10",
+                                    "exercicioId": "leg-press"
                               },
                               {
                                     "nome": "Agachamento Sumô",
-                                    "series": "3 x 12"
+                                    "series": "3 x 12",
+                                    "exercicioId": "agachamento-sumo"
                               },
                               {
                                     "nome": "Cadeira Flexora",
-                                    "series": "3 x 12"
+                                    "series": "3 x 12",
+                                    "exercicioId": "cadeira-flexora"
                               },
                               {
                                     "nome": "Cadeira Extensora",
-                                    "series": "3 x 12"
+                                    "series": "3 x 12",
+                                    "exercicioId": "cadeira-extensora"
                               }
                         ]
                   },
@@ -600,39 +686,48 @@
                         "exercicios": [
                               {
                                     "nome": "Supino Reto",
-                                    "series": "3 x 12"
+                                    "series": "3 x 12",
+                                    "exercicioId": "supino-reto"
                               },
                               {
                                     "nome": "Fly",
-                                    "series": "3 x 12"
+                                    "series": "3 x 12",
+                                    "exercicioId": "fly"
                               },
                               {
                                     "nome": "Puxada Alta Unilateral",
-                                    "series": "3 x 12"
+                                    "series": "3 x 12",
+                                    "exercicioId": "puxada-alta-unilateral"
                               },
                               {
                                     "nome": "Remada Baixa com Triângulo",
-                                    "series": "3 x 12"
+                                    "series": "3 x 12",
+                                    "exercicioId": "remada-baixa-com-triangulo"
                               },
                               {
                                     "nome": "Elevação Lateral",
-                                    "series": "3 x 12-15"
+                                    "series": "3 x 12-15",
+                                    "exercicioId": "elevacao-lateral"
                               },
                               {
                                     "nome": "Tríceps Paralela",
-                                    "series": "3 x 10"
+                                    "series": "3 x 10",
+                                    "exercicioId": "triceps-paralela"
                               },
                               {
                                     "nome": "Rosca Scott",
-                                    "series": "3 x 12"
+                                    "series": "3 x 12",
+                                    "exercicioId": "rosca-scott"
                               },
                               {
                                     "nome": "Cadeira Flexora",
-                                    "series": "4 x 8"
+                                    "series": "4 x 8",
+                                    "exercicioId": "cadeira-flexora"
                               },
                               {
                                     "nome": "Cadeira Extensora",
-                                    "series": "4 x 10"
+                                    "series": "4 x 10",
+                                    "exercicioId": "cadeira-extensora"
                               }
                         ]
                   }
@@ -649,32 +744,38 @@
                               {
                                     "nome": "Remada Curvada",
                                     "series": "2 válidas",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "remada-curvada"
                               },
                               {
                                     "nome": "Puxada Alta (Pegada Aberta)",
                                     "series": "2 válidas",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "puxada-alta-pegada-aberta"
                               },
                               {
                                     "nome": "Puxada Alta com Triângulo",
                                     "series": "2 válidas",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "puxada-alta-com-triangulo"
                               },
                               {
                                     "nome": "Serrote",
                                     "series": "2 válidas",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "serrote"
                               },
                               {
                                     "nome": "Rosca Scott",
                                     "series": "3 válidas",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "rosca-scott"
                               },
                               {
                                     "nome": "Rosca Bayesian",
                                     "series": "3",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "rosca-bayesian"
                               }
                         ]
                   },
@@ -685,32 +786,38 @@
                               {
                                     "nome": "Fly",
                                     "series": "3 válidas",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "fly"
                               },
                               {
                                     "nome": "Supino Inclinado com Halteres",
                                     "series": "2 válidas",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "supino-inclinado-com-halteres"
                               },
                               {
                                     "nome": "Supino Reto na Máquina",
                                     "series": "2 válidas",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "supino-reto-na-maquina"
                               },
                               {
-                                    "nome": "Elevação Frontal com Corda",
+                                    "nome": "Elevação Frontal",
                                     "series": "A definir",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "elevacao-frontal"
                               },
                               {
                                     "nome": "Elevação Lateral",
                                     "series": "2 válidas",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "elevacao-lateral"
                               },
                               {
                                     "nome": "Tríceps na Corda",
                                     "series": "3 válidas",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "triceps-na-corda"
                               }
                         ]
                   },
@@ -721,27 +828,32 @@
                               {
                                     "nome": "Cadeira Flexora",
                                     "series": "2 válidas",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "cadeira-flexora"
                               },
                               {
                                     "nome": "Hack Machine",
                                     "series": "2 válidas",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "hack-machine"
                               },
                               {
                                     "nome": "Cadeira Extensora",
                                     "series": "2 válidas",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "cadeira-extensora"
                               },
                               {
                                     "nome": "Elevação Pélvica",
                                     "series": "2 válidas",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "elevacao-pelvica"
                               },
                               {
                                     "nome": "Cadeira Adutora",
                                     "series": "2 válidas",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "cadeira-adutora"
                               }
                         ]
                   },
@@ -752,37 +864,44 @@
                               {
                                     "nome": "Supino Inclinado na Máquina",
                                     "series": "2 válidas",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "supino-inclinado-na-maquina"
                               },
                               {
                                     "nome": "Fly",
                                     "series": "2 válidas",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "fly"
                               },
                               {
                                     "nome": "Remada Baixa na Polia",
                                     "series": "2",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "remada-baixa-na-polia"
                               },
                               {
                                     "nome": "Pulldown na Máquina",
                                     "series": "2 válidas",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "pulldown-na-maquina"
                               },
                               {
                                     "nome": "Elevação Lateral",
                                     "series": "2 válidas",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "elevacao-lateral"
                               },
                               {
-                                    "nome": "Rosca Direta no Cabo",
+                                    "nome": "Rosca Direta",
                                     "series": "3 válidas",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "rosca-direta"
                               },
                               {
                                     "nome": "Tríceps Francês na Máquina",
                                     "series": "3 válidas",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "triceps-frances-na-maquina"
                               }
                         ]
                   },
@@ -793,27 +912,60 @@
                               {
                                     "nome": "Cadeira Flexora",
                                     "series": "2 válidas",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "cadeira-flexora"
                               },
                               {
                                     "nome": "Agachamento",
                                     "series": "2 válidas",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "agachamento"
                               },
                               {
                                     "nome": "Leg Press 45°",
                                     "series": "2 válidas",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "leg-press-45"
                               },
                               {
                                     "nome": "Stiff",
                                     "series": "2 válidas",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "stiff"
                               },
                               {
                                     "nome": "Cadeira Abdutora",
                                     "series": "2 válidas",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "cadeira-abdutora"
+                              }
+                        ]
+                  },
+                  {
+                        "codigo": "Cardio",
+                        "nome": "Cardio — Esteira, Bicicleta ou Escada",
+                        "tipo": "cardio",
+                        "exercicios": [
+                              {
+                                    "nome": "Esteira",
+                                    "exercicioId": "cardio-esteira",
+                                    "tipo": "cardio",
+                                    "series": "—",
+                                    "repeticoes": "Tempo (min) × distância (km)"
+                              },
+                              {
+                                    "nome": "Bicicleta",
+                                    "exercicioId": "cardio-bicicleta",
+                                    "tipo": "cardio",
+                                    "series": "—",
+                                    "repeticoes": "Tempo (min) × distância (km)"
+                              },
+                              {
+                                    "nome": "Escada",
+                                    "exercicioId": "cardio-escada",
+                                    "tipo": "cardio",
+                                    "series": "—",
+                                    "repeticoes": "Tempo (min) × degraus"
                               }
                         ]
                   }
@@ -830,37 +982,44 @@
                               {
                                     "nome": "Supino Inclinado com Halteres",
                                     "series": "A definir",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "supino-inclinado-com-halteres"
                               },
                               {
                                     "nome": "Puxada Alta",
                                     "series": "A definir",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "puxada-alta"
                               },
                               {
                                     "nome": "Supino Reto na Máquina",
                                     "series": "A definir",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "supino-reto-na-maquina"
                               },
                               {
                                     "nome": "Remada",
                                     "series": "A definir",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "remada"
                               },
                               {
                                     "nome": "Elevação Lateral",
                                     "series": "A definir",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "elevacao-lateral"
                               },
                               {
                                     "nome": "Tríceps na Polia",
                                     "series": "A definir",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "triceps-na-polia"
                               },
                               {
                                     "nome": "Rosca Direta",
                                     "series": "A definir",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "rosca-direta"
                               }
                         ]
                   },
@@ -871,27 +1030,32 @@
                               {
                                     "nome": "Agachamento ou Hack Machine",
                                     "series": "A definir",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "agachamento-ou-hack-machine"
                               },
                               {
                                     "nome": "Leg Press",
                                     "series": "A definir",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "leg-press"
                               },
                               {
                                     "nome": "Mesa Flexora",
                                     "series": "A definir",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "mesa-flexora"
                               },
                               {
                                     "nome": "Cadeira Extensora",
                                     "series": "A definir",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "cadeira-extensora"
                               },
                               {
                                     "nome": "Panturrilha",
                                     "series": "A definir",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "panturrilha"
                               }
                         ]
                   },
@@ -902,42 +1066,50 @@
                               {
                                     "nome": "Puxada Alta",
                                     "series": "A definir",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "puxada-alta"
                               },
                               {
-                                    "nome": "Remada Baixa",
+                                    "nome": "Remada Baixa na Polia",
                                     "series": "A definir",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "remada-baixa-na-polia"
                               },
                               {
                                     "nome": "Supino Inclinado na Máquina",
                                     "series": "A definir",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "supino-inclinado-na-maquina"
                               },
                               {
                                     "nome": "Fly",
                                     "series": "A definir",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "fly"
                               },
                               {
                                     "nome": "Elevação Lateral",
                                     "series": "A definir",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "elevacao-lateral"
                               },
                               {
                                     "nome": "Crucifixo Inverso",
                                     "series": "A definir",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "crucifixo-inverso"
                               },
                               {
                                     "nome": "Rosca Inclinada",
                                     "series": "A definir",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "rosca-inclinada"
                               },
                               {
                                     "nome": "Tríceps na Polia",
                                     "series": "A definir",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "triceps-na-polia"
                               }
                         ]
                   },
@@ -948,27 +1120,32 @@
                               {
                                     "nome": "Terra Romeno com Halteres",
                                     "series": "A definir",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "terra-romeno-com-halteres"
                               },
                               {
                                     "nome": "Agachamento Búlgaro",
                                     "series": "A definir",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "agachamento-bulgaro"
                               },
                               {
                                     "nome": "Mesa Flexora",
                                     "series": "A definir",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "mesa-flexora"
                               },
                               {
                                     "nome": "Cadeira Extensora",
                                     "series": "A definir",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "cadeira-extensora"
                               },
                               {
                                     "nome": "Panturrilha",
                                     "series": "A definir",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "panturrilha"
                               }
                         ]
                   }
@@ -985,32 +1162,38 @@
                               {
                                     "nome": "Remada Curvada",
                                     "series": "2 válidas",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "remada-curvada"
                               },
                               {
                                     "nome": "Puxada Alta (Pegada Aberta)",
                                     "series": "2 válidas",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "puxada-alta-pegada-aberta"
                               },
                               {
                                     "nome": "Puxada Alta com Triângulo",
                                     "series": "2 válidas",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "puxada-alta-com-triangulo"
                               },
                               {
                                     "nome": "Serrote",
                                     "series": "2 válidas",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "serrote"
                               },
                               {
                                     "nome": "Rosca Scott",
                                     "series": "3 válidas",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "rosca-scott"
                               },
                               {
                                     "nome": "Rosca Bayesian",
                                     "series": "3",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "rosca-bayesian"
                               }
                         ]
                   },
@@ -1021,32 +1204,38 @@
                               {
                                     "nome": "Fly",
                                     "series": "3 válidas",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "fly"
                               },
                               {
                                     "nome": "Supino Inclinado com Halteres",
                                     "series": "2 válidas",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "supino-inclinado-com-halteres"
                               },
                               {
                                     "nome": "Supino Reto na Máquina",
                                     "series": "2 válidas",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "supino-reto-na-maquina"
                               },
                               {
-                                    "nome": "Elevação Frontal com Corda",
+                                    "nome": "Elevação Frontal",
                                     "series": "A definir",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "elevacao-frontal"
                               },
                               {
                                     "nome": "Elevação Lateral",
                                     "series": "2 válidas",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "elevacao-lateral"
                               },
                               {
                                     "nome": "Tríceps na Corda",
                                     "series": "3 válidas",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "triceps-na-corda"
                               }
                         ]
                   },
@@ -1057,27 +1246,32 @@
                               {
                                     "nome": "Cadeira Flexora",
                                     "series": "2 válidas",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "cadeira-flexora"
                               },
                               {
                                     "nome": "Hack Machine",
                                     "series": "2 válidas",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "hack-machine"
                               },
                               {
                                     "nome": "Cadeira Extensora",
                                     "series": "2 válidas",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "cadeira-extensora"
                               },
                               {
                                     "nome": "Elevação Pélvica",
                                     "series": "2 válidas",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "elevacao-pelvica"
                               },
                               {
                                     "nome": "Cadeira Adutora",
                                     "series": "2 válidas",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "cadeira-adutora"
                               }
                         ]
                   },
@@ -1088,37 +1282,44 @@
                               {
                                     "nome": "Supino Inclinado na Máquina",
                                     "series": "2 válidas",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "supino-inclinado-na-maquina"
                               },
                               {
                                     "nome": "Fly",
                                     "series": "2 válidas",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "fly"
                               },
                               {
                                     "nome": "Remada Baixa na Polia",
                                     "series": "2",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "remada-baixa-na-polia"
                               },
                               {
                                     "nome": "Pulldown na Máquina",
                                     "series": "2 válidas",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "pulldown-na-maquina"
                               },
                               {
                                     "nome": "Elevação Lateral",
                                     "series": "2 válidas",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "elevacao-lateral"
                               },
                               {
-                                    "nome": "Rosca Direta no Cabo",
+                                    "nome": "Rosca Direta",
                                     "series": "3 válidas",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "rosca-direta"
                               },
                               {
                                     "nome": "Tríceps Francês na Máquina",
                                     "series": "3 válidas",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "triceps-frances-na-maquina"
                               }
                         ]
                   },
@@ -1129,27 +1330,32 @@
                               {
                                     "nome": "Cadeira Flexora",
                                     "series": "2 válidas",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "cadeira-flexora"
                               },
                               {
                                     "nome": "Agachamento",
                                     "series": "2 válidas",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "agachamento"
                               },
                               {
                                     "nome": "Leg Press 45°",
                                     "series": "2 válidas",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "leg-press-45"
                               },
                               {
                                     "nome": "Stiff",
                                     "series": "2 válidas",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "stiff"
                               },
                               {
                                     "nome": "Cadeira Abdutora",
                                     "series": "2 válidas",
-                                    "repeticoes": "A definir"
+                                    "repeticoes": "A definir",
+                                    "exercicioId": "cadeira-abdutora"
                               }
                         ]
                   }
@@ -2455,16 +2661,16 @@ const MEASURE_REGISTER_FIELDS = [
       "desenvolvimento na maquina": "Desenvolvimento na Máquina",
       "desenvolvimento maquina": "Desenvolvimento na Máquina",
       "elevacao frontal": "Elevação Frontal",
-      "elevacao frontal com corda": "Elevação Frontal com Corda",
-      "elevacao frontal corda": "Elevação Frontal com Corda",
-      "elevacao frontal na polia": "Elevação Frontal na Polia",
+      "elevacao frontal com corda": "Elevação Frontal",
+      "elevacao frontal corda": "Elevação Frontal",
+      "elevacao frontal na polia": "Elevação Frontal",
       "elevacao frontal polia": "Elevação Frontal na Polia",
       "elevacao lateral": "Elevação Lateral",
       "elevacao lateral maquina polia": "Elevação Lateral",
-      "elevacao lateral na maquina": "Elevação Lateral na Máquina",
-      "elevacao lateral maquina": "Elevação Lateral na Máquina",
-      "elevacao lateral na polia": "Elevação Lateral na Polia",
-      "elevacao lateral polia": "Elevação Lateral na Polia",
+      "elevacao lateral na maquina": "Elevação Lateral",
+      "elevacao lateral maquina": "Elevação Lateral",
+      "elevacao lateral na polia": "Elevação Lateral",
+      "elevacao lateral polia": "Elevação Lateral",
       "elevacao pelvica": "Elevação Pélvica",
       "elevacao pelvica maquina ou barra livre": "Elevação Pélvica",
       "fly": "Fly",
@@ -2495,7 +2701,7 @@ const MEASURE_REGISTER_FIELDS = [
       "remada aberta polia alta": "Remada Aberta na Polia Alta",
       "remada alta pegada supinada": "Remada Alta (Pegada Supinada)",
       "remada alta supinada": "Remada Alta (Pegada Supinada)",
-      "remada baixa": "Remada Baixa",
+      "remada baixa": "Remada Baixa na Polia",
       "remada baixa na polia": "Remada Baixa na Polia",
       "remada baixa pulley": "Remada Baixa na Polia",
       "remada baixa com triangulo": "Remada Baixa com Triângulo",
@@ -2505,10 +2711,10 @@ const MEASURE_REGISTER_FIELDS = [
       "remada maquina supinada": "Remada na Máquina (Pegada Supinada)",
       "rosca bayesian": "Rosca Bayesian",
       "rosca direta": "Rosca Direta",
-      "rosca direta no cabo": "Rosca Direta no Cabo",
+      "rosca direta no cabo": "Rosca Direta",
       "rosca direta cabo": "Rosca Direta no Cabo",
       "rosca direta polia": "Rosca Direta no Cabo",
-      "rosca direta cabo halter barra w": "Rosca Direta (Cabo/Halter/Barra W)",
+      "rosca direta cabo halter barra w": "Rosca Direta",
       "rosca direta cabo halter ou barra w": "Rosca Direta (Cabo/Halter/Barra W)",
       "rosca inclinada": "Rosca Inclinada",
       "rosca scott": "Rosca Scott",
@@ -2528,7 +2734,16 @@ const MEASURE_REGISTER_FIELDS = [
       "triceps frances na maquina": "Tríceps Francês na Máquina",
       "triceps frances maquina": "Tríceps Francês na Máquina",
       "triceps na polia": "Tríceps na Polia",
-      "triceps paralela": "Tríceps Paralela"
+      "triceps paralela": "Tríceps Paralela",
+      "supino inclinado halteres": "Supino Inclinado com Halteres",
+      "pulley frente": "Puxada Alta (Pegada Aberta)",
+      "puxada frente aberta": "Puxada Alta (Pegada Aberta)",
+      "triceps pulley corda": "Tríceps na Corda",
+      "cabo triceps": "Tríceps na Polia",
+      "voador peitoral": "Fly",
+      "peck deck": "Fly",
+      "crucifixo peitoral": "Fly",
+      "elevacao lateral no cabo": "Elevação Lateral"
 };
 
     function baseExerciseNameKey(name) {
