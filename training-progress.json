@@ -33,7 +33,7 @@
       "exercicios": [
         {
           "numero": 1,
-          "nome": "Remada aberta polia alta",
+          "nome": "Remada Aberta na Polia Alta",
           "unidade": "kg",
           "series": [
             {
@@ -55,7 +55,7 @@
         },
         {
           "numero": 2,
-          "nome": "Puxada triângulo polia",
+          "nome": "Puxada Alta com Triângulo",
           "unidade": "kg",
           "series": [
             {
@@ -77,7 +77,7 @@
         },
         {
           "numero": 3,
-          "nome": "remada maquina supinada",
+          "nome": "Remada na Máquina (Pegada Supinada)",
           "unidade": "kg",
           "series": [
             {
@@ -99,7 +99,7 @@
         },
         {
           "numero": 4,
-          "nome": "Rosca scott na polia",
+          "nome": "Rosca Scott na Polia",
           "unidade": "kg",
           "series": [
             {
@@ -121,13 +121,13 @@
         },
         {
           "numero": 5,
-          "nome": "Abdominal (prancha)",
+          "nome": "Prancha Abdominal",
           "unidade": "kg",
           "series": []
         },
         {
           "numero": 6,
-          "nome": "Panturrilha (escada ou em pé)",
+          "nome": "Panturrilha (Escada ou em Pé)",
           "unidade": "kg",
           "series": []
         }
@@ -143,7 +143,7 @@
       "exercicios": [
         {
           "numero": 1,
-          "nome": "Remada aberta polia alta",
+          "nome": "Remada Aberta na Polia Alta",
           "unidade": "kg",
           "series": [
             {
@@ -165,7 +165,7 @@
         },
         {
           "numero": 2,
-          "nome": "Puxada triângulo polia",
+          "nome": "Puxada Alta com Triângulo",
           "unidade": "kg",
           "series": [
             {
@@ -187,7 +187,7 @@
         },
         {
           "numero": 3,
-          "nome": "Remada máquina supinada",
+          "nome": "Remada na Máquina (Pegada Supinada)",
           "unidade": "kg",
           "series": [
             {
@@ -209,7 +209,7 @@
         },
         {
           "numero": 4,
-          "nome": "Rosca direta",
+          "nome": "Rosca Direta",
           "unidade": "kg",
           "series": [
             {
@@ -241,7 +241,7 @@
       "exercicios": [
         {
           "numero": 1,
-          "nome": "Remada aberta polia alta",
+          "nome": "Remada Aberta na Polia Alta",
           "unidade": "kg",
           "series": [
             {
@@ -264,7 +264,7 @@
         },
         {
           "numero": 2,
-          "nome": "Puxada triângulo polia",
+          "nome": "Puxada Alta com Triângulo",
           "unidade": "kg",
           "series": [
             {
@@ -286,7 +286,7 @@
         },
         {
           "numero": 3,
-          "nome": "Remada maquina supinada",
+          "nome": "Remada na Máquina (Pegada Supinada)",
           "unidade": "kg",
           "series": [
             {
@@ -308,7 +308,7 @@
         },
         {
           "numero": 4,
-          "nome": "Rosca direta polia",
+          "nome": "Rosca Direta no Cabo",
           "unidade": "kg",
           "series": [
             {
@@ -330,13 +330,13 @@
         },
         {
           "numero": 5,
-          "nome": "Abdominal (prancha)",
+          "nome": "Prancha Abdominal",
           "unidade": "kg",
           "series": []
         },
         {
           "numero": 6,
-          "nome": "Panturrilha (escada ou em pé)",
+          "nome": "Panturrilha (Escada ou em Pé)",
           "unidade": "kg",
           "series": []
         }
@@ -352,7 +352,7 @@
       "exercicios": [
         {
           "numero": 1,
-          "nome": "Remada aberta polia alta",
+          "nome": "Remada Aberta na Polia Alta",
           "unidade": "kg",
           "series": [
             {
@@ -374,7 +374,7 @@
         },
         {
           "numero": 2,
-          "nome": "Puxada triângulo polia",
+          "nome": "Puxada Alta com Triângulo",
           "unidade": "kg",
           "series": [
             {
@@ -396,7 +396,7 @@
         },
         {
           "numero": 3,
-          "nome": "Remada máquina supinada",
+          "nome": "Remada na Máquina (Pegada Supinada)",
           "unidade": "kg",
           "series": [
             {
@@ -418,7 +418,7 @@
         },
         {
           "numero": 4,
-          "nome": "Rosca direta",
+          "nome": "Rosca Direta",
           "unidade": "kg",
           "series": [
             {
@@ -472,7 +472,7 @@
         },
         {
           "numero": 2,
-          "nome": "Cadeira flexora",
+          "nome": "Cadeira Flexora",
           "unidade": "kg",
           "series": [
             {
@@ -494,7 +494,7 @@
         },
         {
           "numero": 3,
-          "nome": "Afundo búlgaro",
+          "nome": "Agachamento Búlgaro",
           "unidade": "kg",
           "series": [
             {
@@ -516,7 +516,7 @@
         },
         {
           "numero": 4,
-          "nome": "Cadeira adutora",
+          "nome": "Cadeira Adutora",
           "unidade": "kg",
           "series": [
             {
@@ -538,7 +538,7 @@
         },
         {
           "numero": 5,
-          "nome": "Elevação pélvica",
+          "nome": "Elevação Pélvica",
           "unidade": "kg",
           "series": [
             {
@@ -570,7 +570,7 @@
       "exercicios": [
         {
           "numero": 1,
-          "nome": "Cadeira flexora",
+          "nome": "Cadeira Flexora",
           "unidade": "kg",
           "series": [
             {
@@ -604,7 +604,7 @@
         },
         {
           "numero": 3,
-          "nome": "Afundo búlgaro",
+          "nome": "Agachamento Búlgaro",
           "unidade": "kg",
           "series": [
             {
@@ -626,7 +626,7 @@
         },
         {
           "numero": 4,
-          "nome": "Cadeira adutora",
+          "nome": "Cadeira Adutora",
           "unidade": "kg",
           "series": [
             {
@@ -648,7 +648,7 @@
         },
         {
           "numero": 5,
-          "nome": "Elevação pélvica",
+          "nome": "Elevação Pélvica",
           "unidade": "kg",
           "series": [
             {
@@ -719,7 +719,7 @@
         },
         {
           "numero": 3,
-          "nome": "Cadeira Extensor",
+          "nome": "Cadeira Extensora",
           "unidade": "kg",
           "series": [
             {
@@ -742,7 +742,7 @@
         },
         {
           "numero": 4,
-          "nome": "Elevação Pelvica",
+          "nome": "Elevação Pélvica",
           "unidade": "kg",
           "series": [
             {
@@ -824,7 +824,7 @@
         },
         {
           "numero": 7,
-          "nome": "Abdominal máquina",
+          "nome": "Abdominal na Máquina",
           "unidade": "kg",
           "series": [
             {
@@ -846,7 +846,7 @@
         },
         {
           "numero": 8,
-          "nome": "Abdominal lateral Romano",
+          "nome": "Abdominal Lateral no Banco Romano",
           "unidade": "kg",
           "series": [
             {
@@ -912,7 +912,7 @@
         },
         {
           "numero": 3,
-          "nome": "Cadeira Extensor",
+          "nome": "Cadeira Extensora",
           "unidade": "kg",
           "series": [
             {
@@ -929,7 +929,7 @@
         },
         {
           "numero": 4,
-          "nome": "Elevação Pelvica",
+          "nome": "Elevação Pélvica",
           "unidade": "kg",
           "series": [
             {
@@ -995,7 +995,7 @@
         },
         {
           "numero": 2,
-          "nome": "Supino Inclinado Halter",
+          "nome": "Supino Inclinado com Halteres",
           "unidade": "kg",
           "series": [
             {
@@ -1012,7 +1012,7 @@
         },
         {
           "numero": 3,
-          "nome": "Supino Reto Maquina",
+          "nome": "Supino Reto na Máquina",
           "unidade": "kg",
           "series": [
             {
@@ -1029,7 +1029,7 @@
         },
         {
           "numero": 4,
-          "nome": "Elevação Frontal Polia",
+          "nome": "Elevação Frontal na Polia",
           "unidade": "kg",
           "series": [
             {
@@ -1051,7 +1051,7 @@
         },
         {
           "numero": 5,
-          "nome": "Elevação Lateral Polia",
+          "nome": "Elevação Lateral na Polia",
           "unidade": "kg",
           "series": [
             {
@@ -1068,7 +1068,7 @@
         },
         {
           "numero": 6,
-          "nome": "Triceps Corda",
+          "nome": "Tríceps na Corda",
           "unidade": "kg",
           "series": [
             {
@@ -1117,7 +1117,7 @@
         },
         {
           "numero": 2,
-          "nome": "supino reto na máquina",
+          "nome": "Supino Reto na Máquina",
           "unidade": "kg",
           "series": [
             {
@@ -1134,7 +1134,7 @@
         },
         {
           "numero": 3,
-          "nome": "elevação lateral maquina",
+          "nome": "Elevação Lateral na Máquina",
           "unidade": "kg",
           "series": [
             {
@@ -1151,7 +1151,7 @@
         },
         {
           "numero": 4,
-          "nome": "triceps na polia",
+          "nome": "Tríceps na Polia",
           "unidade": "kg",
           "series": [
             {
@@ -1178,7 +1178,7 @@
       "exercicios": [
         {
           "numero": 1,
-          "nome": "Puxada alta",
+          "nome": "Puxada Alta",
           "unidade": "kg",
           "series": [
             {
@@ -1205,7 +1205,7 @@
         },
         {
           "numero": 2,
-          "nome": "Remada baixa",
+          "nome": "Remada Baixa",
           "unidade": "kg",
           "series": [
             {
@@ -1227,7 +1227,7 @@
         },
         {
           "numero": 3,
-          "nome": "Supino inclinado na máquina",
+          "nome": "Supino Inclinado na Máquina",
           "unidade": "kg",
           "series": [
             {
@@ -1271,7 +1271,7 @@
         },
         {
           "numero": 5,
-          "nome": "Elevação lateral",
+          "nome": "Elevação Lateral",
           "unidade": "kg",
           "series": [
             {
@@ -1293,7 +1293,7 @@
         },
         {
           "numero": 6,
-          "nome": "Crucifixo inverso",
+          "nome": "Crucifixo Inverso",
           "unidade": "kg",
           "series": [
             {
@@ -1315,7 +1315,7 @@
         },
         {
           "numero": 7,
-          "nome": "Rosca inclinada",
+          "nome": "Rosca Inclinada",
           "unidade": "kg",
           "series": [
             {
@@ -1337,7 +1337,7 @@
         },
         {
           "numero": 8,
-          "nome": "Tríceps na polia",
+          "nome": "Tríceps na Polia",
           "unidade": "kg",
           "series": [
             {
@@ -1369,7 +1369,7 @@
       "exercicios": [
         {
           "numero": 1,
-          "nome": "Hack machine",
+          "nome": "Hack Machine",
           "unidade": "kg",
           "series": [
             {
@@ -1396,7 +1396,7 @@
         },
         {
           "numero": 2,
-          "nome": "Leg press 45°",
+          "nome": "Leg Press 45°",
           "unidade": "kg",
           "series": [
             {
@@ -1418,7 +1418,7 @@
         },
         {
           "numero": 3,
-          "nome": "Cadeira extensora",
+          "nome": "Cadeira Extensora",
           "unidade": "kg",
           "series": [
             {
@@ -1445,7 +1445,7 @@
         },
         {
           "numero": 4,
-          "nome": "Cadeira abdutora",
+          "nome": "Cadeira Abdutora",
           "unidade": "kg",
           "series": [
             {
@@ -1483,7 +1483,7 @@
         },
         {
           "numero": 2,
-          "nome": "Hack machine",
+          "nome": "Hack Machine",
           "unidade": "kg",
           "series": [
             {
@@ -1510,7 +1510,7 @@
         },
         {
           "numero": 3,
-          "nome": "Leg press 45°",
+          "nome": "Leg Press 45°",
           "unidade": "kg",
           "series": [
             {
@@ -1537,7 +1537,7 @@
         },
         {
           "numero": 4,
-          "nome": "Cadeira extensora",
+          "nome": "Cadeira Extensora",
           "unidade": "kg",
           "series": [
             {
@@ -1564,7 +1564,7 @@
         },
         {
           "numero": 5,
-          "nome": "Cadeira abdutora",
+          "nome": "Cadeira Abdutora",
           "unidade": "kg",
           "series": [
             {
@@ -1596,7 +1596,7 @@
       "exercicios": [
         {
           "numero": 1,
-          "nome": "Supino Inclinado Maquina",
+          "nome": "Supino Inclinado na Máquina",
           "unidade": "kg",
           "series": [
             {
@@ -1636,7 +1636,7 @@
         },
         {
           "numero": 3,
-          "nome": "Remada baixa pulley",
+          "nome": "Remada Baixa na Polia",
           "unidade": "kg",
           "series": [
             {
@@ -1654,7 +1654,7 @@
         },
         {
           "numero": 4,
-          "nome": "Pulldown máquina",
+          "nome": "Pulldown na Máquina",
           "unidade": "kg",
           "series": [
             {
@@ -1671,7 +1671,7 @@
         },
         {
           "numero": 5,
-          "nome": "Elevação lateral",
+          "nome": "Elevação Lateral",
           "unidade": "kg",
           "series": [
             {
@@ -1688,7 +1688,7 @@
         },
         {
           "numero": 6,
-          "nome": "Rosca Direta Cabo",
+          "nome": "Rosca Direta no Cabo",
           "unidade": "kg",
           "series": [
             {
@@ -1710,7 +1710,7 @@
         },
         {
           "numero": 7,
-          "nome": "Triceps Frances Máquina",
+          "nome": "Tríceps Francês na Máquina",
           "unidade": "kg",
           "series": [
             {
@@ -1742,7 +1742,7 @@
       "exercicios": [
         {
           "numero": 1,
-          "nome": "Supino Inclinado máquina",
+          "nome": "Supino Inclinado na Máquina",
           "unidade": "kg",
           "series": [
             {
@@ -1781,7 +1781,7 @@
         },
         {
           "numero": 3,
-          "nome": "Remada baixa pulley",
+          "nome": "Remada Baixa na Polia",
           "unidade": "kg",
           "series": [
             {
@@ -1798,7 +1798,7 @@
         },
         {
           "numero": 4,
-          "nome": "Pulldown máquina",
+          "nome": "Pulldown na Máquina",
           "unidade": "kg",
           "series": [
             {
@@ -1820,7 +1820,7 @@
         },
         {
           "numero": 5,
-          "nome": "Elevação lateral",
+          "nome": "Elevação Lateral",
           "unidade": "kg",
           "series": [
             {
@@ -1837,7 +1837,7 @@
         },
         {
           "numero": 6,
-          "nome": "Rosca Direta Cabo",
+          "nome": "Rosca Direta no Cabo",
           "unidade": "kg",
           "series": [
             {
@@ -1859,7 +1859,7 @@
         },
         {
           "numero": 7,
-          "nome": "Triceps Frances Máquina",
+          "nome": "Tríceps Francês na Máquina",
           "unidade": "kg",
           "series": [
             {
