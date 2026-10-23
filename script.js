@@ -2454,12 +2454,12 @@ const MEASURE_REGISTER_FIELDS = [
       const labels = selected.map(entry => formatPeriod(entry.date));
       const units = [...new Set(selected.map(entry => entry.item.unidade || entry.record?.unidade || 'kg'))].join('/') || 'kg';
       const maxLoads = selected.map(entry => entry.item.series.length ? Math.max(...entry.item.series.map(set => set.peso)) : null);
-      const volumes = selected.map(entry => entry.item.series.reduce((sum, set) => sum + (set.peso * (Number.isFinite(set.repeticoes) ? set.repeticoes : 0)), 0) || null);
+      const volumes = selected.map(entry => entry.item.series.reduce((sum, set) => sum + (set.peso * (Number.isFinite(set.repeticoes) && set.repeticoes > 0 && set.repeticoes <= 200 ? set.repeticoes : 0)), 0) || null);
       const progressSummary = document.getElementById('trainingProgressSummary');
       if (progressSummary) {
         const first = selected[0], previous = selected.at(-2), latest = selected.at(-1);
         const max = entry => entry?.item?.series?.length ? Math.max(...entry.item.series.map(set => set.peso)) : null;
-        const volume = entry => entry?.item?.series?.reduce((sum, set) => sum + (set.peso * (Number.isFinite(set.repeticoes) ? set.repeticoes : 0)), 0) || null;
+        const volume = entry => entry?.item?.series?.reduce((sum, set) => sum + (set.peso * (Number.isFinite(set.repeticoes) && set.repeticoes > 0 && set.repeticoes <= 200 ? set.repeticoes : 0)), 0) || null;
         const maxValues = selected.map(max).filter(Number.isFinite);
         const best = maxValues.length ? Math.max(...maxValues) : null;
         const latestMax = max(latest);
