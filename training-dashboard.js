@@ -40,7 +40,7 @@ function workoutStats(session) {
     (exercise.series || []).forEach(function (set) {
       const load = workoutSetKg(set.peso, exercise.unidade || session.unidade || 'kg');
       const reps = Number(set.repeticoes);
-      if (load === null || set.repeticoes == null || set.repeticoes === '' || !Number.isFinite(reps) || reps <= 0) return;
+      if (load === null || set.repeticoes == null || set.repeticoes === '' || !Number.isFinite(reps) || reps <= 0 || reps > 200) return;
       volumeKg += load * reps;
       countedSets++;
       repetitions += reps;
@@ -79,6 +79,8 @@ function workoutExerciseText(exercise, session) {
 }
 function workoutSessionDetails(session, short) {
   const stats = workoutStats(session);
+  const pending = (session.exercicios || []).flatMap(function (e) { return (e.series || []).filter(function (set) { return Number(set.repeticoes) > 200; }).map(function (set) { return { name: e.nome, reps: set.repeticoes }; }); });
+  const warning = pending.length ? '<p class="workout-data-warning"><strong>Conferir repetições:</strong> ' + pending.map(function (x) { return workoutEscape(x.name) + ' (' + x.reps + ' reps)'; }).join(' · ') + '. Séries acima de 200 repetições ficam fora da tonelagem até confirmação.</p>' : '';
   const detail = (session.exercicios || []).map(function (e) {
     const eStats = workoutStats({ unidade: session.unidade, exercicios: [e] });
     return '<li><strong>' + workoutEscape(e.nome) + '</strong><span>' + workoutEscape(workoutExerciseText(e, session)) +
@@ -89,7 +91,7 @@ function workoutSessionDetails(session, short) {
     '<div class="workout-log-header"><div><strong>' + title + ' · ' + workoutEscape(session.titulo || 'Treino') + '</strong>' +
     '<small>' + workoutDateBr(session.data) + ' · ' + stats.countedSets + ' séries com carga</small></div>' +
     '<strong class="workout-tonnage">' + workoutFullMass(stats.volumeKg) + '</strong></div>' +
-    '<details' + (short ? '' : ' open') + '><summary>Exercícios e séries (' + (session.exercicios || []).length + ')</summary>' +
+    warning + '<details' + (short ? '' : ' open') + '><summary>Exercícios e séries (' + (session.exercicios || []).length + ')</summary>' +
     '<ol class="workout-detail-exercises">' + detail + '</ol>' + (session.observacao ? '<p class="muted">' + workoutEscape(session.observacao) + '</p>' : '') +
     '</details></article>';
 }
@@ -198,7 +200,7 @@ function workoutExerciseRecords() {
       (exercise.series || []).forEach(function (set) {
         const kg = workoutSetKg(set.peso, exercise.unidade || session.unidade || 'kg');
         const reps = Number(set.repeticoes);
-        if (kg === null || set.repeticoes == null || set.repeticoes === '' || !Number.isFinite(reps) || reps <= 0) return;
+        if (kg === null || set.repeticoes == null || set.repeticoes === '' || !Number.isFinite(reps) || reps <= 0 || reps > 200) return;
         person.maxKg = person.maxKg === null ? kg : Math.max(person.maxKg, kg);
         person.volumeKg += kg * reps;
         person.sets++;
@@ -276,7 +278,7 @@ function renderWorkoutComparison(rows) {
     '<div class="table-wrap"><table class="workout-table"><thead><tr><th>Pessoa</th><th>Peso</th><th>Data da medição</th></tr></thead><tbody>' +
     latestWeight.map(function (p) { return '<tr><td>' + workoutEscape(p.name) + '</td><td>' + (p.value === null ? '—' : formatNumber(p.value, 1) + ' kg') + '</td><td>' + workoutDateBr(p.date) + '</td></tr>'; }).join('') +
     '</tbody></table></div></div>' +
-    '<p class="muted workout-help">Como calculamos: volume = soma, em todas as séries válidas, de peso × repetições. 1 tonelada = 1.000 kg de volume. Cargas em libras são convertidas para kg. A comparação entre máquinas ou rotinas diferentes não mede diretamente força ou desempenho equivalente.</p>';
+    '<p class="muted workout-help">Como calculamos: volume = soma, em todas as séries válidas, de peso × repetições. 1 tonelada = 1.000 kg de volume. Cargas em libras são convertidas para kg. A comparação entre máquinas ou rotinas diferentes não mede diretamente força ou desempenho equivalente. Séries acima de 200 repetições são sinalizadas para conferência e excluídas dos cálculos de volume até correção.</p>';
   const exerciseSelect = root.querySelector('#workoutCompareExercise');
   if (exerciseSelect) exerciseSelect.onchange = function (event) { workoutComparisonExercise = event.target.value; renderWorkoutComparison(rows); };
   const metricSelect = root.querySelector('#workoutCompareMetric');
