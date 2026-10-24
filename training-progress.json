@@ -1985,6 +1985,472 @@
           "series": []
         }
       ]
+    },
+    {
+      "id": "be-2026-10-24-e",
+      "pessoaId": "be",
+      "data": "2026-10-24",
+      "titulo": "E",
+      "unidade": "kg",
+      "observacao": "",
+      "exercicios": [
+        {
+          "numero": 1,
+          "nome": "Elevação Pélvica",
+          "exercicioId": "elevacao-pelvica",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 40,
+              "repeticoes": 8,
+              "emoji": "😐"
+            },
+            {
+              "peso": 50,
+              "repeticoes": 8,
+              "emoji": "😐"
+            },
+            {
+              "peso": 50,
+              "repeticoes": 12,
+              "emoji": "💀"
+            },
+            {
+              "peso": 50,
+              "repeticoes": 12,
+              "emoji": "💀"
+            }
+          ]
+        },
+        {
+          "numero": 2,
+          "nome": "Glúteo no Cabo",
+          "exercicioId": "gluteo-no-cabo",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 9,
+              "repeticoes": 12,
+              "emoji": "😐"
+            },
+            {
+              "peso": 14,
+              "repeticoes": 12,
+              "emoji": "😐"
+            },
+            {
+              "peso": 19,
+              "repeticoes": 10,
+              "emoji": "😐"
+            }
+          ]
+        },
+        {
+          "numero": 3,
+          "nome": "Cadeira Abdutora",
+          "exercicioId": "cadeira-abdutora",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 25,
+              "repeticoes": 12,
+              "emoji": "😐"
+            },
+            {
+              "peso": 25,
+              "repeticoes": 11,
+              "emoji": "💀"
+            },
+            {
+              "peso": 18,
+              "repeticoes": 15,
+              "emoji": "😐"
+            }
+          ]
+        },
+        {
+          "numero": 4,
+          "nome": "Cadeira Flexora",
+          "exercicioId": "cadeira-flexora",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 40,
+              "repeticoes": 12,
+              "emoji": "😐"
+            },
+            {
+              "peso": 40,
+              "repeticoes": 12,
+              "emoji": "😐"
+            },
+            {
+              "peso": 45,
+              "repeticoes": 12,
+              "emoji": "😐"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "thais-oliveira-2026-10-24-e",
+      "pessoaId": "thais-oliveira",
+      "data": "2026-10-24",
+      "titulo": "E",
+      "unidade": "kg",
+      "observacao": "",
+      "exercicios": [
+        {
+          "numero": 1,
+          "nome": "Elevação Pélvica",
+          "exercicioId": "elevacao-pelvica",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 40,
+              "repeticoes": 12,
+              "emoji": ""
+            },
+            {
+              "peso": 40,
+              "repeticoes": 10,
+              "emoji": ""
+            },
+            {
+              "peso": 50,
+              "repeticoes": 10,
+              "emoji": ""
+            },
+            {
+              "peso": 50,
+              "repeticoes": 12,
+              "emoji": ""
+            }
+          ]
+        },
+        {
+          "numero": 2,
+          "nome": "Glúteo no Cabo",
+          "exercicioId": "gluteo-no-cabo",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 19,
+              "repeticoes": 10,
+              "emoji": "😴"
+            },
+            {
+              "peso": 19,
+              "repeticoes": 12,
+              "emoji": "😴"
+            },
+            {
+              "peso": 24,
+              "repeticoes": 8,
+              "emoji": "😴"
+            }
+          ]
+        },
+        {
+          "numero": 3,
+          "nome": "Cadeira Abdutora",
+          "exercicioId": "cadeira-abdutora",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 25,
+              "repeticoes": 12,
+              "emoji": "😴"
+            },
+            {
+              "peso": 25,
+              "repeticoes": 12,
+              "emoji": "😴"
+            },
+            {
+              "peso": 25,
+              "repeticoes": 10,
+              "emoji": "🏳️‍🌈"
+            }
+          ]
+        },
+        {
+          "numero": 4,
+          "nome": "Cadeira Flexora",
+          "exercicioId": "cadeira-flexora",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 40,
+              "repeticoes": 12,
+              "emoji": ""
+            },
+            {
+              "peso": 40,
+              "repeticoes": 12,
+              "emoji": ""
+            },
+            {
+              "peso": 40,
+              "repeticoes": 12,
+              "emoji": ""
+            }
+          ]
+        },
+        {
+          "numero": 5,
+          "nome": "Mesa Flexora",
+          "exercicioId": "mesa-flexora",
+          "unidade": "kg",
+          "series": []
+        },
+        {
+          "numero": 6,
+          "nome": "Cardio (Bicicleta, Escada ou Esteira)",
+          "exercicioId": "cardio-bicicleta-escada-ou-esteira",
+          "unidade": "kg",
+          "series": []
+        }
+      ]
+    },
+    {
+      "id": "lucas-marques-2026-10-24-lower",
+      "pessoaId": "lucas-marques",
+      "data": "2026-10-24",
+      "titulo": "Lower",
+      "unidade": "kg",
+      "observacao": "",
+      "exercicios": [
+        {
+          "numero": 1,
+          "nome": "Cadeira Flexora",
+          "exercicioId": "cadeira-flexora",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 60,
+              "repeticoes": 12,
+              "emoji": ""
+            },
+            {
+              "peso": 70,
+              "repeticoes": 12,
+              "emoji": "💀"
+            }
+          ]
+        },
+        {
+          "numero": 2,
+          "nome": "Agachamento",
+          "exercicioId": "agachamento",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 80,
+              "repeticoes": 12,
+              "emoji": ""
+            },
+            {
+              "peso": 120,
+              "repeticoes": 12,
+              "emoji": "💀"
+            }
+          ]
+        },
+        {
+          "numero": 3,
+          "nome": "Leg Press 45°",
+          "exercicioId": "leg-press-45",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 200,
+              "repeticoes": 12,
+              "emoji": "💀"
+            },
+            {
+              "peso": 240,
+              "repeticoes": 12,
+              "emoji": ""
+            }
+          ]
+        },
+        {
+          "numero": 4,
+          "nome": "Rdl",
+          "exercicioId": "rdl",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 40,
+              "repeticoes": 8,
+              "emoji": ""
+            },
+            {
+              "peso": 40,
+              "repeticoes": 8,
+              "emoji": ""
+            }
+          ]
+        },
+        {
+          "numero": 5,
+          "nome": "Cadeira Abdutora",
+          "exercicioId": "cadeira-abdutora",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 52,
+              "repeticoes": 11,
+              "emoji": "💀"
+            },
+            {
+              "peso": 52,
+              "repeticoes": 12,
+              "emoji": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "andre-2026-10-24-lower",
+      "pessoaId": "andre",
+      "data": "2026-10-24",
+      "titulo": "Lower",
+      "unidade": "kg",
+      "observacao": "",
+      "exercicios": [
+        {
+          "numero": 1,
+          "nome": "Cadeira Flexora",
+          "exercicioId": "cadeira-flexora",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 110,
+              "repeticoes": 12,
+              "emoji": "😐"
+            },
+            {
+              "peso": 110,
+              "repeticoes": 12,
+              "emoji": "💀"
+            }
+          ]
+        },
+        {
+          "numero": 2,
+          "nome": "Agachamento",
+          "exercicioId": "agachamento",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 120,
+              "repeticoes": 12,
+              "emoji": "😐"
+            },
+            {
+              "peso": 200,
+              "repeticoes": 12,
+              "emoji": ""
+            }
+          ]
+        },
+        {
+          "numero": 3,
+          "nome": "Leg Press 45°",
+          "exercicioId": "leg-press-45",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 240,
+              "repeticoes": 12,
+              "emoji": "😐"
+            },
+            {
+              "peso": 360,
+              "repeticoes": 12,
+              "emoji": "💀"
+            },
+            {
+              "peso": 360,
+              "repeticoes": 12,
+              "emoji": ""
+            }
+          ]
+        },
+        {
+          "numero": 4,
+          "nome": "Rdl",
+          "exercicioId": "rdl",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 40,
+              "repeticoes": 8,
+              "emoji": ""
+            },
+            {
+              "peso": 55,
+              "repeticoes": 12,
+              "emoji": ""
+            },
+            {
+              "peso": 55,
+              "repeticoes": 8,
+              "emoji": ""
+            }
+          ]
+        },
+        {
+          "numero": 5,
+          "nome": "Cadeira Abdutora",
+          "exercicioId": "cadeira-abdutora",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 100,
+              "repeticoes": 12,
+              "emoji": ""
+            },
+            {
+              "peso": 100,
+              "repeticoes": 12,
+              "emoji": "🤢"
+            },
+            {
+              "peso": 100,
+              "repeticoes": 12,
+              "emoji": ""
+            }
+          ]
+        },
+        {
+          "numero": 6,
+          "nome": "Cadeira Abdutora",
+          "exercicioId": "cadeira-abdutora",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 100,
+              "repeticoes": 12,
+              "emoji": ""
+            },
+            {
+              "peso": 100,
+              "repeticoes": 12,
+              "emoji": ""
+            },
+            {
+              "peso": 100,
+              "repeticoes": 12,
+              "emoji": ""
+            }
+          ]
+        }
+      ]
     }
   ]
 }
