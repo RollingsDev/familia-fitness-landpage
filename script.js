@@ -1443,7 +1443,13 @@
     let selectedComparePeriodB = null;
 const MEASURE_REGISTER_DRAFTS = readLocalJson('measurement-register-drafts') || {};
 let selectedMeasureRegisterPerson = '';
-let selectedMeasureRegisterDate = new Date().toISOString().slice(0, 10);
+function currentLocalDate() {
+      const date = new Date();
+      return date.getFullYear() + '-' +
+        String(date.getMonth() + 1).padStart(2, '0') + '-' +
+        String(date.getDate()).padStart(2, '0');
+    }
+let selectedMeasureRegisterDate = currentLocalDate();
 
 const MEASURE_REGISTER_FIELDS = [
   { key: 'idade', label: 'Idade', unit: 'anos', group: 'dados' },
@@ -1468,6 +1474,15 @@ const MEASURE_REGISTER_FIELDS = [
       TRAINING_REGISTER_DRAFTS = JSON.parse(localStorage.getItem('training-register-drafts') || '{}');
       TRAINING_REGISTER_ACTIVE_DATES = JSON.parse(localStorage.getItem('training-register-active-dates') || '{}');
     } catch (error) { TRAINING_REGISTER_DRAFTS = {}; TRAINING_REGISTER_ACTIVE_DATES = {}; }
+    // Nunca reaproveitar automaticamente a data de outro dia.
+    // Rascunhos permanecem salvos e acessíveis caso a data antiga seja selecionada manualmente.
+    for (const [workout, date] of Object.entries(TRAINING_REGISTER_ACTIVE_DATES)) {
+      if (typeof date !== 'string' || !/^\d{4}-\d{2}-\d{2}$/.test(date) || date < currentLocalDate()) {
+        delete TRAINING_REGISTER_ACTIVE_DATES[workout];
+      }
+    }
+    try { localStorage.setItem('training-register-active-dates', JSON.stringify(TRAINING_REGISTER_ACTIVE_DATES)); }
+    catch (error) { /* armazenamento não disponível */ }
 
     const BODY_FAT_REFERENCE = {
       M: [{ key: 'essential', label: 'Essencial', min: 2, max: 5 }, { key: 'athlete', label: 'Atleta', min: 6, max: 12 }, { key: 'fitness', label: 'Fitness', min: 13, max: 16 }, { key: 'average', label: 'Sobrepeso', min: 17, max: 22 }, { key: 'aboveAverage', label: 'Elevado', min: 23, max: 29 }, { key: 'high', label: 'Obesidade', min: 30, max: 40 }],
@@ -2922,7 +2937,7 @@ const MEASURE_REGISTER_FIELDS = [
     function renderCardioRegister(rows,person,day) {
       const people=trainingPeopleOptions(rows);
       const days=TRAINING_PLANS[person.name].dias;
-      const date=TRAINING_REGISTER_ACTIVE_DATES[person.id+'::Cardio'] || new Date().toLocaleDateString('sv-SE');
+      const date=TRAINING_REGISTER_ACTIVE_DATES[person.id+'::Cardio'] || currentLocalDate();
       const draft=TRAINING_REGISTER_DRAFTS[trainingRegisterDraftKey(person.id,date,'Cardio')] || {};
       const safe=value=>String(value??'').replace(/&/g,'&amp;').replace(/"/g,'&quot;').replace(/</g,'&lt;');
       const options=people.map(p=>'<option value="'+safe(p.id)+'" '+(p.id===person.id?'selected':'')+'>'+safe(p.name)+'</option>').join('');
@@ -3031,7 +3046,7 @@ const MEASURE_REGISTER_FIELDS = [
       const plan = TRAINING_PLANS[person?.name];
       const days = plan ? orderedTrainingDays(person.name, plan) : [];
       const day = days.find(item => item.codigo === workoutCode) || days[0];
-      const today = new Date().toISOString().slice(0, 10);
+      const today = currentLocalDate();
       if (!person || !plan || !day) return '<section class="workout-section"><p class="muted">Nenhum plano disponível para registro.</p></section>';
       if (day.tipo === 'cardio') return renderCardioRegister(rows,person,day);
       const activeDate = TRAINING_REGISTER_ACTIVE_DATES[`${person.id}::${day.codigo}`] || today;
