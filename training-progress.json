@@ -3890,6 +3890,549 @@
           ]
         }
       ]
+    },
+    {
+      "id": "lucas-marques-2026-10-29-upper",
+      "pessoaId": "lucas-marques",
+      "titulo": "Upper",
+      "exercicios": [
+        {
+          "numero": 1,
+          "nome": "Supino Inclinado na Máquina",
+          "exercicioId": "supino-inclinado-na-maquina",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 20,
+              "repeticoes": 12,
+              "emoji": ""
+            },
+            {
+              "peso": 20,
+              "repeticoes": 12,
+              "emoji": ""
+            }
+          ]
+        },
+        {
+          "numero": 2,
+          "nome": "Pec fly",
+          "exercicioId": "pec-fly",
+          "unidade": "lb",
+          "series": [
+            {
+              "peso": 40,
+              "repeticoes": 12,
+              "emoji": ""
+            },
+            {
+              "peso": 70,
+              "repeticoes": 6,
+              "emoji": ""
+            },
+            {
+              "peso": 70,
+              "repeticoes": 5,
+              "emoji": ""
+            }
+          ],
+          "observacao": "S1 aquecimento"
+        },
+        {
+          "numero": 3,
+          "nome": "Remada Baixa na Polia",
+          "exercicioId": "remada-baixa-na-polia",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 47,
+              "repeticoes": 12,
+              "emoji": ""
+            },
+            {
+              "peso": 47,
+              "repeticoes": 10,
+              "emoji": ""
+            }
+          ]
+        },
+        {
+          "numero": 4,
+          "nome": "Pulldown na Máquina",
+          "exercicioId": "pulldown-na-maquina",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 35,
+              "repeticoes": 8,
+              "emoji": ""
+            },
+            {
+              "peso": 35,
+              "repeticoes": 12,
+              "emoji": "🏳️‍🌈"
+            }
+          ]
+        },
+        {
+          "numero": 5,
+          "nome": "Elevação Lateral",
+          "exercicioId": "elevacao-lateral",
+          "unidade": "kg",
+          "series": []
+        },
+        {
+          "numero": 6,
+          "nome": "Rosca Direta",
+          "exercicioId": "rosca-direta",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 30,
+              "repeticoes": 12,
+              "emoji": ""
+            },
+            {
+              "peso": 35,
+              "repeticoes": 12,
+              "emoji": ""
+            },
+            {
+              "peso": 40,
+              "repeticoes": 10,
+              "emoji": ""
+            }
+          ]
+        },
+        {
+          "numero": 7,
+          "nome": "Tríceps Francês na Máquina",
+          "exercicioId": "triceps-frances-na-maquina",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 35,
+              "repeticoes": 12,
+              "emoji": ""
+            },
+            {
+              "peso": 40,
+              "repeticoes": 10,
+              "emoji": "💀"
+            },
+            {
+              "peso": 40,
+              "repeticoes": 12,
+              "emoji": "🏳️‍🌈"
+            }
+          ]
+        }
+      ],
+      "data": "2026-10-29",
+      "unidade": "kg",
+      "observacao": ""
+    },
+    {
+      "id": "andre-2026-10-29-upper",
+      "pessoaId": "andre",
+      "titulo": "Upper",
+      "exercicios": [
+        {
+          "numero": 1,
+          "nome": "Supino Inclinado na Máquina",
+          "exercicioId": "supino-inclinado-na-maquina",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 60,
+              "repeticoes": 12,
+              "emoji": ""
+            },
+            {
+              "peso": 80,
+              "repeticoes": 12,
+              "emoji": ""
+            }
+          ]
+        },
+        {
+          "numero": 2,
+          "nome": "Pec Fly",
+          "exercicioId": "pec-fly",
+          "unidade": "lb",
+          "series": [
+            {
+              "peso": 85,
+              "repeticoes": 6,
+              "emoji": ""
+            },
+            {
+              "peso": 100,
+              "repeticoes": 12,
+              "emoji": ""
+            },
+            {
+              "peso": 115,
+              "repeticoes": 12,
+              "emoji": ""
+            }
+          ]
+        },
+        {
+          "numero": 3,
+          "nome": "Remada Baixa na Polia",
+          "exercicioId": "remada-baixa-na-polia",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 75,
+              "repeticoes": 10,
+              "emoji": ""
+            },
+            {
+              "peso": 75,
+              "repeticoes": 12,
+              "emoji": ""
+            }
+          ]
+        },
+        {
+          "numero": 4,
+          "nome": "Pulldown na Máquina",
+          "exercicioId": "pulldown-na-maquina",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 50,
+              "repeticoes": 10,
+              "emoji": ""
+            },
+            {
+              "peso": 50,
+              "repeticoes": 12,
+              "emoji": "😐"
+            }
+          ]
+        },
+        {
+          "numero": 5,
+          "nome": "Elevação Lateral",
+          "exercicioId": "elevacao-lateral",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 35,
+              "repeticoes": 12,
+              "emoji": ""
+            },
+            {
+              "peso": 35,
+              "repeticoes": 12,
+              "emoji": ""
+            }
+          ]
+        },
+        {
+          "numero": 6,
+          "nome": "Rosca Direta Polia leve",
+          "exercicioId": "rosca-direta-polia-leve",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 65,
+              "repeticoes": 10,
+              "emoji": ""
+            },
+            {
+              "peso": 75,
+              "repeticoes": 8,
+              "emoji": ""
+            },
+            {
+              "peso": 75,
+              "repeticoes": 8,
+              "emoji": ""
+            }
+          ]
+        },
+        {
+          "numero": 7,
+          "nome": "Tríceps Francês na Máquina",
+          "exercicioId": "triceps-frances-na-maquina",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 80,
+              "repeticoes": 12,
+              "emoji": ""
+            },
+            {
+              "peso": 100,
+              "repeticoes": 12,
+              "emoji": ""
+            },
+            {
+              "peso": 100,
+              "repeticoes": 12,
+              "emoji": ""
+            }
+          ]
+        }
+      ],
+      "data": "2026-10-29",
+      "unidade": "kg",
+      "observacao": ""
+    },
+    {
+      "id": "be-2026-10-29-d",
+      "pessoaId": "be",
+      "titulo": "D",
+      "exercicios": [
+        {
+          "numero": 1,
+          "nome": "Remada Aberta na Polia Alta",
+          "exercicioId": "remada-aberta-na-polia-alta",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 20,
+              "repeticoes": 12,
+              "emoji": "😐"
+            },
+            {
+              "peso": 20,
+              "repeticoes": 12,
+              "emoji": "😐"
+            },
+            {
+              "peso": 20,
+              "repeticoes": 12,
+              "emoji": "🏳️‍🌈"
+            },
+            {
+              "peso": 20,
+              "repeticoes": 10,
+              "emoji": "💩"
+            }
+          ]
+        },
+        {
+          "numero": 2,
+          "nome": "Puxada Alta com Triângulo",
+          "exercicioId": "puxada-alta-com-triangulo",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 33,
+              "repeticoes": 12,
+              "emoji": "😐"
+            },
+            {
+              "peso": 40,
+              "repeticoes": 12,
+              "emoji": "😐"
+            },
+            {
+              "peso": 40,
+              "repeticoes": 12,
+              "emoji": "😐"
+            }
+          ]
+        },
+        {
+          "numero": 3,
+          "nome": "Pulldown",
+          "exercicioId": "pulldown",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 20,
+              "repeticoes": 10,
+              "emoji": "💩"
+            },
+            {
+              "peso": 20,
+              "repeticoes": 8,
+              "emoji": "💩"
+            },
+            {
+              "peso": 20,
+              "repeticoes": 8,
+              "emoji": "💩"
+            }
+          ],
+          "observacao": "NAO GOSTEU DESSA MAQUINA"
+        },
+        {
+          "numero": 4,
+          "nome": "Rosca Direta",
+          "exercicioId": "rosca-direta",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 20,
+              "repeticoes": 8,
+              "emoji": "💩"
+            },
+            {
+              "peso": 20,
+              "repeticoes": 12,
+              "emoji": "🏳️‍🌈"
+            },
+            {
+              "peso": 20,
+              "repeticoes": 12,
+              "emoji": "🏳️‍🌈"
+            }
+          ],
+          "observacao": "UMA BOSTA TBM"
+        }
+      ],
+      "data": "2026-10-29",
+      "unidade": "kg",
+      "observacao": ""
+    },
+    {
+      "id": "thais-oliveira-2026-10-29-d",
+      "pessoaId": "thais-oliveira",
+      "titulo": "D",
+      "exercicios": [
+        {
+          "numero": 1,
+          "nome": "Remada Aberta na Polia Alta",
+          "exercicioId": "remada-aberta-na-polia-alta",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 25,
+              "repeticoes": 10,
+              "emoji": "💀"
+            },
+            {
+              "peso": 25,
+              "repeticoes": 8,
+              "emoji": "💀"
+            },
+            {
+              "peso": 25,
+              "repeticoes": 8,
+              "emoji": "💀"
+            },
+            {
+              "peso": 25,
+              "repeticoes": 0,
+              "emoji": "💀"
+            }
+          ],
+          "observacao": "É fome ou a maquina pesada? Maquina do meio"
+        },
+        {
+          "numero": 2,
+          "nome": "Puxada Alta com Triângulo",
+          "exercicioId": "puxada-alta-com-triangulo",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 47,
+              "repeticoes": 12,
+              "emoji": "💩"
+            },
+            {
+              "peso": 47,
+              "repeticoes": 12,
+              "emoji": "💩"
+            },
+            {
+              "peso": 47,
+              "repeticoes": 12,
+              "emoji": "🏳️‍🌈"
+            }
+          ]
+        },
+        {
+          "numero": 3,
+          "nome": "Pulldown na Máquina",
+          "exercicioId": "pulldown-na-maquina",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 20,
+              "repeticoes": 12,
+              "emoji": "💩"
+            },
+            {
+              "peso": 25,
+              "repeticoes": 12,
+              "emoji": "🏳️‍🌈"
+            },
+            {
+              "peso": 25,
+              "repeticoes": 12,
+              "emoji": "🏳️‍🌈"
+            }
+          ]
+        },
+        {
+          "numero": 4,
+          "nome": "Rosca Direta",
+          "exercicioId": "rosca-direta",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 20,
+              "repeticoes": 10,
+              "emoji": "🤢"
+            },
+            {
+              "peso": 20,
+              "repeticoes": 9,
+              "emoji": "💀"
+            },
+            {
+              "peso": 20,
+              "repeticoes": 7,
+              "emoji": "💀"
+            },
+            {
+              "peso": 20,
+              "repeticoes": 0,
+              "emoji": ""
+            }
+          ],
+          "observacao": "Primeira"
+        },
+        {
+          "numero": 5,
+          "nome": "Panturrilha (Escada ou em Pé)",
+          "exercicioId": "panturrilha-escada-ou-em-pe",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 20,
+              "repeticoes": 12,
+              "emoji": "😐"
+            },
+            {
+              "peso": 40,
+              "repeticoes": 12,
+              "emoji": "😐"
+            },
+            {
+              "peso": 60,
+              "repeticoes": 12,
+              "emoji": "😐"
+            },
+            {
+              "peso": 80,
+              "repeticoes": 12,
+              "emoji": "😴"
+            }
+          ]
+        }
+      ],
+      "data": "2026-10-29",
+      "unidade": "kg",
+      "observacao": ""
     }
   ]
 }
