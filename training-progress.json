@@ -24,122 +24,6 @@
   ],
   "sessions": [
     {
-      "id": "thais-oliveira-2026-10-19-d",
-      "pessoaId": "thais-oliveira",
-      "data": "2026-10-19",
-      "titulo": "D",
-      "unidade": "kg",
-      "observacao": "",
-      "exercicios": [
-        {
-          "numero": 1,
-          "nome": "Remada Aberta na Polia Alta",
-          "unidade": "kg",
-          "series": [
-            {
-              "peso": 30,
-              "repeticoes": 12,
-              "emoji": ""
-            },
-            {
-              "peso": 30,
-              "repeticoes": 12,
-              "emoji": ""
-            },
-            {
-              "peso": 30,
-              "repeticoes": 12,
-              "emoji": ""
-            }
-          ],
-          "exercicioId": "remada-aberta-na-polia-alta"
-        },
-        {
-          "numero": 2,
-          "nome": "Puxada Alta com Triângulo",
-          "unidade": "kg",
-          "series": [
-            {
-              "peso": 47,
-              "repeticoes": 12,
-              "emoji": ""
-            },
-            {
-              "peso": 47,
-              "repeticoes": 12,
-              "emoji": ""
-            },
-            {
-              "peso": 47,
-              "repeticoes": 12,
-              "emoji": ""
-            }
-          ],
-          "exercicioId": "puxada-alta-com-triangulo"
-        },
-        {
-          "numero": 3,
-          "nome": "Remada na Máquina (Pegada Supinada)",
-          "unidade": "kg",
-          "series": [
-            {
-              "peso": 33,
-              "repeticoes": 8,
-              "emoji": ""
-            },
-            {
-              "peso": 33,
-              "repeticoes": 8,
-              "emoji": ""
-            },
-            {
-              "peso": 33,
-              "repeticoes": 8,
-              "emoji": ""
-            }
-          ],
-          "exercicioId": "remada-na-maquina-pegada-supinada"
-        },
-        {
-          "numero": 4,
-          "nome": "Rosca Scott na Polia",
-          "unidade": "kg",
-          "series": [
-            {
-              "peso": 7.5,
-              "repeticoes": 10,
-              "emoji": ""
-            },
-            {
-              "peso": 7.5,
-              "repeticoes": 10,
-              "emoji": ""
-            },
-            {
-              "peso": 7.5,
-              "repeticoes": 8,
-              "emoji": ""
-            }
-          ],
-          "exercicioId": "rosca-scott-na-polia"
-        },
-        {
-          "numero": 5,
-          "nome": "Prancha Abdominal",
-          "unidade": "kg",
-          "series": [],
-          "exercicioId": "prancha-abdominal"
-        },
-        {
-          "numero": 6,
-          "nome": "Panturrilha (Escada ou em Pé)",
-          "unidade": "kg",
-          "series": [],
-          "exercicioId": "panturrilha-escada-ou-em-pe"
-        }
-      ]
-    },
-    {
       "id": "andre-2026-10-19-d",
       "pessoaId": "andre",
       "data": "2026-10-19",
@@ -233,6 +117,108 @@
             },
             {
               "peso": 27.5,
+              "repeticoes": 8,
+              "emoji": "💀"
+            }
+          ],
+          "exercicioId": "rosca-direta"
+        }
+      ]
+    },
+    {
+      "id": "be-2026-10-19-d",
+      "pessoaId": "be",
+      "data": "2026-10-19",
+      "titulo": "D",
+      "unidade": "kg",
+      "observacao": "",
+      "exercicios": [
+        {
+          "numero": 1,
+          "nome": "Remada Aberta na Polia Alta",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 20,
+              "repeticoes": 11,
+              "emoji": "😴"
+            },
+            {
+              "peso": 20,
+              "repeticoes": 12,
+              "emoji": "😴"
+            },
+            {
+              "peso": 20,
+              "repeticoes": 12,
+              "emoji": "💀"
+            }
+          ],
+          "exercicioId": "remada-aberta-na-polia-alta"
+        },
+        {
+          "numero": 2,
+          "nome": "Puxada Alta com Triângulo",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 33,
+              "repeticoes": 12,
+              "emoji": "😐"
+            },
+            {
+              "peso": 33,
+              "repeticoes": 12,
+              "emoji": "😐"
+            },
+            {
+              "peso": 33,
+              "repeticoes": 12,
+              "emoji": "💀"
+            }
+          ],
+          "exercicioId": "puxada-alta-com-triangulo"
+        },
+        {
+          "numero": 3,
+          "nome": "Remada na Máquina (Pegada Supinada)",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 26,
+              "repeticoes": 12,
+              "emoji": "😐"
+            },
+            {
+              "peso": 26,
+              "repeticoes": 12,
+              "emoji": "😄"
+            },
+            {
+              "peso": 26,
+              "repeticoes": 8,
+              "emoji": "💩"
+            }
+          ],
+          "exercicioId": "remada-na-maquina-pegada-supinada"
+        },
+        {
+          "numero": 4,
+          "nome": "Rosca Direta",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 5,
+              "repeticoes": 8,
+              "emoji": "💀"
+            },
+            {
+              "peso": 5,
+              "repeticoes": 8,
+              "emoji": "💀"
+            },
+            {
+              "peso": 5,
               "repeticoes": 8,
               "emoji": "💀"
             }
@@ -359,8 +345,8 @@
       ]
     },
     {
-      "id": "be-2026-10-19-d",
-      "pessoaId": "be",
+      "id": "thais-oliveira-2026-10-19-d",
+      "pessoaId": "thais-oliveira",
       "data": "2026-10-19",
       "titulo": "D",
       "unidade": "kg",
@@ -372,19 +358,19 @@
           "unidade": "kg",
           "series": [
             {
-              "peso": 20,
-              "repeticoes": 11,
-              "emoji": "😴"
+              "peso": 30,
+              "repeticoes": 12,
+              "emoji": ""
             },
             {
-              "peso": 20,
+              "peso": 30,
               "repeticoes": 12,
-              "emoji": "😴"
+              "emoji": ""
             },
             {
-              "peso": 20,
+              "peso": 30,
               "repeticoes": 12,
-              "emoji": "💀"
+              "emoji": ""
             }
           ],
           "exercicioId": "remada-aberta-na-polia-alta"
@@ -395,19 +381,19 @@
           "unidade": "kg",
           "series": [
             {
-              "peso": 33,
+              "peso": 47,
               "repeticoes": 12,
-              "emoji": "😐"
+              "emoji": ""
             },
             {
-              "peso": 33,
+              "peso": 47,
               "repeticoes": 12,
-              "emoji": "😐"
+              "emoji": ""
             },
             {
-              "peso": 33,
+              "peso": 47,
               "repeticoes": 12,
-              "emoji": "💀"
+              "emoji": ""
             }
           ],
           "exercicioId": "puxada-alta-com-triangulo"
@@ -418,591 +404,59 @@
           "unidade": "kg",
           "series": [
             {
-              "peso": 26,
-              "repeticoes": 12,
-              "emoji": "😐"
-            },
-            {
-              "peso": 26,
-              "repeticoes": 12,
-              "emoji": "😄"
-            },
-            {
-              "peso": 26,
+              "peso": 33,
               "repeticoes": 8,
-              "emoji": "💩"
+              "emoji": ""
+            },
+            {
+              "peso": 33,
+              "repeticoes": 8,
+              "emoji": ""
+            },
+            {
+              "peso": 33,
+              "repeticoes": 8,
+              "emoji": ""
             }
           ],
           "exercicioId": "remada-na-maquina-pegada-supinada"
         },
         {
           "numero": 4,
-          "nome": "Rosca Direta",
+          "nome": "Rosca Scott na Polia",
           "unidade": "kg",
           "series": [
             {
-              "peso": 5,
-              "repeticoes": 8,
-              "emoji": "💀"
-            },
-            {
-              "peso": 5,
-              "repeticoes": 8,
-              "emoji": "💀"
-            },
-            {
-              "peso": 5,
-              "repeticoes": 8,
-              "emoji": "💀"
-            }
-          ],
-          "exercicioId": "rosca-direta"
-        }
-      ]
-    },
-    {
-      "id": "thais-oliveira-2026-10-21-a",
-      "pessoaId": "thais-oliveira",
-      "data": "2026-10-21",
-      "titulo": "A",
-      "unidade": "kg",
-      "observacao": "",
-      "exercicios": [
-        {
-          "numero": 1,
-          "nome": "Stiff",
-          "unidade": "kg",
-          "series": [
-            {
-              "peso": 30,
-              "repeticoes": 12,
-              "emoji": ""
-            },
-            {
-              "peso": 20,
-              "repeticoes": 15,
-              "emoji": ""
-            },
-            {
-              "peso": 20,
-              "repeticoes": 15,
-              "emoji": ""
-            }
-          ],
-          "exercicioId": "stiff"
-        },
-        {
-          "numero": 2,
-          "nome": "Cadeira Flexora",
-          "unidade": "kg",
-          "series": [
-            {
-              "peso": 40,
-              "repeticoes": 12,
-              "emoji": ""
-            },
-            {
-              "peso": 45,
-              "repeticoes": 12,
-              "emoji": ""
-            },
-            {
-              "peso": 45,
-              "repeticoes": 12,
-              "emoji": ""
-            }
-          ],
-          "exercicioId": "cadeira-flexora"
-        },
-        {
-          "numero": 3,
-          "nome": "Agachamento Búlgaro",
-          "unidade": "kg",
-          "series": [
-            {
-              "peso": 20,
+              "peso": 7.5,
               "repeticoes": 10,
               "emoji": ""
             },
             {
-              "peso": 20,
+              "peso": 7.5,
               "repeticoes": 10,
               "emoji": ""
             },
             {
-              "peso": 20,
-              "repeticoes": 11,
+              "peso": 7.5,
+              "repeticoes": 8,
               "emoji": ""
             }
           ],
-          "exercicioId": "agachamento-bulgaro"
-        },
-        {
-          "numero": 4,
-          "nome": "Cadeira Adutora",
-          "unidade": "kg",
-          "series": [
-            {
-              "peso": 25,
-              "repeticoes": 12,
-              "emoji": ""
-            },
-            {
-              "peso": 25,
-              "repeticoes": 14,
-              "emoji": ""
-            },
-            {
-              "peso": 25,
-              "repeticoes": 11,
-              "emoji": ""
-            }
-          ],
-          "exercicioId": "cadeira-adutora"
+          "exercicioId": "rosca-scott-na-polia"
         },
         {
           "numero": 5,
-          "nome": "Elevação Pélvica",
+          "nome": "Prancha Abdominal",
           "unidade": "kg",
-          "series": [
-            {
-              "peso": 15,
-              "repeticoes": 12,
-              "emoji": ""
-            },
-            {
-              "peso": 15,
-              "repeticoes": 12,
-              "emoji": ""
-            },
-            {
-              "peso": 15,
-              "repeticoes": 12,
-              "emoji": ""
-            }
-          ],
-          "exercicioId": "elevacao-pelvica"
-        }
-      ]
-    },
-    {
-      "id": "be-2026-10-21-a",
-      "pessoaId": "be",
-      "data": "2026-10-21",
-      "titulo": "A",
-      "unidade": "kg",
-      "observacao": "",
-      "exercicios": [
-        {
-          "numero": 1,
-          "nome": "Cadeira Flexora",
-          "unidade": "kg",
-          "series": [
-            {
-              "peso": 35,
-              "repeticoes": 12,
-              "emoji": "😐"
-            },
-            {
-              "peso": 40,
-              "repeticoes": 12,
-              "emoji": "😐"
-            },
-            {
-              "peso": 40,
-              "repeticoes": 12,
-              "emoji": "😐"
-            }
-          ],
-          "exercicioId": "cadeira-flexora"
-        },
-        {
-          "numero": 2,
-          "nome": "Stiff",
-          "unidade": "kg",
-          "series": [
-            {
-              "peso": 20,
-              "repeticoes": 12,
-              "emoji": ""
-            }
-          ],
-          "exercicioId": "stiff"
-        },
-        {
-          "numero": 3,
-          "nome": "Agachamento Búlgaro",
-          "unidade": "kg",
-          "series": [
-            {
-              "peso": 10,
-              "repeticoes": 10,
-              "emoji": ""
-            },
-            {
-              "peso": 10,
-              "repeticoes": 10,
-              "emoji": ""
-            },
-            {
-              "peso": 10,
-              "repeticoes": 8,
-              "emoji": ""
-            }
-          ],
-          "exercicioId": "agachamento-bulgaro"
-        },
-        {
-          "numero": 4,
-          "nome": "Cadeira Adutora",
-          "unidade": "kg",
-          "series": [
-            {
-              "peso": 25,
-              "repeticoes": 12,
-              "emoji": "🤢"
-            },
-            {
-              "peso": 25,
-              "repeticoes": 12,
-              "emoji": "🏳️‍🌈"
-            },
-            {
-              "peso": 25,
-              "repeticoes": 10,
-              "emoji": "💀"
-            }
-          ],
-          "exercicioId": "cadeira-adutora"
-        },
-        {
-          "numero": 5,
-          "nome": "Elevação Pélvica",
-          "unidade": "kg",
-          "series": [
-            {
-              "peso": 20,
-              "repeticoes": 12,
-              "emoji": ""
-            },
-            {
-              "peso": 40,
-              "repeticoes": 12,
-              "emoji": ""
-            },
-            {
-              "peso": 50,
-              "repeticoes": 8,
-              "emoji": ""
-            }
-          ],
-          "exercicioId": "elevacao-pelvica"
-        }
-      ]
-    },
-    {
-      "id": "andre-2026-10-21-legs",
-      "pessoaId": "andre",
-      "data": "2026-10-21",
-      "titulo": "Legs",
-      "unidade": "kg",
-      "observacao": "",
-      "exercicios": [
-        {
-          "numero": 1,
-          "nome": "Cadeira Flexora",
-          "unidade": "kg",
-          "series": [
-            {
-              "peso": 110,
-              "repeticoes": 12,
-              "emoji": "😴"
-            },
-            {
-              "peso": 110,
-              "repeticoes": 12,
-              "emoji": "😴"
-            }
-          ],
-          "exercicioId": "cadeira-flexora"
-        },
-        {
-          "numero": 2,
-          "nome": "Hack Machine",
-          "unidade": "kg",
-          "series": [
-            {
-              "peso": 60,
-              "repeticoes": 12,
-              "emoji": "😐"
-            },
-            {
-              "peso": 100,
-              "repeticoes": 12,
-              "emoji": "💀"
-            },
-            {
-              "peso": 100,
-              "repeticoes": 12,
-              "emoji": "💀"
-            }
-          ],
-          "exercicioId": "hack-machine"
-        },
-        {
-          "numero": 3,
-          "nome": "Cadeira Extensora",
-          "unidade": "kg",
-          "series": [
-            {
-              "peso": 145,
-              "repeticoes": 15,
-              "emoji": "🏳️‍🌈"
-            },
-            {
-              "peso": 145,
-              "repeticoes": 12,
-              "emoji": "💀"
-            },
-            {
-              "peso": 145,
-              "repeticoes": 15,
-              "emoji": "💀"
-            }
-          ],
-          "observacao": "Máquina ruim e leve",
-          "exercicioId": "cadeira-extensora"
-        },
-        {
-          "numero": 4,
-          "nome": "Elevação Pélvica",
-          "unidade": "kg",
-          "series": [
-            {
-              "peso": 80,
-              "repeticoes": 6,
-              "emoji": ""
-            },
-            {
-              "peso": 130,
-              "repeticoes": 12,
-              "emoji": "💀"
-            },
-            {
-              "peso": 130,
-              "repeticoes": 12,
-              "emoji": "💀"
-            }
-          ],
-          "observacao": "Aumentar a carga",
-          "exercicioId": "elevacao-pelvica"
-        },
-        {
-          "numero": 5,
-          "nome": "Cadeira Adutora",
-          "unidade": "kg",
-          "series": [
-            {
-              "peso": 93,
-              "repeticoes": 12,
-              "emoji": "😐"
-            },
-            {
-              "peso": 100,
-              "repeticoes": 12,
-              "emoji": "💩"
-            }
-          ],
-          "exercicioId": "cadeira-adutora"
+          "series": [],
+          "exercicioId": "prancha-abdominal"
         },
         {
           "numero": 6,
-          "nome": "Levantamento Terra",
+          "nome": "Panturrilha (Escada ou em Pé)",
           "unidade": "kg",
-          "series": [
-            {
-              "peso": 20,
-              "repeticoes": 8,
-              "emoji": "😴"
-            },
-            {
-              "peso": 60,
-              "repeticoes": 4,
-              "emoji": "😴"
-            },
-            {
-              "peso": 100,
-              "repeticoes": 10,
-              "emoji": "😴"
-            },
-            {
-              "peso": 100,
-              "repeticoes": 10,
-              "emoji": "😐"
-            },
-            {
-              "peso": 100,
-              "repeticoes": 10,
-              "emoji": "🤢"
-            },
-            {
-              "peso": 100,
-              "repeticoes": 10,
-              "emoji": "💀"
-            },
-            {
-              "peso": 100,
-              "repeticoes": 10,
-              "emoji": "💀"
-            }
-          ],
-          "exercicioId": "levantamento-terra"
-        },
-        {
-          "numero": 7,
-          "nome": "Abdominal na Máquina",
-          "unidade": "kg",
-          "series": [
-            {
-              "peso": 80,
-              "repeticoes": 15,
-              "emoji": "😐"
-            },
-            {
-              "peso": 95,
-              "repeticoes": 12,
-              "emoji": "😐"
-            },
-            {
-              "peso": 95,
-              "repeticoes": 15,
-              "emoji": "😐"
-            }
-          ],
-          "exercicioId": "abdominal-na-maquina"
-        },
-        {
-          "numero": 8,
-          "nome": "Abdominal Lateral no Banco Romano",
-          "unidade": "kg",
-          "series": [
-            {
-              "peso": 35,
-              "repeticoes": 15,
-              "emoji": "🤢"
-            },
-            {
-              "peso": 35,
-              "repeticoes": 15,
-              "emoji": "😐"
-            },
-            {
-              "peso": 35,
-              "repeticoes": 15,
-              "emoji": "🤢"
-            }
-          ],
-          "exercicioId": "abdominal-lateral-no-banco-romano"
-        }
-      ]
-    },
-    {
-      "id": "lucas-marques-2026-10-21-legs",
-      "pessoaId": "lucas-marques",
-      "data": "2026-10-21",
-      "titulo": "Legs",
-      "unidade": "kg",
-      "observacao": "",
-      "exercicios": [
-        {
-          "numero": 1,
-          "nome": "Cadeira Flexora",
-          "unidade": "kg",
-          "series": [
-            {
-              "peso": 60,
-              "repeticoes": 12,
-              "emoji": "😴"
-            },
-            {
-              "peso": 65,
-              "repeticoes": 12,
-              "emoji": "💩"
-            }
-          ],
-          "exercicioId": "cadeira-flexora"
-        },
-        {
-          "numero": 2,
-          "nome": "Hack Machine",
-          "unidade": "kg",
-          "series": [
-            {
-              "peso": 30,
-              "repeticoes": 12,
-              "emoji": "💀"
-            },
-            {
-              "peso": 30,
-              "repeticoes": 12,
-              "emoji": "💀"
-            }
-          ],
-          "exercicioId": "hack-machine"
-        },
-        {
-          "numero": 3,
-          "nome": "Cadeira Extensora",
-          "unidade": "kg",
-          "series": [
-            {
-              "peso": 60,
-              "repeticoes": 10,
-              "emoji": ""
-            },
-            {
-              "peso": 60,
-              "repeticoes": 8,
-              "emoji": ""
-            }
-          ],
-          "exercicioId": "cadeira-extensora"
-        },
-        {
-          "numero": 4,
-          "nome": "Elevação Pélvica",
-          "unidade": "kg",
-          "series": [
-            {
-              "peso": 90,
-              "repeticoes": 12,
-              "emoji": "💀"
-            },
-            {
-              "peso": 90,
-              "repeticoes": 12,
-              "emoji": "🏳️‍🌈"
-            }
-          ],
-          "exercicioId": "elevacao-pelvica"
-        },
-        {
-          "numero": 5,
-          "nome": "Cadeira Adutora",
-          "unidade": "kg",
-          "series": [
-            {
-              "peso": 38,
-              "repeticoes": 10,
-              "emoji": "💩"
-            },
-            {
-              "peso": 38,
-              "repeticoes": 10,
-              "emoji": "🏳️‍🌈"
-            }
-          ],
-          "exercicioId": "cadeira-adutora"
+          "series": [],
+          "exercicioId": "panturrilha-escada-ou-em-pe"
         }
       ]
     },
@@ -1222,6 +676,820 @@
       ]
     },
     {
+      "id": "andre-2026-10-21-legs",
+      "pessoaId": "andre",
+      "data": "2026-10-21",
+      "titulo": "Legs",
+      "unidade": "kg",
+      "observacao": "",
+      "exercicios": [
+        {
+          "numero": 1,
+          "nome": "Cadeira Flexora",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 110,
+              "repeticoes": 12,
+              "emoji": "😴"
+            },
+            {
+              "peso": 110,
+              "repeticoes": 12,
+              "emoji": "😴"
+            }
+          ],
+          "exercicioId": "cadeira-flexora"
+        },
+        {
+          "numero": 2,
+          "nome": "Hack Machine",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 60,
+              "repeticoes": 12,
+              "emoji": "😐"
+            },
+            {
+              "peso": 100,
+              "repeticoes": 12,
+              "emoji": "💀"
+            },
+            {
+              "peso": 100,
+              "repeticoes": 12,
+              "emoji": "💀"
+            }
+          ],
+          "exercicioId": "hack-machine"
+        },
+        {
+          "numero": 3,
+          "nome": "Cadeira Extensora",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 145,
+              "repeticoes": 15,
+              "emoji": "🏳️‍🌈"
+            },
+            {
+              "peso": 145,
+              "repeticoes": 12,
+              "emoji": "💀"
+            },
+            {
+              "peso": 145,
+              "repeticoes": 15,
+              "emoji": "💀"
+            }
+          ],
+          "observacao": "Máquina ruim e leve",
+          "exercicioId": "cadeira-extensora"
+        },
+        {
+          "numero": 4,
+          "nome": "Elevação Pélvica",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 80,
+              "repeticoes": 6,
+              "emoji": ""
+            },
+            {
+              "peso": 130,
+              "repeticoes": 12,
+              "emoji": "💀"
+            },
+            {
+              "peso": 130,
+              "repeticoes": 12,
+              "emoji": "💀"
+            }
+          ],
+          "observacao": "Aumentar a carga",
+          "exercicioId": "elevacao-pelvica"
+        },
+        {
+          "numero": 5,
+          "nome": "Cadeira Adutora",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 93,
+              "repeticoes": 12,
+              "emoji": "😐"
+            },
+            {
+              "peso": 100,
+              "repeticoes": 12,
+              "emoji": "💩"
+            }
+          ],
+          "exercicioId": "cadeira-adutora"
+        },
+        {
+          "numero": 6,
+          "nome": "Levantamento Terra",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 20,
+              "repeticoes": 8,
+              "emoji": "😴"
+            },
+            {
+              "peso": 60,
+              "repeticoes": 4,
+              "emoji": "😴"
+            },
+            {
+              "peso": 100,
+              "repeticoes": 10,
+              "emoji": "😴"
+            },
+            {
+              "peso": 100,
+              "repeticoes": 10,
+              "emoji": "😐"
+            },
+            {
+              "peso": 100,
+              "repeticoes": 10,
+              "emoji": "🤢"
+            },
+            {
+              "peso": 100,
+              "repeticoes": 10,
+              "emoji": "💀"
+            },
+            {
+              "peso": 100,
+              "repeticoes": 10,
+              "emoji": "💀"
+            }
+          ],
+          "exercicioId": "levantamento-terra"
+        },
+        {
+          "numero": 7,
+          "nome": "Abdominal na Máquina",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 80,
+              "repeticoes": 15,
+              "emoji": "😐"
+            },
+            {
+              "peso": 95,
+              "repeticoes": 12,
+              "emoji": "😐"
+            },
+            {
+              "peso": 95,
+              "repeticoes": 15,
+              "emoji": "😐"
+            }
+          ],
+          "exercicioId": "abdominal-na-maquina"
+        },
+        {
+          "numero": 8,
+          "nome": "Abdominal Lateral no Banco Romano",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 35,
+              "repeticoes": 15,
+              "emoji": "🤢"
+            },
+            {
+              "peso": 35,
+              "repeticoes": 15,
+              "emoji": "😐"
+            },
+            {
+              "peso": 35,
+              "repeticoes": 15,
+              "emoji": "🤢"
+            }
+          ],
+          "exercicioId": "abdominal-lateral-no-banco-romano"
+        }
+      ]
+    },
+    {
+      "id": "be-2026-10-21-a",
+      "pessoaId": "be",
+      "data": "2026-10-21",
+      "titulo": "A",
+      "unidade": "kg",
+      "observacao": "",
+      "exercicios": [
+        {
+          "numero": 1,
+          "nome": "Cadeira Flexora",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 35,
+              "repeticoes": 12,
+              "emoji": "😐"
+            },
+            {
+              "peso": 40,
+              "repeticoes": 12,
+              "emoji": "😐"
+            },
+            {
+              "peso": 40,
+              "repeticoes": 12,
+              "emoji": "😐"
+            }
+          ],
+          "exercicioId": "cadeira-flexora"
+        },
+        {
+          "numero": 2,
+          "nome": "Stiff",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 20,
+              "repeticoes": 12,
+              "emoji": ""
+            }
+          ],
+          "exercicioId": "stiff"
+        },
+        {
+          "numero": 3,
+          "nome": "Agachamento Búlgaro",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 10,
+              "repeticoes": 10,
+              "emoji": ""
+            },
+            {
+              "peso": 10,
+              "repeticoes": 10,
+              "emoji": ""
+            },
+            {
+              "peso": 10,
+              "repeticoes": 8,
+              "emoji": ""
+            }
+          ],
+          "exercicioId": "agachamento-bulgaro"
+        },
+        {
+          "numero": 4,
+          "nome": "Cadeira Adutora",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 25,
+              "repeticoes": 12,
+              "emoji": "🤢"
+            },
+            {
+              "peso": 25,
+              "repeticoes": 12,
+              "emoji": "🏳️‍🌈"
+            },
+            {
+              "peso": 25,
+              "repeticoes": 10,
+              "emoji": "💀"
+            }
+          ],
+          "exercicioId": "cadeira-adutora"
+        },
+        {
+          "numero": 5,
+          "nome": "Elevação Pélvica",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 20,
+              "repeticoes": 12,
+              "emoji": ""
+            },
+            {
+              "peso": 40,
+              "repeticoes": 12,
+              "emoji": ""
+            },
+            {
+              "peso": 50,
+              "repeticoes": 8,
+              "emoji": ""
+            }
+          ],
+          "exercicioId": "elevacao-pelvica"
+        }
+      ]
+    },
+    {
+      "id": "lucas-marques-2026-10-21-legs",
+      "pessoaId": "lucas-marques",
+      "data": "2026-10-21",
+      "titulo": "Legs",
+      "unidade": "kg",
+      "observacao": "",
+      "exercicios": [
+        {
+          "numero": 1,
+          "nome": "Cadeira Flexora",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 60,
+              "repeticoes": 12,
+              "emoji": "😴"
+            },
+            {
+              "peso": 65,
+              "repeticoes": 12,
+              "emoji": "💩"
+            }
+          ],
+          "exercicioId": "cadeira-flexora"
+        },
+        {
+          "numero": 2,
+          "nome": "Hack Machine",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 30,
+              "repeticoes": 12,
+              "emoji": "💀"
+            },
+            {
+              "peso": 30,
+              "repeticoes": 12,
+              "emoji": "💀"
+            }
+          ],
+          "exercicioId": "hack-machine"
+        },
+        {
+          "numero": 3,
+          "nome": "Cadeira Extensora",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 60,
+              "repeticoes": 10,
+              "emoji": ""
+            },
+            {
+              "peso": 60,
+              "repeticoes": 8,
+              "emoji": ""
+            }
+          ],
+          "exercicioId": "cadeira-extensora"
+        },
+        {
+          "numero": 4,
+          "nome": "Elevação Pélvica",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 90,
+              "repeticoes": 12,
+              "emoji": "💀"
+            },
+            {
+              "peso": 90,
+              "repeticoes": 12,
+              "emoji": "🏳️‍🌈"
+            }
+          ],
+          "exercicioId": "elevacao-pelvica"
+        },
+        {
+          "numero": 5,
+          "nome": "Cadeira Adutora",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 38,
+              "repeticoes": 10,
+              "emoji": "💩"
+            },
+            {
+              "peso": 38,
+              "repeticoes": 10,
+              "emoji": "🏳️‍🌈"
+            }
+          ],
+          "exercicioId": "cadeira-adutora"
+        }
+      ]
+    },
+    {
+      "id": "thais-oliveira-2026-10-21-a",
+      "pessoaId": "thais-oliveira",
+      "data": "2026-10-21",
+      "titulo": "A",
+      "unidade": "kg",
+      "observacao": "",
+      "exercicios": [
+        {
+          "numero": 1,
+          "nome": "Stiff",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 30,
+              "repeticoes": 12,
+              "emoji": ""
+            },
+            {
+              "peso": 20,
+              "repeticoes": 15,
+              "emoji": ""
+            },
+            {
+              "peso": 20,
+              "repeticoes": 15,
+              "emoji": ""
+            }
+          ],
+          "exercicioId": "stiff"
+        },
+        {
+          "numero": 2,
+          "nome": "Cadeira Flexora",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 40,
+              "repeticoes": 12,
+              "emoji": ""
+            },
+            {
+              "peso": 45,
+              "repeticoes": 12,
+              "emoji": ""
+            },
+            {
+              "peso": 45,
+              "repeticoes": 12,
+              "emoji": ""
+            }
+          ],
+          "exercicioId": "cadeira-flexora"
+        },
+        {
+          "numero": 3,
+          "nome": "Agachamento Búlgaro",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 20,
+              "repeticoes": 10,
+              "emoji": ""
+            },
+            {
+              "peso": 20,
+              "repeticoes": 10,
+              "emoji": ""
+            },
+            {
+              "peso": 20,
+              "repeticoes": 11,
+              "emoji": ""
+            }
+          ],
+          "exercicioId": "agachamento-bulgaro"
+        },
+        {
+          "numero": 4,
+          "nome": "Cadeira Adutora",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 25,
+              "repeticoes": 12,
+              "emoji": ""
+            },
+            {
+              "peso": 25,
+              "repeticoes": 14,
+              "emoji": ""
+            },
+            {
+              "peso": 25,
+              "repeticoes": 11,
+              "emoji": ""
+            }
+          ],
+          "exercicioId": "cadeira-adutora"
+        },
+        {
+          "numero": 5,
+          "nome": "Elevação Pélvica",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 15,
+              "repeticoes": 12,
+              "emoji": ""
+            },
+            {
+              "peso": 15,
+              "repeticoes": 12,
+              "emoji": ""
+            },
+            {
+              "peso": 15,
+              "repeticoes": 12,
+              "emoji": ""
+            }
+          ],
+          "exercicioId": "elevacao-pelvica"
+        }
+      ]
+    },
+    {
+      "id": "andre-2026-10-22-upper",
+      "pessoaId": "andre",
+      "data": "2026-10-22",
+      "titulo": "Upper",
+      "unidade": "kg",
+      "observacao": "",
+      "exercicios": [
+        {
+          "numero": 1,
+          "nome": "Supino Inclinado na Máquina",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 80,
+              "repeticoes": 8,
+              "emoji": "💀"
+            },
+            {
+              "peso": 80,
+              "repeticoes": 8,
+              "emoji": "💀"
+            }
+          ],
+          "exercicioId": "supino-inclinado-na-maquina"
+        },
+        {
+          "numero": 2,
+          "nome": "Fly",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 40,
+              "repeticoes": 10,
+              "emoji": "😴"
+            },
+            {
+              "peso": 75,
+              "repeticoes": 12,
+              "emoji": ""
+            },
+            {
+              "peso": 83,
+              "repeticoes": 8,
+              "emoji": ""
+            }
+          ],
+          "exercicioId": "fly"
+        },
+        {
+          "numero": 3,
+          "nome": "Remada Baixa na Polia",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 75,
+              "repeticoes": 10,
+              "emoji": "🏳️‍🌈"
+            },
+            {
+              "peso": 75,
+              "repeticoes": 10,
+              "emoji": "🏳️‍🌈"
+            }
+          ],
+          "exercicioId": "remada-baixa-na-polia"
+        },
+        {
+          "numero": 4,
+          "nome": "Pulldown na Máquina",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 35,
+              "repeticoes": 12,
+              "emoji": "😴"
+            },
+            {
+              "peso": 50,
+              "repeticoes": 8,
+              "emoji": "😐"
+            },
+            {
+              "peso": 50,
+              "repeticoes": 8,
+              "emoji": "😴"
+            }
+          ],
+          "exercicioId": "pulldown-na-maquina"
+        },
+        {
+          "numero": 5,
+          "nome": "Elevação Lateral",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 35,
+              "repeticoes": 12,
+              "emoji": "💀"
+            },
+            {
+              "peso": 35,
+              "repeticoes": 10,
+              "emoji": ""
+            }
+          ],
+          "exercicioId": "elevacao-lateral"
+        },
+        {
+          "numero": 6,
+          "nome": "Rosca Direta",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 20,
+              "repeticoes": 12,
+              "emoji": "😐"
+            },
+            {
+              "peso": 27.5,
+              "repeticoes": 12,
+              "emoji": "💀"
+            },
+            {
+              "peso": 30,
+              "repeticoes": 8,
+              "emoji": "💀"
+            }
+          ],
+          "exercicioId": "rosca-direta"
+        },
+        {
+          "numero": 7,
+          "nome": "Tríceps Francês na Máquina",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 75,
+              "repeticoes": 12,
+              "emoji": ""
+            },
+            {
+              "peso": 80,
+              "repeticoes": 12,
+              "emoji": ""
+            },
+            {
+              "peso": 100,
+              "repeticoes": 12,
+              "emoji": ""
+            }
+          ],
+          "exercicioId": "triceps-frances-na-maquina"
+        }
+      ]
+    },
+    {
+      "id": "be-2026-10-22-c",
+      "pessoaId": "be",
+      "data": "2026-10-22",
+      "titulo": "C",
+      "unidade": "kg",
+      "observacao": "",
+      "exercicios": [
+        {
+          "numero": 1,
+          "nome": "Hack Machine",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 10,
+              "repeticoes": 8,
+              "emoji": "😐"
+            },
+            {
+              "peso": 10,
+              "repeticoes": 12,
+              "emoji": "😐"
+            },
+            {
+              "peso": 10,
+              "repeticoes": 10,
+              "emoji": "💀"
+            },
+            {
+              "peso": 10,
+              "repeticoes": 10,
+              "emoji": "💀"
+            }
+          ],
+          "exercicioId": "hack-machine"
+        },
+        {
+          "numero": 2,
+          "nome": "Leg Press 45°",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 60,
+              "repeticoes": 10,
+              "emoji": "😐"
+            },
+            {
+              "peso": 60,
+              "repeticoes": 10,
+              "emoji": "💀"
+            },
+            {
+              "peso": 60,
+              "repeticoes": 10,
+              "emoji": "💀"
+            }
+          ],
+          "exercicioId": "leg-press-45"
+        },
+        {
+          "numero": 3,
+          "nome": "Cadeira Extensora",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 26,
+              "repeticoes": 12,
+              "emoji": "😐"
+            },
+            {
+              "peso": 33,
+              "repeticoes": 12,
+              "emoji": "😐"
+            },
+            {
+              "peso": 33,
+              "repeticoes": 12,
+              "emoji": "😐"
+            },
+            {
+              "peso": 33,
+              "repeticoes": 12,
+              "emoji": "😐"
+            }
+          ],
+          "exercicioId": "cadeira-extensora"
+        },
+        {
+          "numero": 4,
+          "nome": "Cadeira Abdutora",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 25,
+              "repeticoes": 12,
+              "emoji": "😐"
+            },
+            {
+              "peso": 32,
+              "repeticoes": 12,
+              "emoji": "💀"
+            },
+            {
+              "peso": 32,
+              "repeticoes": 12,
+              "emoji": "💀"
+            }
+          ],
+          "exercicioId": "cadeira-abdutora"
+        }
+      ]
+    },
+    {
       "id": "Isaias-teofilo-2026-10-22-3",
       "pessoaId": "Isaias-teofilo",
       "data": "2026-10-22",
@@ -1421,242 +1689,6 @@
       ]
     },
     {
-      "id": "be-2026-10-22-c",
-      "pessoaId": "be",
-      "data": "2026-10-22",
-      "titulo": "C",
-      "unidade": "kg",
-      "observacao": "",
-      "exercicios": [
-        {
-          "numero": 1,
-          "nome": "Hack Machine",
-          "unidade": "kg",
-          "series": [
-            {
-              "peso": 10,
-              "repeticoes": 8,
-              "emoji": "😐"
-            },
-            {
-              "peso": 10,
-              "repeticoes": 12,
-              "emoji": "😐"
-            },
-            {
-              "peso": 10,
-              "repeticoes": 10,
-              "emoji": "💀"
-            },
-            {
-              "peso": 10,
-              "repeticoes": 10,
-              "emoji": "💀"
-            }
-          ],
-          "exercicioId": "hack-machine"
-        },
-        {
-          "numero": 2,
-          "nome": "Leg Press 45°",
-          "unidade": "kg",
-          "series": [
-            {
-              "peso": 60,
-              "repeticoes": 10,
-              "emoji": "😐"
-            },
-            {
-              "peso": 60,
-              "repeticoes": 10,
-              "emoji": "💀"
-            },
-            {
-              "peso": 60,
-              "repeticoes": 10,
-              "emoji": "💀"
-            }
-          ],
-          "exercicioId": "leg-press-45"
-        },
-        {
-          "numero": 3,
-          "nome": "Cadeira Extensora",
-          "unidade": "kg",
-          "series": [
-            {
-              "peso": 26,
-              "repeticoes": 12,
-              "emoji": "😐"
-            },
-            {
-              "peso": 33,
-              "repeticoes": 12,
-              "emoji": "😐"
-            },
-            {
-              "peso": 33,
-              "repeticoes": 12,
-              "emoji": "😐"
-            },
-            {
-              "peso": 33,
-              "repeticoes": 12,
-              "emoji": "😐"
-            }
-          ],
-          "exercicioId": "cadeira-extensora"
-        },
-        {
-          "numero": 4,
-          "nome": "Cadeira Abdutora",
-          "unidade": "kg",
-          "series": [
-            {
-              "peso": 25,
-              "repeticoes": 12,
-              "emoji": "😐"
-            },
-            {
-              "peso": 32,
-              "repeticoes": 12,
-              "emoji": "💀"
-            },
-            {
-              "peso": 32,
-              "repeticoes": 12,
-              "emoji": "💀"
-            }
-          ],
-          "exercicioId": "cadeira-abdutora"
-        }
-      ]
-    },
-    {
-      "id": "thais-oliveira-2026-10-22-c",
-      "pessoaId": "thais-oliveira",
-      "data": "2026-10-22",
-      "titulo": "C",
-      "unidade": "kg",
-      "observacao": "",
-      "exercicios": [
-        {
-          "numero": 1,
-          "nome": "Agachamento",
-          "unidade": "kg",
-          "series": [],
-          "exercicioId": "agachamento"
-        },
-        {
-          "numero": 2,
-          "nome": "Hack Machine",
-          "unidade": "kg",
-          "series": [
-            {
-              "peso": 10,
-              "repeticoes": 8,
-              "emoji": "💩"
-            },
-            {
-              "peso": 10,
-              "repeticoes": 10,
-              "emoji": "💩"
-            },
-            {
-              "peso": 10,
-              "repeticoes": 12,
-              "emoji": "💩"
-            },
-            {
-              "peso": 10,
-              "repeticoes": 12,
-              "emoji": "💩"
-            }
-          ],
-          "exercicioId": "hack-machine"
-        },
-        {
-          "numero": 3,
-          "nome": "Leg Press 45°",
-          "unidade": "kg",
-          "series": [
-            {
-              "peso": 80,
-              "repeticoes": 12,
-              "emoji": "😴"
-            },
-            {
-              "peso": 90,
-              "repeticoes": 10,
-              "emoji": "😴"
-            },
-            {
-              "peso": 90,
-              "repeticoes": 10,
-              "emoji": "💀"
-            },
-            {
-              "peso": 90,
-              "repeticoes": 10,
-              "emoji": "💀"
-            }
-          ],
-          "exercicioId": "leg-press-45"
-        },
-        {
-          "numero": 4,
-          "nome": "Cadeira Extensora",
-          "unidade": "kg",
-          "series": [
-            {
-              "peso": 40,
-              "repeticoes": 12,
-              "emoji": "😴"
-            },
-            {
-              "peso": 40,
-              "repeticoes": 12,
-              "emoji": "😴"
-            },
-            {
-              "peso": 40,
-              "repeticoes": 12,
-              "emoji": "💀"
-            },
-            {
-              "peso": 40,
-              "repeticoes": 12,
-              "emoji": "💀"
-            }
-          ],
-          "exercicioId": "cadeira-extensora"
-        },
-        {
-          "numero": 5,
-          "nome": "Cadeira Abdutora",
-          "unidade": "kg",
-          "series": [
-            {
-              "peso": 25,
-              "repeticoes": 12,
-              "emoji": "😐"
-            },
-            {
-              "peso": 38,
-              "repeticoes": 12,
-              "emoji": "💀"
-            },
-            {
-              "peso": 38,
-              "repeticoes": 12,
-              "emoji": "💀"
-            }
-          ],
-          "exercicioId": "cadeira-abdutora"
-        }
-      ]
-    },
-    {
       "id": "lucas-marques-2026-10-22-upper",
       "pessoaId": "lucas-marques",
       "data": "2026-10-22",
@@ -1810,158 +1842,126 @@
       ]
     },
     {
-      "id": "andre-2026-10-22-upper",
-      "pessoaId": "andre",
+      "id": "thais-oliveira-2026-10-22-c",
+      "pessoaId": "thais-oliveira",
       "data": "2026-10-22",
-      "titulo": "Upper",
+      "titulo": "C",
       "unidade": "kg",
       "observacao": "",
       "exercicios": [
         {
           "numero": 1,
-          "nome": "Supino Inclinado na Máquina",
+          "nome": "Agachamento",
+          "unidade": "kg",
+          "series": [],
+          "exercicioId": "agachamento"
+        },
+        {
+          "numero": 2,
+          "nome": "Hack Machine",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 10,
+              "repeticoes": 8,
+              "emoji": "💩"
+            },
+            {
+              "peso": 10,
+              "repeticoes": 10,
+              "emoji": "💩"
+            },
+            {
+              "peso": 10,
+              "repeticoes": 12,
+              "emoji": "💩"
+            },
+            {
+              "peso": 10,
+              "repeticoes": 12,
+              "emoji": "💩"
+            }
+          ],
+          "exercicioId": "hack-machine"
+        },
+        {
+          "numero": 3,
+          "nome": "Leg Press 45°",
           "unidade": "kg",
           "series": [
             {
               "peso": 80,
-              "repeticoes": 8,
+              "repeticoes": 12,
+              "emoji": "😴"
+            },
+            {
+              "peso": 90,
+              "repeticoes": 10,
+              "emoji": "😴"
+            },
+            {
+              "peso": 90,
+              "repeticoes": 10,
               "emoji": "💀"
             },
             {
-              "peso": 80,
-              "repeticoes": 8,
+              "peso": 90,
+              "repeticoes": 10,
               "emoji": "💀"
             }
           ],
-          "exercicioId": "supino-inclinado-na-maquina"
+          "exercicioId": "leg-press-45"
         },
         {
-          "numero": 2,
-          "nome": "Fly",
+          "numero": 4,
+          "nome": "Cadeira Extensora",
           "unidade": "kg",
           "series": [
             {
               "peso": 40,
-              "repeticoes": 10,
-              "emoji": "😴"
-            },
-            {
-              "peso": 75,
-              "repeticoes": 12,
-              "emoji": ""
-            },
-            {
-              "peso": 83,
-              "repeticoes": 8,
-              "emoji": ""
-            }
-          ],
-          "exercicioId": "fly"
-        },
-        {
-          "numero": 3,
-          "nome": "Remada Baixa na Polia",
-          "unidade": "kg",
-          "series": [
-            {
-              "peso": 75,
-              "repeticoes": 10,
-              "emoji": "🏳️‍🌈"
-            },
-            {
-              "peso": 75,
-              "repeticoes": 10,
-              "emoji": "🏳️‍🌈"
-            }
-          ],
-          "exercicioId": "remada-baixa-na-polia"
-        },
-        {
-          "numero": 4,
-          "nome": "Pulldown na Máquina",
-          "unidade": "kg",
-          "series": [
-            {
-              "peso": 35,
               "repeticoes": 12,
               "emoji": "😴"
             },
             {
-              "peso": 50,
-              "repeticoes": 8,
-              "emoji": "😐"
+              "peso": 40,
+              "repeticoes": 12,
+              "emoji": "😴"
             },
             {
-              "peso": 50,
-              "repeticoes": 8,
-              "emoji": "😴"
+              "peso": 40,
+              "repeticoes": 12,
+              "emoji": "💀"
+            },
+            {
+              "peso": 40,
+              "repeticoes": 12,
+              "emoji": "💀"
             }
           ],
-          "exercicioId": "pulldown-na-maquina"
+          "exercicioId": "cadeira-extensora"
         },
         {
           "numero": 5,
-          "nome": "Elevação Lateral",
+          "nome": "Cadeira Abdutora",
           "unidade": "kg",
           "series": [
             {
-              "peso": 35,
-              "repeticoes": 12,
-              "emoji": "💀"
-            },
-            {
-              "peso": 35,
-              "repeticoes": 10,
-              "emoji": ""
-            }
-          ],
-          "exercicioId": "elevacao-lateral"
-        },
-        {
-          "numero": 6,
-          "nome": "Rosca Direta",
-          "unidade": "kg",
-          "series": [
-            {
-              "peso": 20,
+              "peso": 25,
               "repeticoes": 12,
               "emoji": "😐"
             },
             {
-              "peso": 27.5,
+              "peso": 38,
               "repeticoes": 12,
               "emoji": "💀"
             },
             {
-              "peso": 30,
-              "repeticoes": 8,
+              "peso": 38,
+              "repeticoes": 12,
               "emoji": "💀"
             }
           ],
-          "exercicioId": "rosca-direta"
-        },
-        {
-          "numero": 7,
-          "nome": "Tríceps Francês na Máquina",
-          "unidade": "kg",
-          "series": [
-            {
-              "peso": 75,
-              "repeticoes": 12,
-              "emoji": ""
-            },
-            {
-              "peso": 80,
-              "repeticoes": 12,
-              "emoji": ""
-            },
-            {
-              "peso": 100,
-              "repeticoes": 12,
-              "emoji": ""
-            }
-          ],
-          "exercicioId": "triceps-frances-na-maquina"
+          "exercicioId": "cadeira-abdutora"
         }
       ]
     },
@@ -1983,334 +1983,6 @@
           "distanciaKm": 9,
           "observacao": "60 minutos de esteira, distância de 9 km.",
           "series": []
-        }
-      ]
-    },
-    {
-      "id": "be-2026-10-24-e",
-      "pessoaId": "be",
-      "data": "2026-10-24",
-      "titulo": "E",
-      "unidade": "kg",
-      "observacao": "",
-      "exercicios": [
-        {
-          "numero": 1,
-          "nome": "Elevação Pélvica",
-          "exercicioId": "elevacao-pelvica",
-          "unidade": "kg",
-          "series": [
-            {
-              "peso": 40,
-              "repeticoes": 8,
-              "emoji": "😐"
-            },
-            {
-              "peso": 50,
-              "repeticoes": 8,
-              "emoji": "😐"
-            },
-            {
-              "peso": 50,
-              "repeticoes": 12,
-              "emoji": "💀"
-            },
-            {
-              "peso": 50,
-              "repeticoes": 12,
-              "emoji": "💀"
-            }
-          ]
-        },
-        {
-          "numero": 2,
-          "nome": "Glúteo no Cabo",
-          "exercicioId": "gluteo-no-cabo",
-          "unidade": "kg",
-          "series": [
-            {
-              "peso": 9,
-              "repeticoes": 12,
-              "emoji": "😐"
-            },
-            {
-              "peso": 14,
-              "repeticoes": 12,
-              "emoji": "😐"
-            },
-            {
-              "peso": 19,
-              "repeticoes": 10,
-              "emoji": "😐"
-            }
-          ]
-        },
-        {
-          "numero": 3,
-          "nome": "Cadeira Abdutora",
-          "exercicioId": "cadeira-abdutora",
-          "unidade": "kg",
-          "series": [
-            {
-              "peso": 25,
-              "repeticoes": 12,
-              "emoji": "😐"
-            },
-            {
-              "peso": 25,
-              "repeticoes": 11,
-              "emoji": "💀"
-            },
-            {
-              "peso": 18,
-              "repeticoes": 15,
-              "emoji": "😐"
-            }
-          ]
-        },
-        {
-          "numero": 4,
-          "nome": "Cadeira Flexora",
-          "exercicioId": "cadeira-flexora",
-          "unidade": "kg",
-          "series": [
-            {
-              "peso": 40,
-              "repeticoes": 12,
-              "emoji": "😐"
-            },
-            {
-              "peso": 40,
-              "repeticoes": 12,
-              "emoji": "😐"
-            },
-            {
-              "peso": 45,
-              "repeticoes": 12,
-              "emoji": "😐"
-            }
-          ]
-        }
-      ]
-    },
-    {
-      "id": "thais-oliveira-2026-10-24-e",
-      "pessoaId": "thais-oliveira",
-      "data": "2026-10-24",
-      "titulo": "E",
-      "unidade": "kg",
-      "observacao": "",
-      "exercicios": [
-        {
-          "numero": 1,
-          "nome": "Elevação Pélvica",
-          "exercicioId": "elevacao-pelvica",
-          "unidade": "kg",
-          "series": [
-            {
-              "peso": 40,
-              "repeticoes": 12,
-              "emoji": ""
-            },
-            {
-              "peso": 40,
-              "repeticoes": 10,
-              "emoji": ""
-            },
-            {
-              "peso": 50,
-              "repeticoes": 10,
-              "emoji": ""
-            },
-            {
-              "peso": 50,
-              "repeticoes": 12,
-              "emoji": ""
-            }
-          ]
-        },
-        {
-          "numero": 2,
-          "nome": "Glúteo no Cabo",
-          "exercicioId": "gluteo-no-cabo",
-          "unidade": "kg",
-          "series": [
-            {
-              "peso": 19,
-              "repeticoes": 10,
-              "emoji": "😴"
-            },
-            {
-              "peso": 19,
-              "repeticoes": 12,
-              "emoji": "😴"
-            },
-            {
-              "peso": 24,
-              "repeticoes": 8,
-              "emoji": "😴"
-            }
-          ]
-        },
-        {
-          "numero": 3,
-          "nome": "Cadeira Abdutora",
-          "exercicioId": "cadeira-abdutora",
-          "unidade": "kg",
-          "series": [
-            {
-              "peso": 25,
-              "repeticoes": 12,
-              "emoji": "😴"
-            },
-            {
-              "peso": 25,
-              "repeticoes": 12,
-              "emoji": "😴"
-            },
-            {
-              "peso": 25,
-              "repeticoes": 10,
-              "emoji": "🏳️‍🌈"
-            }
-          ]
-        },
-        {
-          "numero": 4,
-          "nome": "Cadeira Flexora",
-          "exercicioId": "cadeira-flexora",
-          "unidade": "kg",
-          "series": [
-            {
-              "peso": 40,
-              "repeticoes": 12,
-              "emoji": ""
-            },
-            {
-              "peso": 40,
-              "repeticoes": 12,
-              "emoji": ""
-            },
-            {
-              "peso": 40,
-              "repeticoes": 12,
-              "emoji": ""
-            }
-          ]
-        },
-        {
-          "numero": 5,
-          "nome": "Mesa Flexora",
-          "exercicioId": "mesa-flexora",
-          "unidade": "kg",
-          "series": []
-        },
-        {
-          "numero": 6,
-          "nome": "Cardio (Bicicleta, Escada ou Esteira)",
-          "exercicioId": "cardio-bicicleta-escada-ou-esteira",
-          "unidade": "kg",
-          "series": []
-        }
-      ]
-    },
-    {
-      "id": "lucas-marques-2026-10-24-lower",
-      "pessoaId": "lucas-marques",
-      "data": "2026-10-24",
-      "titulo": "Lower",
-      "unidade": "kg",
-      "observacao": "",
-      "exercicios": [
-        {
-          "numero": 1,
-          "nome": "Cadeira Flexora",
-          "exercicioId": "cadeira-flexora",
-          "unidade": "kg",
-          "series": [
-            {
-              "peso": 60,
-              "repeticoes": 12,
-              "emoji": ""
-            },
-            {
-              "peso": 70,
-              "repeticoes": 12,
-              "emoji": "💀"
-            }
-          ]
-        },
-        {
-          "numero": 2,
-          "nome": "Agachamento",
-          "exercicioId": "agachamento",
-          "unidade": "kg",
-          "series": [
-            {
-              "peso": 80,
-              "repeticoes": 12,
-              "emoji": ""
-            },
-            {
-              "peso": 120,
-              "repeticoes": 12,
-              "emoji": "💀"
-            }
-          ]
-        },
-        {
-          "numero": 3,
-          "nome": "Leg Press 45°",
-          "exercicioId": "leg-press-45",
-          "unidade": "kg",
-          "series": [
-            {
-              "peso": 200,
-              "repeticoes": 12,
-              "emoji": "💀"
-            },
-            {
-              "peso": 240,
-              "repeticoes": 12,
-              "emoji": ""
-            }
-          ]
-        },
-        {
-          "numero": 4,
-          "nome": "Rdl",
-          "exercicioId": "rdl",
-          "unidade": "kg",
-          "series": [
-            {
-              "peso": 40,
-              "repeticoes": 8,
-              "emoji": ""
-            },
-            {
-              "peso": 40,
-              "repeticoes": 8,
-              "emoji": ""
-            }
-          ]
-        },
-        {
-          "numero": 5,
-          "nome": "Cadeira Abdutora",
-          "exercicioId": "cadeira-abdutora",
-          "unidade": "kg",
-          "series": [
-            {
-              "peso": 52,
-              "repeticoes": 11,
-              "emoji": "💀"
-            },
-            {
-              "peso": 52,
-              "repeticoes": 12,
-              "emoji": ""
-            }
-          ]
         }
       ]
     },
@@ -2453,6 +2125,334 @@
       ]
     },
     {
+      "id": "be-2026-10-24-e",
+      "pessoaId": "be",
+      "data": "2026-10-24",
+      "titulo": "E",
+      "unidade": "kg",
+      "observacao": "",
+      "exercicios": [
+        {
+          "numero": 1,
+          "nome": "Elevação Pélvica",
+          "exercicioId": "elevacao-pelvica",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 40,
+              "repeticoes": 8,
+              "emoji": "😐"
+            },
+            {
+              "peso": 50,
+              "repeticoes": 8,
+              "emoji": "😐"
+            },
+            {
+              "peso": 50,
+              "repeticoes": 12,
+              "emoji": "💀"
+            },
+            {
+              "peso": 50,
+              "repeticoes": 12,
+              "emoji": "💀"
+            }
+          ]
+        },
+        {
+          "numero": 2,
+          "nome": "Glúteo no Cabo",
+          "exercicioId": "gluteo-no-cabo",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 9,
+              "repeticoes": 12,
+              "emoji": "😐"
+            },
+            {
+              "peso": 14,
+              "repeticoes": 12,
+              "emoji": "😐"
+            },
+            {
+              "peso": 19,
+              "repeticoes": 10,
+              "emoji": "😐"
+            }
+          ]
+        },
+        {
+          "numero": 3,
+          "nome": "Cadeira Abdutora",
+          "exercicioId": "cadeira-abdutora",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 25,
+              "repeticoes": 12,
+              "emoji": "😐"
+            },
+            {
+              "peso": 25,
+              "repeticoes": 11,
+              "emoji": "💀"
+            },
+            {
+              "peso": 18,
+              "repeticoes": 15,
+              "emoji": "😐"
+            }
+          ]
+        },
+        {
+          "numero": 4,
+          "nome": "Cadeira Flexora",
+          "exercicioId": "cadeira-flexora",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 40,
+              "repeticoes": 12,
+              "emoji": "😐"
+            },
+            {
+              "peso": 40,
+              "repeticoes": 12,
+              "emoji": "😐"
+            },
+            {
+              "peso": 45,
+              "repeticoes": 12,
+              "emoji": "😐"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lucas-marques-2026-10-24-lower",
+      "pessoaId": "lucas-marques",
+      "data": "2026-10-24",
+      "titulo": "Lower",
+      "unidade": "kg",
+      "observacao": "",
+      "exercicios": [
+        {
+          "numero": 1,
+          "nome": "Cadeira Flexora",
+          "exercicioId": "cadeira-flexora",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 60,
+              "repeticoes": 12,
+              "emoji": ""
+            },
+            {
+              "peso": 70,
+              "repeticoes": 12,
+              "emoji": "💀"
+            }
+          ]
+        },
+        {
+          "numero": 2,
+          "nome": "Agachamento",
+          "exercicioId": "agachamento",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 80,
+              "repeticoes": 12,
+              "emoji": ""
+            },
+            {
+              "peso": 120,
+              "repeticoes": 12,
+              "emoji": "💀"
+            }
+          ]
+        },
+        {
+          "numero": 3,
+          "nome": "Leg Press 45°",
+          "exercicioId": "leg-press-45",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 200,
+              "repeticoes": 12,
+              "emoji": "💀"
+            },
+            {
+              "peso": 240,
+              "repeticoes": 12,
+              "emoji": ""
+            }
+          ]
+        },
+        {
+          "numero": 4,
+          "nome": "Rdl",
+          "exercicioId": "rdl",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 40,
+              "repeticoes": 8,
+              "emoji": ""
+            },
+            {
+              "peso": 40,
+              "repeticoes": 8,
+              "emoji": ""
+            }
+          ]
+        },
+        {
+          "numero": 5,
+          "nome": "Cadeira Abdutora",
+          "exercicioId": "cadeira-abdutora",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 52,
+              "repeticoes": 11,
+              "emoji": "💀"
+            },
+            {
+              "peso": 52,
+              "repeticoes": 12,
+              "emoji": ""
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "thais-oliveira-2026-10-24-e",
+      "pessoaId": "thais-oliveira",
+      "data": "2026-10-24",
+      "titulo": "E",
+      "unidade": "kg",
+      "observacao": "",
+      "exercicios": [
+        {
+          "numero": 1,
+          "nome": "Elevação Pélvica",
+          "exercicioId": "elevacao-pelvica",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 40,
+              "repeticoes": 12,
+              "emoji": ""
+            },
+            {
+              "peso": 40,
+              "repeticoes": 10,
+              "emoji": ""
+            },
+            {
+              "peso": 50,
+              "repeticoes": 10,
+              "emoji": ""
+            },
+            {
+              "peso": 50,
+              "repeticoes": 12,
+              "emoji": ""
+            }
+          ]
+        },
+        {
+          "numero": 2,
+          "nome": "Glúteo no Cabo",
+          "exercicioId": "gluteo-no-cabo",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 19,
+              "repeticoes": 10,
+              "emoji": "😴"
+            },
+            {
+              "peso": 19,
+              "repeticoes": 12,
+              "emoji": "😴"
+            },
+            {
+              "peso": 24,
+              "repeticoes": 8,
+              "emoji": "😴"
+            }
+          ]
+        },
+        {
+          "numero": 3,
+          "nome": "Cadeira Abdutora",
+          "exercicioId": "cadeira-abdutora",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 25,
+              "repeticoes": 12,
+              "emoji": "😴"
+            },
+            {
+              "peso": 25,
+              "repeticoes": 12,
+              "emoji": "😴"
+            },
+            {
+              "peso": 25,
+              "repeticoes": 10,
+              "emoji": "🏳️‍🌈"
+            }
+          ]
+        },
+        {
+          "numero": 4,
+          "nome": "Cadeira Flexora",
+          "exercicioId": "cadeira-flexora",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 40,
+              "repeticoes": 12,
+              "emoji": ""
+            },
+            {
+              "peso": 40,
+              "repeticoes": 12,
+              "emoji": ""
+            },
+            {
+              "peso": 40,
+              "repeticoes": 12,
+              "emoji": ""
+            }
+          ]
+        },
+        {
+          "numero": 5,
+          "nome": "Mesa Flexora",
+          "exercicioId": "mesa-flexora",
+          "unidade": "kg",
+          "series": []
+        },
+        {
+          "numero": 6,
+          "nome": "Cardio (Bicicleta, Escada ou Esteira)",
+          "exercicioId": "cardio-bicicleta-escada-ou-esteira",
+          "unidade": "kg",
+          "series": []
+        }
+      ]
+    },
+    {
       "id": "andre-2026-10-26-pull",
       "pessoaId": "andre",
       "data": "2026-10-26",
@@ -2580,6 +2580,118 @@
               "peso": 25,
               "repeticoes": 8,
               "emoji": "💀"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "be-2026-10-26-c",
+      "pessoaId": "be",
+      "data": "2026-10-26",
+      "titulo": "C",
+      "unidade": "kg",
+      "observacao": "",
+      "exercicios": [
+        {
+          "numero": 1,
+          "nome": "Hack Machine",
+          "exercicioId": "hack-machine",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 10,
+              "repeticoes": 8,
+              "emoji": "💩"
+            },
+            {
+              "peso": 10,
+              "repeticoes": 8,
+              "emoji": "💩"
+            },
+            {
+              "peso": 10,
+              "repeticoes": 8,
+              "emoji": "💩"
+            }
+          ]
+        },
+        {
+          "numero": 2,
+          "nome": "Leg Press 45°",
+          "exercicioId": "leg-press-45",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 40,
+              "repeticoes": 12,
+              "emoji": "😐"
+            },
+            {
+              "peso": 45,
+              "repeticoes": 12,
+              "emoji": "😐"
+            },
+            {
+              "peso": 45,
+              "repeticoes": 12,
+              "emoji": "😐"
+            },
+            {
+              "peso": 45,
+              "repeticoes": 12,
+              "emoji": "😐"
+            }
+          ]
+        },
+        {
+          "numero": 3,
+          "nome": "Cadeira Extensora",
+          "exercicioId": "cadeira-extensora",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 30,
+              "repeticoes": 12,
+              "emoji": "😐"
+            },
+            {
+              "peso": 35,
+              "repeticoes": 12,
+              "emoji": "😐"
+            },
+            {
+              "peso": 40,
+              "repeticoes": 10,
+              "emoji": "💀"
+            },
+            {
+              "peso": 40,
+              "repeticoes": 10,
+              "emoji": "💀"
+            }
+          ]
+        },
+        {
+          "numero": 4,
+          "nome": "Cadeira Abdutora",
+          "exercicioId": "cadeira-abdutora",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 18,
+              "repeticoes": 12,
+              "emoji": "😐"
+            },
+            {
+              "peso": 25,
+              "repeticoes": 12,
+              "emoji": "💀"
+            },
+            {
+              "peso": 25,
+              "repeticoes": 12,
+              "emoji": "🏳️‍🌈"
             }
           ]
         }
@@ -2720,118 +2832,6 @@
       ]
     },
     {
-      "id": "be-2026-10-26-c",
-      "pessoaId": "be",
-      "data": "2026-10-26",
-      "titulo": "C",
-      "unidade": "kg",
-      "observacao": "",
-      "exercicios": [
-        {
-          "numero": 1,
-          "nome": "Hack Machine",
-          "exercicioId": "hack-machine",
-          "unidade": "kg",
-          "series": [
-            {
-              "peso": 10,
-              "repeticoes": 8,
-              "emoji": "💩"
-            },
-            {
-              "peso": 10,
-              "repeticoes": 8,
-              "emoji": "💩"
-            },
-            {
-              "peso": 10,
-              "repeticoes": 8,
-              "emoji": "💩"
-            }
-          ]
-        },
-        {
-          "numero": 2,
-          "nome": "Leg Press 45°",
-          "exercicioId": "leg-press-45",
-          "unidade": "kg",
-          "series": [
-            {
-              "peso": 40,
-              "repeticoes": 12,
-              "emoji": "😐"
-            },
-            {
-              "peso": 45,
-              "repeticoes": 12,
-              "emoji": "😐"
-            },
-            {
-              "peso": 45,
-              "repeticoes": 12,
-              "emoji": "😐"
-            },
-            {
-              "peso": 45,
-              "repeticoes": 12,
-              "emoji": "😐"
-            }
-          ]
-        },
-        {
-          "numero": 3,
-          "nome": "Cadeira Extensora",
-          "exercicioId": "cadeira-extensora",
-          "unidade": "kg",
-          "series": [
-            {
-              "peso": 30,
-              "repeticoes": 12,
-              "emoji": "😐"
-            },
-            {
-              "peso": 35,
-              "repeticoes": 12,
-              "emoji": "😐"
-            },
-            {
-              "peso": 40,
-              "repeticoes": 10,
-              "emoji": "💀"
-            },
-            {
-              "peso": 40,
-              "repeticoes": 10,
-              "emoji": "💀"
-            }
-          ]
-        },
-        {
-          "numero": 4,
-          "nome": "Cadeira Abdutora",
-          "exercicioId": "cadeira-abdutora",
-          "unidade": "kg",
-          "series": [
-            {
-              "peso": 18,
-              "repeticoes": 12,
-              "emoji": "😐"
-            },
-            {
-              "peso": 25,
-              "repeticoes": 12,
-              "emoji": "💀"
-            },
-            {
-              "peso": 25,
-              "repeticoes": 12,
-              "emoji": "🏳️‍🌈"
-            }
-          ]
-        }
-      ]
-    },
-    {
       "id": "thais-oliveira-2026-10-26-c",
       "pessoaId": "thais-oliveira",
       "data": "2026-10-26",
@@ -2945,140 +2945,6 @@
               "emoji": "💩"
             }
           ]
-        }
-      ]
-    },
-    {
-      "id": "lucas-marques-2026-10-27-push",
-      "pessoaId": "lucas-marques",
-      "data": "2026-10-27",
-      "titulo": "Push",
-      "unidade": "kg",
-      "observacao": "",
-      "exercicios": [
-        {
-          "numero": 1,
-          "nome": "Fly",
-          "exercicioId": "fly",
-          "unidade": "kg",
-          "series": [
-            {
-              "peso": 33,
-              "repeticoes": 10,
-              "emoji": "😴"
-            },
-            {
-              "peso": 35.3,
-              "repeticoes": 8,
-              "emoji": "💩"
-            },
-            {
-              "peso": 35.3,
-              "repeticoes": 6,
-              "emoji": "💩"
-            }
-          ]
-        },
-        {
-          "numero": 2,
-          "nome": "Supino Inclinado com Halteres",
-          "exercicioId": "supino-inclinado-com-halteres",
-          "unidade": "kg",
-          "series": [
-            {
-              "peso": 14,
-              "repeticoes": 12,
-              "emoji": ""
-            },
-            {
-              "peso": 16,
-              "repeticoes": 12,
-              "emoji": ""
-            }
-          ]
-        },
-        {
-          "numero": 3,
-          "nome": "Supino Reto na Máquina",
-          "exercicioId": "supino-reto-na-maquina",
-          "unidade": "kg",
-          "series": [
-            {
-              "peso": 55,
-              "repeticoes": 11,
-              "emoji": ""
-            },
-            {
-              "peso": 55,
-              "repeticoes": 12,
-              "emoji": ""
-            }
-          ]
-        },
-        {
-          "numero": 4,
-          "nome": "Desenvolvimento",
-          "exercicioId": "desenvolvimento",
-          "unidade": "kg",
-          "series": [
-            {
-              "peso": 14,
-              "repeticoes": 12,
-              "emoji": "😐"
-            },
-            {
-              "peso": 16,
-              "repeticoes": 10,
-              "emoji": ""
-            },
-            {
-              "peso": 16,
-              "repeticoes": 8,
-              "emoji": ""
-            }
-          ]
-        },
-        {
-          "numero": 5,
-          "nome": "Elevação Lateral",
-          "exercicioId": "elevacao-lateral",
-          "unidade": "kg",
-          "series": [
-            {
-              "peso": 20,
-              "repeticoes": 11,
-              "emoji": ""
-            },
-            {
-              "peso": 20,
-              "repeticoes": 8,
-              "emoji": ""
-            }
-          ]
-        },
-        {
-          "numero": 6,
-          "nome": "Tríceps na Corda",
-          "exercicioId": "triceps-na-corda",
-          "unidade": "kg",
-          "series": [
-            {
-              "peso": 17.5,
-              "repeticoes": 8,
-              "emoji": ""
-            },
-            {
-              "peso": 17.5,
-              "repeticoes": 8,
-              "emoji": ""
-            },
-            {
-              "peso": 17.5,
-              "repeticoes": 8,
-              "emoji": ""
-            }
-          ],
-          "observacao": "Com puxador da prohammer, na polia pesada"
         }
       ]
     },
@@ -3337,6 +3203,140 @@
       ]
     },
     {
+      "id": "lucas-marques-2026-10-27-push",
+      "pessoaId": "lucas-marques",
+      "data": "2026-10-27",
+      "titulo": "Push",
+      "unidade": "kg",
+      "observacao": "",
+      "exercicios": [
+        {
+          "numero": 1,
+          "nome": "Fly",
+          "exercicioId": "fly",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 33,
+              "repeticoes": 10,
+              "emoji": "😴"
+            },
+            {
+              "peso": 35.3,
+              "repeticoes": 8,
+              "emoji": "💩"
+            },
+            {
+              "peso": 35.3,
+              "repeticoes": 6,
+              "emoji": "💩"
+            }
+          ]
+        },
+        {
+          "numero": 2,
+          "nome": "Supino Inclinado com Halteres",
+          "exercicioId": "supino-inclinado-com-halteres",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 14,
+              "repeticoes": 12,
+              "emoji": ""
+            },
+            {
+              "peso": 16,
+              "repeticoes": 12,
+              "emoji": ""
+            }
+          ]
+        },
+        {
+          "numero": 3,
+          "nome": "Supino Reto na Máquina",
+          "exercicioId": "supino-reto-na-maquina",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 55,
+              "repeticoes": 11,
+              "emoji": ""
+            },
+            {
+              "peso": 55,
+              "repeticoes": 12,
+              "emoji": ""
+            }
+          ]
+        },
+        {
+          "numero": 4,
+          "nome": "Desenvolvimento",
+          "exercicioId": "desenvolvimento",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 14,
+              "repeticoes": 12,
+              "emoji": "😐"
+            },
+            {
+              "peso": 16,
+              "repeticoes": 10,
+              "emoji": ""
+            },
+            {
+              "peso": 16,
+              "repeticoes": 8,
+              "emoji": ""
+            }
+          ]
+        },
+        {
+          "numero": 5,
+          "nome": "Elevação Lateral",
+          "exercicioId": "elevacao-lateral",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 20,
+              "repeticoes": 11,
+              "emoji": ""
+            },
+            {
+              "peso": 20,
+              "repeticoes": 8,
+              "emoji": ""
+            }
+          ]
+        },
+        {
+          "numero": 6,
+          "nome": "Tríceps na Corda",
+          "exercicioId": "triceps-na-corda",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 17.5,
+              "repeticoes": 8,
+              "emoji": ""
+            },
+            {
+              "peso": 17.5,
+              "repeticoes": 8,
+              "emoji": ""
+            },
+            {
+              "peso": 17.5,
+              "repeticoes": 8,
+              "emoji": ""
+            }
+          ],
+          "observacao": "Com puxador da prohammer, na polia pesada"
+        }
+      ]
+    },
+    {
       "id": "thais-oliveira-2026-10-27-b",
       "pessoaId": "thais-oliveira",
       "data": "2026-10-27",
@@ -3457,6 +3457,437 @@
           "exercicioId": "panturrilha-escada-ou-em-pe",
           "unidade": "kg",
           "series": []
+        }
+      ]
+    },
+    {
+      "id": "andre-2026-10-28-legs",
+      "pessoaId": "andre",
+      "data": "2026-10-28",
+      "titulo": "Legs",
+      "unidade": "kg",
+      "observacao": "",
+      "exercicios": [
+        {
+          "numero": 1,
+          "nome": "Cadeira Flexora",
+          "exercicioId": "cadeira-flexora",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 80,
+              "repeticoes": 8,
+              "emoji": ""
+            },
+            {
+              "peso": 110,
+              "repeticoes": 12,
+              "emoji": ""
+            },
+            {
+              "peso": 110,
+              "repeticoes": 17,
+              "emoji": ""
+            }
+          ]
+        },
+        {
+          "numero": 2,
+          "nome": "Hack Machine",
+          "exercicioId": "hack-machine",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 80,
+              "repeticoes": 12,
+              "emoji": ""
+            },
+            {
+              "peso": 140,
+              "repeticoes": 12,
+              "emoji": ""
+            },
+            {
+              "peso": 200,
+              "repeticoes": 0,
+              "emoji": ""
+            }
+          ]
+        },
+        {
+          "numero": 3,
+          "nome": "Cadeira Extensora",
+          "exercicioId": "cadeira-extensora",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 140,
+              "repeticoes": 12,
+              "emoji": "🏳️‍🌈"
+            },
+            {
+              "peso": 140,
+              "repeticoes": 12,
+              "emoji": "🏳️‍🌈"
+            }
+          ]
+        },
+        {
+          "numero": 4,
+          "nome": "Elevação Pélvica",
+          "exercicioId": "elevacao-pelvica",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 160,
+              "repeticoes": 12,
+              "emoji": ""
+            },
+            {
+              "peso": 180,
+              "repeticoes": 12,
+              "emoji": "💀"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "be-2026-10-28-a",
+      "pessoaId": "be",
+      "data": "2026-10-28",
+      "titulo": "A",
+      "unidade": "kg",
+      "observacao": "",
+      "exercicios": [
+        {
+          "numero": 1,
+          "nome": "Stiff",
+          "exercicioId": "stiff",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 10,
+              "repeticoes": 12,
+              "emoji": "😐"
+            },
+            {
+              "peso": 10,
+              "repeticoes": 12,
+              "emoji": "😐"
+            },
+            {
+              "peso": 10,
+              "repeticoes": 12,
+              "emoji": "😐"
+            }
+          ]
+        },
+        {
+          "numero": 2,
+          "nome": "Cadeira Flexora",
+          "exercicioId": "cadeira-flexora",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 50,
+              "repeticoes": 10,
+              "emoji": "😐"
+            },
+            {
+              "peso": 50,
+              "repeticoes": 12,
+              "emoji": "😐"
+            },
+            {
+              "peso": 50,
+              "repeticoes": 12,
+              "emoji": "😐"
+            }
+          ]
+        },
+        {
+          "numero": 3,
+          "nome": "Agachamento Búlgaro",
+          "exercicioId": "agachamento-bulgaro",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 6,
+              "repeticoes": 8,
+              "emoji": "💩"
+            },
+            {
+              "peso": 6,
+              "repeticoes": 8,
+              "emoji": "💩"
+            }
+          ]
+        },
+        {
+          "numero": 4,
+          "nome": "Cadeira Adutora",
+          "exercicioId": "cadeira-adutora",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 25,
+              "repeticoes": 12,
+              "emoji": "😐"
+            },
+            {
+              "peso": 32,
+              "repeticoes": 12,
+              "emoji": "😐"
+            },
+            {
+              "peso": 32,
+              "repeticoes": 12,
+              "emoji": "💀"
+            }
+          ]
+        },
+        {
+          "numero": 5,
+          "nome": "Elevação Pélvica",
+          "exercicioId": "elevacao-pelvica",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 40,
+              "repeticoes": 12,
+              "emoji": "😐"
+            },
+            {
+              "peso": 50,
+              "repeticoes": 12,
+              "emoji": "😐"
+            },
+            {
+              "peso": 50,
+              "repeticoes": 12,
+              "emoji": "😐"
+            },
+            {
+              "peso": 50,
+              "repeticoes": 10,
+              "emoji": "💀"
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "lucas-marques-2026-10-28-legs",
+      "pessoaId": "lucas-marques",
+      "data": "2026-10-28",
+      "titulo": "Legs",
+      "unidade": "kg",
+      "observacao": "",
+      "exercicios": [
+        {
+          "numero": 1,
+          "nome": "Cadeira Flexora",
+          "exercicioId": "cadeira-flexora",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 70,
+              "repeticoes": 12,
+              "emoji": ""
+            },
+            {
+              "peso": 75,
+              "repeticoes": 12,
+              "emoji": "🏳️‍🌈"
+            }
+          ]
+        },
+        {
+          "numero": 2,
+          "nome": "Hack Machine",
+          "exercicioId": "hack-machine",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 100,
+              "repeticoes": 12,
+              "emoji": "😴"
+            },
+            {
+              "peso": 140,
+              "repeticoes": 10,
+              "emoji": "💀"
+            }
+          ]
+        },
+        {
+          "numero": 3,
+          "nome": "Cadeira Extensora",
+          "exercicioId": "cadeira-extensora",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 60,
+              "repeticoes": 12,
+              "emoji": ""
+            },
+            {
+              "peso": 65,
+              "repeticoes": 12,
+              "emoji": "💀"
+            }
+          ]
+        },
+        {
+          "numero": 4,
+          "nome": "Elevação Pélvica",
+          "exercicioId": "elevacao-pelvica",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 100,
+              "repeticoes": 12,
+              "emoji": ""
+            },
+            {
+              "peso": 120,
+              "repeticoes": 10,
+              "emoji": "💀"
+            }
+          ]
+        },
+        {
+          "numero": 5,
+          "nome": "Cadeira Adutora",
+          "exercicioId": "cadeira-adutora",
+          "unidade": "kg",
+          "series": []
+        }
+      ]
+    },
+    {
+      "id": "thais-oliveira-2026-10-28-a",
+      "pessoaId": "thais-oliveira",
+      "data": "2026-10-28",
+      "titulo": "A",
+      "unidade": "kg",
+      "observacao": "",
+      "exercicios": [
+        {
+          "numero": 1,
+          "nome": "Stiff",
+          "exercicioId": "stiff",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 10,
+              "repeticoes": 12,
+              "emoji": ""
+            },
+            {
+              "peso": 10,
+              "repeticoes": 12,
+              "emoji": ""
+            },
+            {
+              "peso": 10,
+              "repeticoes": 12,
+              "emoji": ""
+            }
+          ]
+        },
+        {
+          "numero": 2,
+          "nome": "Cadeira Flexora",
+          "exercicioId": "cadeira-flexora",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 50,
+              "repeticoes": 12,
+              "emoji": "💩"
+            },
+            {
+              "peso": 50,
+              "repeticoes": 12,
+              "emoji": "💩"
+            },
+            {
+              "peso": 50,
+              "repeticoes": 12,
+              "emoji": "💩"
+            }
+          ]
+        },
+        {
+          "numero": 3,
+          "nome": "Agachamento Búlgaro",
+          "exercicioId": "agachamento-bulgaro",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 10,
+              "repeticoes": 12,
+              "emoji": ""
+            },
+            {
+              "peso": 10,
+              "repeticoes": 12,
+              "emoji": ""
+            }
+          ]
+        },
+        {
+          "numero": 4,
+          "nome": "Cadeira Adutora",
+          "exercicioId": "cadeira-adutora",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 32,
+              "repeticoes": 12,
+              "emoji": "😴"
+            },
+            {
+              "peso": 38,
+              "repeticoes": 12,
+              "emoji": "💩"
+            },
+            {
+              "peso": 38,
+              "repeticoes": 12,
+              "emoji": "💩"
+            }
+          ]
+        },
+        {
+          "numero": 5,
+          "nome": "Elevação Pélvica",
+          "exercicioId": "elevacao-pelvica",
+          "unidade": "kg",
+          "series": [
+            {
+              "peso": 40,
+              "repeticoes": 12,
+              "emoji": ""
+            },
+            {
+              "peso": 50,
+              "repeticoes": 12,
+              "emoji": ""
+            },
+            {
+              "peso": 60,
+              "repeticoes": 8,
+              "emoji": "💀"
+            },
+            {
+              "peso": 60,
+              "repeticoes": 12,
+              "emoji": "🏳️‍🌈"
+            }
+          ]
         }
       ]
     }
